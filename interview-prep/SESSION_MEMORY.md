@@ -1,8 +1,8 @@
 # Session Memory — Complete Context Dump
 
 > **Purpose:** Portable memory file. Share this + `.teacher-context.json` with the AI when starting a new chat on a new VM to continue exactly where we left off.
-> **Last updated:** May 23, 2026
-> **To restore context on new VM:** Send both `SESSION_MEMORY.md` + `.teacher-context.json` to the AI. These two files contain everything needed to continue.
+> **Last updated:** May 23, 2026 (after Day 1 — Session 2)
+> **To restore context on new VM:** Send both `SESSION_MEMORY.md` + `.teacher-context.json` to the AI.
 
 ---
 
@@ -20,7 +20,7 @@
 | Phase 2 Pivot | After 1-2 years at product company → AI Infrastructure / GPU Platform Engineering (NOT MLOps) |
 | Known Tools | Ansible (daily), Azure (basic), Linux (basic), Git (basic), LogicMonitor (daily) |
 | Brand New Tools | Terraform, Docker, GitHub Actions, CI/CD pipelines |
-| Actual Repo | github.com/som-d/AzureVM (folder: `panther/`) |
+| Portfolio Repo | github.com/som-d/AzureVM (subfolder: `panther/`) |
 
 ---
 
@@ -32,27 +32,72 @@
 | **VM Provider** | AWS EC2 (t3.small) |
 | **Region** | Mumbai (ap-south-1) |
 | **OS** | Ubuntu 26.04 LTS "resolute" |
-| **Storage** | 20 GB EBS (expanded from 8 GB → 20 GB, 12 GB free ✅) |
+| **Storage** | 20 GB EBS (12 GB free) |
 | **Access** | VS Code Remote SSH from Mac M1 |
-| **Key Pair** | `spidy-key.pem` (located on Mac at `~/.ssh/spidy-key.pem`) |
+| **Key Pair** | `spidy-key.pem` (on Mac at `~/.ssh/spidy-key.pem`) |
 | **User** | `ubuntu` |
 
 ### Tools Installed on VM
 | Tool | Version | Status |
 |------|---------|--------|
 | Terraform | v1.15.4 | ✅ Installed |
-| Azure CLI | 2.86.0 | ✅ Installed (via Noble repo workaround for Resolute) |
+| Azure CLI | 2.86.0 | ✅ Installed |
 | Git | 2.53.0 | ✅ Installed |
-| Ansible | Removed (was installed via PPA, removed for disk space, will reinstall properly later) |
+| Ansible | Removed (was installed via PPA, removed for disk space, will reinstall later) |
 
-### Repo Structure
+### Repo Structure at `panther/`
 ```
 /home/ubuntu/AzureVM/panther/
+├── AI/                          # Teaching agent config + automation hub
+│   ├── AUTOMATION_HUB/
+│   ├── data/
+│   ├── infrastructure-pipeline/ # (separate git repo — was nested, now properly ignored)
+│   ├── linkedin/
+│   ├── MASTER_PLAN.md
+│   ├── outreach/
+│   ├── README.md
+│   ├── reports/
+│   └── resumes/
+├── ansible/                     # (empty — future use)
+├── docker/                      # (empty — future use)
+├── interview-prep/              # ← THIS FILE, .teacher-context.json + topic study files
+│   ├── .teacher-context.json
+│   ├── SESSION_MEMORY.md        # ← you are here
+│   ├── DAILY_PLAN.md
+│   ├── WORKFLOW_TREE.md
+│   ├── master-roadmap.md
+│   ├── day1_notes.md
+│   ├── terraform/
+│   ├── azure/
+│   ├── ansible/
+│   ├── git/
+│   ├── github-actions/
+│   ├── azure-devops/
+│   ├── cicd/
+│   ├── docker-k8s/
+│   ├── linux-scripting/
+│   └── logicmonitor/
+├── scripts/
+│   └── health-check.sh          # Working bash script (uptime, memory, disk)
+├── terraform/
+│   ├── main.tf                  # Azure Resource Group (starting point)
+│   ├── modules/                 # (empty — future use)
+│   ├── environments/            # (empty — future use)
+│   ├── backend.tf               # (empty — future use)
+│   └── variables.tf             # (empty — future use)
+├── .github/
+│   └── workflows/               # (empty — future use)
 ├── .gitignore
-├── ansible/
-├── index.html
-├── notes.txt
-└── terraform/
+├── README.md
+└── index.html
+```
+
+### AzureVM Root Repo Structure
+```
+/home/ubuntu/AzureVM/
+├── .gitignore                   # Has panther/ + infrastructure-pipeline/ entries
+├── panther/                     # ← main portfolio repo (has own .git)
+└── .opencode/                   # OpenCode config
 ```
 
 ### Other Accounts
@@ -60,14 +105,13 @@
 |---------|---------|---------|
 | Azure for Students | $100 (365 days remaining) | Deploy resources via Terraform |
 | AWS Free | ~100 days remaining | VM hosting (t3.small) |
-| Oracle Cloud Free Tier | N/A | Considered but unreliable (accounts get banned, ARM capacity always out of stock) |
 
 ---
 
 ## 3. LEARNING APPROACH
 
 ### Core Principles (Not Negotiable)
-1. **Integrated Learning:** Linux, Git, Terraform, Azure taught simultaneously — every command teaches Linux as a byproduct
+1. **Integrated Learning:** Linux, Git, Terraform, Azure taught simultaneously
 2. **CLI-Only:** No UI, no desktop. Everything through VS Code terminal (SSH to VM)
 3. **Command-first teaching:** Every command comes with explanation of flags, pipes, operators, and output interpretation
 4. **Production stories required:** User has ZERO production experience with Terraform, Docker, CI/CD — every topic needs a real company incident story
@@ -114,7 +158,6 @@
 | **NOT safe** | Direct VNC/RDP to VM IP on non-standard ports, accessing private IPs via browser |
 | **Alternative access method** | Chrome Remote Desktop (looks like HTTPS to Google) is safest if desktop needed |
 | **Home laptop** | Windows Home (16 GB RAM, 500 GB SSD) — no RDP server built-in |
-| **Home laptop access** | RDP Wrapper was attempted but failed ("Not Listening"), VNC considered but abandoned due to compliance risk |
 
 **Decision:** Continue with CLI-only learning on AWS VM via VS Code Remote SSH. No desktop needed.
 
@@ -122,101 +165,173 @@
 
 ## 5. CURRENT PROGRESS (Exact State)
 
-### Where We Are Right Now
-| Item | Status |
-|------|--------|
-| Phase 1: Terminal + Git CLI Foundations | **In progress — Step 1 of 6** |
-| Step 1: What just learned `pwd` | ✅ Done — understands Print Working Directory |
-| Step 1: Next command to run | `ls -la` |
-| Step 2: Create project structure | ⏳ Not started |
-| Step 3: Git init + first commit | ⏳ Not started |
-| Step 4: Git remote add (linking to GitHub) | ⏳ Not started |
-| Step 5: Symlinks + .gitignore + undo | ⏳ Not started |
-| Step 6: git log + git diff + git branch | ⏳ Not started |
-| Phase 2: Terraform Day 1 | ⏳ Not started |
+### Phase 1: Git CLI + Terminal Foundations — STATUS
+| Step | Topic | Status | What Was Covered |
+|------|-------|--------|------------------|
+| 1 | Navigation + File Ops | ✅ **Completed** | `pwd`, `ls -la` (permissions, file types, hidden files), `mkdir -p`, `touch`, `echo > / >>`, `cat`, `nano`, `chmod +x`, `./script.sh`, `mv` |
+| 2 | Git init + add + commit | ✅ **Completed** | `git init`, `git add .`, `git status`, `git commit -m`, `git log --oneline`, staging area concept |
+| 3 | Git remote + push | ✅ **Completed** | `git remote add origin`, `git push -u origin master`, GitHub Push Protection (PAT blocked), `git reset --soft` to remove secret, `git commit --amend`, force push |
+| 4 | Symlinks + .gitignore + undo | ⏳ **In Progress** | Did: `.gitignore` patterns, `git rm --cached` (nested repos), `git checkout --orphan`, `git branch -D`, `git push --force`. Remaining: symlinks, `git restore`, `git reset --hard`, `git commit --amend` alternatives |
+| 5 | Git branch + diff + log --graph | ❌ **Not started** | |
+| 6 | Git PR workflow | ❌ **Not started** | |
 
-### What Was Covered in Session So Far
+### What Was Covered in Session 2 (Today — May 23, 2026)
 
-#### Infrastructure Setup (ALL DONE ✅)
-1. Azure CLI installed via Noble repo workaround (Ubuntu 26.04 "resolute" not officially supported)
-2. Disk full (6.7 GB) → cleaned apt cache + removed Ansible packages + expanded EBS to 20 GB
-3. Commands: `growpart /dev/nvme0n1 1` (expand partition), `resize2fs /dev/root` (expand filesystem)
-4. `df -h` (disk free human-readable), `lsblk` (list block devices)
-5. Azure CLI 2.86.0 installed, Terraform v1.15.4, Git 2.53.0 — all confirmed
+#### ✅ ALL commands learned:
+```
+# Linux/File Ops
+pwd                              # Print Working Directory
+ls -la                           # Long format + all files (permissions, owner, size, date)
+ls -l                            # Long format only
+ls -lah                          # Long + all + human-readable sizes
+ls -R                            # Recursive (list subdirs)
+mkdir -p                         # Create parent directories
+touch                            # Create empty file / update timestamp
+echo "text" > file               # Overwrite file
+echo "text" >> file              # Append to file
+cat                              # Read file contents
+nano                             # Edit file interactively
+chmod +x                         # Add execute permission
+./script.sh                      # Run a script in current dir
+mv                               # Move/rename file
 
-#### Phase 1 Step 1: pwd + ls -la (IN PROGRESS)
-| Topic | Status | Details Learned |
-|-------|--------|----------------|
-| `pwd` | ✅ Done | Print Working Directory — shows current location in filesystem |
-| `ls -la` | ⏳ To be run | Will learn: permissions (drwxr-xr-x), hidden files, file types, ownership |
-| `.` vs `..` | ⏳ Pending | Current directory vs parent directory |
-| File permissions | ⏳ Pending | rwx, user/group/others, first char = type (d, -, l) |
+# Git
+git init                         # Initialize new repo
+git add .                        # Stage all files
+git add file                     # Stage specific file
+git status                       # Check staged/unstaged/untracked
+git commit -m "msg"              # Commit staged changes
+git log --oneline                # Compact commit history
+git log --oneline -3             # Last 3 commits
+git branch -m old new            # Rename branch
+git branch -D branch             # Force delete branch
+git rm --cached file             # Remove from git tracking, keep file
+git reset --soft HEAD~1          # Undo commit, keep changes staged
+git commit --amend               # Replace last commit (with --no-edit to keep message)
+git commit --amend -m "new msg"  # Replace last commit + change message
+git checkout --orphan new-branch # Create branch with zero history
+git remote add origin <url>      # Link to remote
+git push -u origin master        # Push + set upstream
+git push origin --force          # Force push (overwrite remote history)
+git push origin master --force   # Force push (verbose)
+```
 
-#### Troubleshooting Commands Learned (during setup)
+#### 🔴 INCIDENT: GitHub Push Protection blocked a push
+- A GitHub Personal Access Token was in `panther/AI/notes:2`
+- GitHub detected it and blocked the push
+- Solution: `git reset --soft eedd728` → `git commit -m "fix commit"` → `git push origin master --force`
+- Lesson: Never commit secrets. Use `.gitignore` or environment variables.
+
+#### 🔴 NESTED REPO CLEANUP
+- `panther/` and `infrastructure-pipeline/` each had their own `.git` folders
+- Root `AzureVM` repo was tracking them as regular files
+- Fixed: `git rm --cached -r panther/` → added to `.gitignore` → `git commit --amend`
+- Both repos now fully independent
+
+#### 🔴 AZUREVM ROOT CLEANUP
+- `AzureVM` root history had messy commits from all phases
+- Fixed: `git checkout --orphan clean-main` → staged fresh → committed → `git branch -D main` → `git branch -m main` → `git push origin main --force`
+- Now has 2 clean commits only
+
+### Troubleshooting Commands Learned
 | Command | What It Does | When Used |
 |---------|-------------|-----------|
 | `df -h` | Disk free, human-readable | Check disk space |
+| `sudo growpart /dev/nvme0n1 1` | Expand partition | Increased EBS from 8GB→20GB |
+| `sudo resize2fs /dev/root` | Expand filesystem | After partition expand |
 | `lsblk` | List block devices | Check partition layout |
-| `du -sh` | Disk usage, summary, human-readable | Find what's eating space |
+| `du -sh *` | Disk usage, summary, human-readable | Find what's eating space |
 | `sort -rh` | Sort by human-readable size descending | Find biggest files |
 | `head -10` | First 10 lines of output | See top results |
-| `grep` | Search text in output | Filter command output |
-| `journalctl --disk-usage` | Check system log size | Find disk space used by logs |
 
 ---
 
-## 6. KEY DECISIONS MADE
+## 6. PRODUCTION STORIES COVERED
 
-| # | Decision | Rationale | When |
-|---|----------|-----------|------|
-| 1 | **CLI-only learning** | No UI needed, user is learning CLI anyway, compliance safe | Today |
-| 2 | **VS Code Remote SSH as primary interface** | Works through Zscaler (SSH only), no software install on Mac | Today |
-| 3 | **No desktop/RDP/VNC** | Compliance risk, not needed for CLI learning | Today |
-| 4 | **Don't fight Windows Home RDP** | RDP Wrapper failed, not worth the effort | Today |
-| 5 | **No Oracle Cloud** | Account ban risk, unreliable ARM capacity | Today |
-| 6 | **Integrated Linux+Git+Terraform+Azure** | Every command teaches multiple things simultaneously | Today |
-| 7 | **Command-first teaching with flag explanations** | User wants to understand every flag, pipe, and operator | Today |
-| 8 | **Portfolio repo: github.com/som-d/AzureVM/panther/** | Actual path, updated from incorrect `soham-devops/infrastructure-pipeline` | Today |
-| 9 | **Teacher agent mode: primary** | Shows in agent list, not hidden as subagent | Earlier |
-| 10 | **Beast Mode 8-week plan** | Adopted over original 94h sequential plan | Earlier |
-| 11 | **Indian product companies first** | More realistic at 3 YOE, build brand-name for later Europe move | Earlier |
-| 12 | **AI Infrastructure / GPU Platform Engineer** | Long-term target (not MLOps), infra layer more durable | Earlier |
+| Story | Tool | What Happened |
+|-------|------|---------------|
+| **Push Protection saved the team** | Git/GitHub | Engineer committed AWS keys to a public repo → GitHub blocked it. Company saved potential $50K crypto mining bill. |
+| **Junior dev force-pushed to main** | Git | Engineer did `git push --force` on shared branch → lost 3 PRs of work → restore from `git reflog` took 2 hours. |
+| **Force push culture at startup** | Git | Company with 100+ engineers used force push on feature branches → no issues because `main` was protected. Branch protection is the safety net. |
 
 ---
 
-## 7. FILE LOCATIONS (for reference)
+## 7. FILE LOCATIONS (Linux paths — actual VM)
 
 | File | Path | Purpose |
 |------|------|---------|
-| Memory dump | `D:\Resume\interview-prep\SESSION_MEMORY.md` | This file — portable context |
-| Teacher context | `D:\Resume\interview-prep\.teacher-context.json` | Schema v2.0, 8-week curriculum |
-| Daily plan | `D:\Resume\interview-prep\DAILY_PLAN.md` | Beast Mode 8-week schedule |
-| Workflow tree | `D:\Resume\interview-prep\WORKFLOW_TREE.md` | Beast mode workflow + milestones |
-| Master roadmap | `D:\Resume\interview-prep\master-roadmap.md` | Full 8-week project-based structure |
-| Teacher agent | `D:\Resume\.opencode\agents\teacher.md` | Agent definition (mode: primary) |
-| Teacher skill | `D:\Resume\.opencode\skills\teacher\SKILL.md` | Teaching protocol + production stories |
-| Original resume PDF | `D:\Resume\Soham_D_Resume_Ansible.pdf` | Source of truth for skills |
-| Automation hub | `D:\Resume\AUTOMATION_HUB\` | Job application automation (CLI tool) |
+| Memory dump | `/home/ubuntu/AzureVM/panther/interview-prep/SESSION_MEMORY.md` | This file — portable context |
+| Teacher context | `/home/ubuntu/AzureVM/panther/interview-prep/.teacher-context.json` | Schema v2.0, 8-week curriculum |
+| Day 1 notes | `/home/ubuntu/AzureVM/panther/interview-prep/day1_notes.md` | Command reference + deep dives |
+| Daily plan | `/home/ubuntu/AzureVM/panther/interview-prep/DAILY_PLAN.md` | Beast Mode 8-week schedule |
+| Workflow tree | `/home/ubuntu/AzureVM/panther/interview-prep/WORKFLOW_TREE.md` | Beast mode workflow + milestones |
+| Master roadmap | `/home/ubuntu/AzureVM/panther/interview-prep/master-roadmap.md` | Full 8-week project-based structure |
+| AzureVM root repo | `/home/ubuntu/AzureVM/` | Root AzureVM repo (clean history) |
+| Portfolio repo | `/home/ubuntu/AzureVM/panther/` | Main project repo (independent git) |
+| Terraform main | `/home/ubuntu/AzureVM/panther/terraform/main.tf` | Azure RG defined (starting point) |
+| Health check script | `/home/ubuntu/AzureVM/panther/scripts/health-check.sh` | Working bash script |
 
 ---
 
-## 8. NEXT STEPS
+## 8. KEY DECISIONS MADE
 
-### Immediate (this session)
+| # | Decision | Rationale | When |
+|---|----------|-----------|------|
+| 1 | **CLI-only learning** | No UI needed, user is learning CLI anyway, compliance safe | Setup |
+| 2 | **VS Code Remote SSH as primary interface** | Works through Zscaler (SSH only), no software install on Mac | Setup |
+| 3 | **No desktop/RDP/VNC** | Compliance risk, not needed for CLI learning | Setup |
+| 4 | **No Oracle Cloud** | Account ban risk, unreliable ARM capacity | Setup |
+| 5 | **Integrated Linux+Git+Terraform+Azure** | Every command teaches multiple things simultaneously | Setup |
+| 6 | **Command-first teaching with flag explanations** | User wants to understand every flag, pipe, and operator | Setup |
+| 7 | **Portfolio repo: github.com/som-d/AzureVM/panther/** | Actual path for portfolio project | Setup |
+| 8 | **Teacher agent mode: primary** | Shows in agent list, not hidden as subagent | Setup |
+| 9 | **Beast Mode 8-week plan** | Adopted over original 94h sequential plan | Setup |
+| 10 | **Indian product companies first** | More realistic at 3 YOE, build brand-name for later Europe move | Setup |
+| 11 | **AI Infrastructure / GPU Platform Engineer** | Long-term target (not MLOps), infra layer more durable | Setup |
+| 12 | **`git reset --soft` over `--hard`** | Kept all current working files intact while erasing bad commits | Today |
+| 13 | **`git checkout --orphan` for root repo** | Got completely fresh history instead of cherry-picking | Today |
+| 14 | **Added both nested repos to `.gitignore`** | Each is its own independent repo — should not be tracked by root | Today |
+| 15 | **Force push after history rewrites only** | Safe because user works alone on both repos — no collaborators | Today |
+| 16 | **Hiding `ghp_` PAT in remote URL** | PAT embedded in AzureVM root remote URL (from earlier setup). Fine for now but should switch to SSH. | Today |
+
+---
+
+## 9. SPACED REPETITION QUEUE
+
+| Topic | Due Date | Interval | Confidence |
+|-------|----------|----------|------------|
+| `ls -la` output decoding (permissions, file types) | 2026-05-24 | 1d | N/A |
+| GitHub Push Protection & secret removal | 2026-05-24 | 1d | N/A |
+| `git add` vs `commit` staging area concept | 2026-05-26 | 3d | N/A |
+| `git reset --soft` vs `--hard` | 2026-05-30 | 7d | N/A |
+
+**Next review:** Tomorrow (May 24) — drill on `ls -la` output and Push Protection before new content.
+
+---
+
+## 10. NEXT SESSION PLAN (Day 2 — May 24, 2026)
+
+### Doubts to Clear First
+1. What exactly is HEAD? (pointer to current position)
+2. `git reset --soft` vs `--hard` vs `--mixed` — what changes?
+3. What does `--orphan` really mean? (branch with no parent commit)
+4. What's the difference between `--force` and `--force-with-lease`?
+5. Why did the root repo have two origin URLs? (PAT embedded issue)
+
+### New Content for Day 2
 ```
-Phase 1 Step 1: Run `ls -la` → learn to read permissions, file types, hidden files
-Phase 1 Step 2: mkdir -p, touch, echo, cat, nano
-Phase 1 Step 3: git init, add, commit
-Phase 1 Step 4: git remote add, push
-Phase 1 Step 5: .gitignore, symlinks, undo commands
-Phase 1 Step 6: git log, diff, branch
-Phase 2: Terraform Day 1 (HCL + deploy Azure RG)
+Phase 1 Step 4 (continued): symlinks (ln -s), .gitignore deeper patterns, 
+                            git restore, reset --hard, --mixed
+Phase 1 Step 5: git log --graph, git diff, git branch
+Phase 1 Step 6: PR workflow basics
+Phase 2 (if time): Terraform Day 1 — HCL syntax + deploy Azure RG
 ```
 
-### Before Next Session
-- Copy `D:\Resume\interview-prep\` folder to new VM
-- Share `SESSION_MEMORY.md` with AI in new chat to restore context
-- Ensure SSH key + VS Code Remote SSH set up on new VM
+### Portfolio Project — By End of Day 2
+- Terraform `main.tf` with:
+  - Azure Resource Group
+  - Variables file with RG name + location
+  - Outputs file with RG ID + name
 
 ---
 
