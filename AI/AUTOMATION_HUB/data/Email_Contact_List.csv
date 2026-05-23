@@ -1,0 +1,14 @@
+Company,Contact Name,Title,Location,Email,Email_Confidence,LinkedIn_URL,Notes,Priority
+LogicMonitor,Simran Kaur Makhija,Senior Talent Acquisition Specialist,Pune,simran.makhija@logicmonitor.com,CONFIRMED - Public post,linkedin.com/in/simran-makhija-39b144108,"Already sent - skip unless follow-up",3
+LogicMonitor,Ankur Tewari,Sr. Manager Talent Acquisition,Pune,ankur.tewari@logicmonitor.com,CONFIRMED - Pattern verified,linkedin.com/in/ankur-tewari-9706a420,Already sent - skip unless follow-up,3
+LogicMonitor,Swati Shukla,Senior Talent Acquisition Specialist,Pune,swati.shukla@logicmonitor.com,CONFIRMED - Pattern verified,linkedin.com/in/swati-shukla-a3847956,Already sent - skip unless follow-up,3
+Ensono,Namrata Shirke,Manager Talent Acquisition,Pune,namrata.shirke@ensono.com,CONFIRMED - Public LinkedIn post,linkedin.com/in/namratashirke,"PUBLICLY POSTED: ""Drop resume to Namrata.shirke@Ensono.com"". You applied to DevOps/Automation Engineer!",1 - Send NOW
+Ensono,Nikhil Sinha,Senior Manager Talent Acquisition,Pune,nikhil.sinha@ensono.com,HIGH - Pattern matches CEO format,linkedin.com/in/nikhilsinhabarclays,"18+ yrs TA exp. Pattern matches confirmed CEO email (firstname.lastname@ensono.com). You applied here!",1 - Send NOW
+Accenture,Deeksha Jain,Senior Recruiter Analyst,Gurgaon,deeksha.jain@accenture.com,HIGH - Pattern confirmed 90%,linkedin.com/in/jaindeeksha,"Accenture email format confirmed at 90% rate. You applied to DevOps Engineer (Terraform/Azure)!",2 - Send this week
+Barclays,Joyeeta Choudhury,Recruiter Technology Centre,Pune,,PATTERN - Needs verification,linkedin.com/in/joyeeta-choudhury-b827b2a,"Unable to verify email. Connect via LinkedIn InMail instead. You applied to Dev Ops Engineer!",2 - LinkedIn instead
+Ensono,Jinny M.,Senior Manager Talent Acquisition,Pune,,PATTERN - Needs verification,linkedin.com/in/jinny-m-7a756a128,"Partial name - can't verify email. Connect via LinkedIn InMail. You applied here!",2 - LinkedIn instead
+Capgemini,Talent Acquisition Team,Pune,,PATTERN,Search Capgemini TA Pune on LinkedIn,Apply directly on career portal - already done!,3
+Citi,Talent Acquisition Team,Pune,,PATTERN,Search Citi TA Pune on LinkedIn,Apply directly on career portal - already done!,3
+TCS,Talent Acquisition Team,Pune,,PATTERN,Search TCS TA Pune on LinkedIn,Apply directly on career portal - already done!,3
+BMC Software,Talent Acquisition Team,Pune,,PATTERN,Search BMC TA Pune on LinkedIn,21L role aspirational,3
+Persistent Systems,Talent Acquisition Team,Pune,,PATTERN,Search Persistent TA Pune on LinkedIn,Ansible+Terraform = your skills,3

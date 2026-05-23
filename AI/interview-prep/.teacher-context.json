@@ -1,0 +1,215 @@
+{
+  "schema_version": "2.0",
+  "plan": "beast_mode_8_weeks",
+  "student": {
+    "name": "Soham",
+    "current_role": "DevOps Engineer at Wipro",
+    "experience_years": 3,
+    "current_ctc": "~3 LPA",
+    "target_ctc": "7-14 LPA",
+    "target_companies": ["Freshworks", "Razorpay", "Postman", "BrowserStack", "Atlassian India", "Chargebee"],
+    "portfolio_project": "github.com/som-d/AzureVM/panther/",
+    "known_tools": ["Ansible (daily)", "Azure (basic)", "Linux (basic)", "Git (basic)", "LogicMonitor (daily)"],
+    "learning_style": "production-driven, project-based, interview-focused",
+    "learning_approach": "integrated_CLI_only",
+    "teaching_method": "command_first_with_flag_explanations",
+    "compliance_mode": "ssh_only_no_desktop",
+    "workstation": "VS Code Remote SSH from Mac M1 to AWS t3.small Ubuntu 26.04",
+    "home_laptop": "Windows Home 16GB/500GB (not used for learning)",
+    "infrastructure": {
+      "primary_vm": "AWS t3.small (Mumbai, ap-south-1)",
+      "vm_storage": "20 GB EBS (12 GB free)",
+      "vm_os": "Ubuntu 26.04 LTS resolute",
+      "tools_installed": ["Terraform v1.15.4", "Azure CLI 2.86.0", "Git 2.53.0"],
+      "tools_pending": ["Docker", "Ansible"],
+      "ssh_key_location": "Mac ~/.ssh/spidy-key.pem",
+      "vm_user": "ubuntu",
+      "repo_path": "/home/ubuntu/AzureVM/panther/"
+    }
+  },
+  "curriculum": {
+    "total_weeks": 8,
+    "hours_per_week": 14,
+    "total_hours": 112,
+    "weekly_structure": "Mon-Sat 2h/day (4-block formula) + Sun 2h mock",
+    "daily_formula": "LEARN (30m) -> BUILD (30m) -> PRODUCTION STORY (30m) -> INTERVIEW DRILL (30m)",
+    "phase_1": {
+      "name": "Git CLI + Terminal Foundations",
+      "description": "Pre-Day 1: Linux + Git taught simultaneously via terminal. Every command teaches both.",
+      "status": "in_progress",
+      "steps": [
+        {"step": 1, "topic": "Navigation + File Ops (pwd, ls, mkdir, touch, echo, cat, nano)", "status": "in_progress"},
+        {"step": 2, "topic": "Git init + add + commit + status + log", "status": "not_started"},
+        {"step": 3, "topic": "Git remote add + push + pull (linking to GitHub)", "status": "not_started"},
+        {"step": 4, "topic": "Symlinks + .gitignore + undo commands (restore, reset, amend)", "status": "not_started"},
+        {"step": 5, "topic": "Git branch + diff + log --graph", "status": "not_started"}
+      ]
+    },
+    "weeks": [
+      {
+        "week": 1,
+        "name": "Foundation + First Deploy",
+        "theme": "Deploy something real on Day 1. Build confidence immediately.",
+        "mock_sunday": true,
+        "status": "not_started",
+        "progress_pct": 0,
+        "days": [
+          {"day": 1,  "topic": "Terraform State + HCL", "id": "b1-d01", "builds": "main.tf with Azure RG + VM", "status": "not_started", "confidence": null},
+          {"day": 2,  "topic": "Azure VNet + Subnets + CIDR", "id": "b1-d02", "builds": "VNet + 2 subnets in Terraform", "status": "not_started", "confidence": null},
+          {"day": 3,  "topic": "Variables + Outputs + Locals", "id": "b1-d03", "builds": "Parameterized config", "status": "not_started", "confidence": null},
+          {"day": 4,  "topic": "NSG + Security Rules", "id": "b1-d04", "builds": "NSG + ASG + tags", "status": "not_started", "confidence": null},
+          {"day": 5,  "topic": "Remote State (Azure Storage)", "id": "b1-d05", "builds": "backend.tf, state migration", "status": "not_started", "confidence": null},
+          {"day": 6,  "topic": "Git Branching + PR Workflow", "id": "b1-d06", "builds": "GitHub repo, branch protection", "status": "not_started", "confidence": null}
+        ]
+      },
+      {
+        "week": 2,
+        "name": "Terraform Deep + Azure Compute",
+        "theme": "Build scalable infrastructure with industry-standard patterns.",
+        "mock_sunday": true,
+        "status": "not_started",
+        "progress_pct": 0,
+        "days": [
+          {"day": 8,  "topic": "Terraform Modules", "id": "b2-d08", "builds": "VNet module + NSG module", "status": "not_started", "confidence": null},
+          {"day": 9,  "topic": "Azure VM + VMSS + LB", "id": "b2-d09", "builds": "VMSS module + LB module", "status": "not_started", "confidence": null},
+          {"day": 10, "topic": "Lifecycle + DAG", "id": "b2-d10", "builds": "create_before_destroy rules", "status": "not_started", "confidence": null},
+          {"day": 11, "topic": "App Gateway + WAF + SSL", "id": "b2-d11", "builds": "App Gateway module", "status": "not_started", "confidence": null},
+          {"day": 12, "topic": "Workspaces + Environment Strategy", "id": "b2-d12", "builds": "dev/staging/prod configs", "status": "not_started", "confidence": null},
+          {"day": 13, "topic": "Azure Storage Deep Dive", "id": "b2-d13", "builds": "Storage account module", "status": "not_started", "confidence": null}
+        ]
+      },
+      {
+        "week": 3,
+        "name": "CI/CD Pipeline + Docker",
+        "theme": "Automate everything. Build your first full pipeline.",
+        "mock_sunday": true,
+        "status": "not_started",
+        "progress_pct": 0,
+        "days": [
+          {"day": 15, "topic": "GitHub Actions Fundamentals", "id": "b3-d15", "builds": "validate + fmt on PR", "status": "not_started", "confidence": null},
+          {"day": 16, "topic": "GH Actions Terraform Pipeline", "id": "b3-d16", "builds": "OIDC, plan -> apply pipeline", "status": "not_started", "confidence": null},
+          {"day": 17, "topic": "Azure DevOps YAML Pipelines", "id": "b3-d17", "builds": "Equivalent ADO pipeline", "status": "not_started", "confidence": null},
+          {"day": 18, "topic": "Dockerfile + Layer Caching", "id": "b3-d18", "builds": "Dockerfile for web app", "status": "not_started", "confidence": null},
+          {"day": 19, "topic": "Multi-stage Builds + Compose", "id": "b3-d19", "builds": "Optimized Dockerfile + compose", "status": "not_started", "confidence": null},
+          {"day": 20, "topic": "ACR + Docker Push in CI/CD", "id": "b3-d20", "builds": "Build -> push -> deploy pipeline", "status": "not_started", "confidence": null}
+        ]
+      },
+      {
+        "week": 4,
+        "name": "Security + State Ops + Deploy Strategies",
+        "theme": "Production-grade patterns. Junior vs senior distinction.",
+        "mock_sunday": true,
+        "status": "not_started",
+        "progress_pct": 0,
+        "days": [
+          {"day": 22, "topic": "IAM + RBAC + Managed Identity", "id": "b4-d22", "builds": "MI + RBAC in Terraform", "status": "not_started", "confidence": null},
+          {"day": 23, "topic": "Key Vault + Secrets Management", "id": "b4-d23", "builds": "KV module with secrets", "status": "not_started", "confidence": null},
+          {"day": 24, "topic": "Terraform Import + State Surgery", "id": "b4-d24", "builds": "Import existing resource", "status": "not_started", "confidence": null},
+          {"day": 25, "topic": "Blue-Green + Rolling + Canary", "id": "b4-d25", "builds": "App Service slots + swap", "status": "not_started", "confidence": null},
+          {"day": 26, "topic": "Azure Monitor + Log Analytics", "id": "b4-d26", "builds": "Diagnostic settings + alerts", "status": "not_started", "confidence": null},
+          {"day": 27, "topic": "Azure Cost + Governance", "id": "b4-d27", "builds": "Budgets, Policy, tags", "status": "not_started", "confidence": null}
+        ]
+      },
+      {
+        "week": 5,
+        "name": "Ansible + Linux + Git Advanced",
+        "theme": "Complete the deployment stack.",
+        "mock_sunday": true,
+        "status": "not_started",
+        "progress_pct": 0,
+        "days": [
+          {"day": 29, "topic": "Ansible Architecture + Playbooks", "id": "b5-d29", "builds": "First playbook, inventory", "status": "not_started", "confidence": null},
+          {"day": 30, "topic": "Ansible Roles + Vault + Dynamic Inv", "id": "b5-d30", "builds": "Role structure, Vault", "status": "not_started", "confidence": null},
+          {"day": 31, "topic": "Terraform + Ansible Integration", "id": "b5-d31", "builds": "TF triggers Ansible", "status": "not_started", "confidence": null},
+          {"day": 32, "topic": "30 Essential Linux Commands", "id": "b5-d32", "builds": "Reference card", "status": "not_started", "confidence": null},
+          {"day": 33, "topic": "Bash Scripting for DevOps", "id": "b5-d33", "builds": "Health check script", "status": "not_started", "confidence": null},
+          {"day": 34, "topic": "Git Advanced: Rebase, Cherry-pick, Revert", "id": "b5-d34", "builds": "Advanced Git workflow", "status": "not_started", "confidence": null}
+        ]
+      },
+      {
+        "week": 6,
+        "name": "LogicMonitor + Integration + Wipro Story",
+        "theme": "Turn existing experience into interview gold. Connect all tools.",
+        "mock_sunday": true,
+        "status": "not_started",
+        "progress_pct": 0,
+        "days": [
+          {"day": 36, "topic": "LogicMonitor Interview Reframe", "id": "b6-d36", "builds": "3 versions of LM story", "status": "not_started", "confidence": null},
+          {"day": 37, "topic": "LM Q&A + STAR Stories", "id": "b6-d37", "builds": "15 LM questions answered", "status": "not_started", "confidence": null},
+          {"day": 38, "topic": "Full Pipeline from Memory", "id": "b6-d38", "builds": "Rebuild pipeline no notes", "status": "not_started", "confidence": null},
+          {"day": 39, "topic": "Wipro -> Product Company Answers", "id": "b6-d39", "builds": "Tell me about yourself", "status": "not_started", "confidence": null},
+          {"day": 40, "topic": "5 Essential STAR Stories", "id": "b6-d40", "builds": "STAR framework written out", "status": "not_started", "confidence": null},
+          {"day": 41, "topic": "Target Company Research", "id": "b6-d41", "builds": "5 companies analyzed", "status": "not_started", "confidence": null}
+        ]
+      },
+      {
+        "week": 7,
+        "name": "Rapid Fire + Resume + Salary Strategy",
+        "theme": "Build speed. Prepare logistics.",
+        "mock_sunday": true,
+        "status": "not_started",
+        "progress_pct": 0,
+        "days": [
+          {"day": 43, "topic": "Resume Tailoring", "id": "b7-d43", "builds": "3 resume versions", "status": "not_started", "confidence": null},
+          {"day": 44, "topic": "Salary Strategy + Negotiation", "id": "b7-d44", "builds": "3->14 LPA justification", "status": "not_started", "confidence": null},
+          {"day": 45, "topic": "Terraform Rapid Fire (60 Q&A)", "id": "b7-d45", "builds": "Mark weak spots", "status": "not_started", "confidence": null},
+          {"day": 46, "topic": "Azure Rapid Fire (50 Q&A)", "id": "b7-d46", "builds": "Mark weak spots", "status": "not_started", "confidence": null},
+          {"day": 47, "topic": "CI/CD + Docker + Git Rapid Fire (40 Q&A)", "id": "b7-d47", "builds": "Mark weak spots", "status": "not_started", "confidence": null},
+          {"day": 48, "topic": "Ansible + Linux + LM Rapid Fire (30 Q&A)", "id": "b7-d48", "builds": "STAR story polish", "status": "not_started", "confidence": null}
+        ]
+      },
+      {
+        "week": 8,
+        "name": "Final Mock + Applications + Buffer",
+        "theme": "Execute. Apply. Interview. Win.",
+        "mock_sunday": false,
+        "status": "not_started",
+        "progress_pct": 0,
+        "days": [
+          {"day": 50, "topic": "FINAL MOCK 8 (1h recorded)", "id": "b8-d50", "builds": "Compare with Mock 1", "status": "not_started", "confidence": null},
+          {"day": 51, "topic": "Apply Tier 1 Companies", "id": "b8-d51", "builds": "3 applications sent", "status": "not_started", "confidence": null},
+          {"day": 52, "topic": "Screening Call Preparation", "id": "b8-d52", "builds": "Answers recorded", "status": "not_started", "confidence": null},
+          {"day": 53, "topic": "Apply Tier 2 Companies", "id": "b8-d53", "builds": "3 applications sent", "status": "not_started", "confidence": null},
+          {"day": 54, "topic": "Whiteboard Drill (recorded)", "id": "b8-d54", "builds": "Draw & explain", "status": "not_started", "confidence": null},
+          {"day": 55, "topic": "Apply Tier 3 + Follow-ups", "id": "b8-d55", "builds": "2 apps + log check", "status": "not_started", "confidence": null},
+          {"day": 56, "topic": "Confidence Day + Review", "id": "b8-d56", "builds": "Weak spots review", "status": "not_started", "confidence": null}
+        ]
+      }
+    ]
+  },
+  "teaching_history": [],
+  "mock_history": [],
+  "weak_spots": [],
+  "spaced_repetition_queue": [],
+  "preferences": {
+    "include_production_stories": true,
+    "require_interview_drill": true,
+    "recording_recommended": true,
+    "teaching_pace": "normal",
+    "drill_depth": "interview-ready",
+    "portfolio_focus": true
+  },
+  "session": {
+    "current_week": 1,
+    "current_day": 1,
+    "last_topic": "Phase 1: Git CLI + Terminal Foundations (Step 1/6)",
+    "phase_progress": "Phase 1 (Git+Terminal) - Step 1: pwd learned, ls -la pending",
+    "day1_prerequisite_complete": false,
+    "streak_days": 0,
+    "total_hours_completed": 0.5,
+    "session_date": "2026-05-23",
+    "last_commands_covered": ["pwd", "ls -la (pending)"],
+    "flags_covered": [
+      "ls -l = long format (permissions, owner, size, date)",
+      "ls -a = all files including hidden (dotfiles)",
+      "df -h = disk free human-readable",
+      "lsblk = list block devices",
+      "growpart = grow partition",
+      "resize2fs = resize filesystem",
+      "grep = search text",
+      "head -n = first n lines of output",
+      "sort -rh = sort by human-readable size descending",
+      "du -sh = disk usage summary human-readable"
+    ]
+  }
+}

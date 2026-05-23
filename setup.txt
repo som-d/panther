@@ -1,0 +1,157 @@
+Step 1: Move the Key to Right Place
+Open Terminal on your Mac:
+# Create .ssh folder if it doesn't exist
+mkdir -p ~/.ssh
+# Copy the downloaded key (assuming it's in Downloads)
+cp ~/Downloads/spidy-key.pem ~/.ssh/
+# Set correct permissions (CRITICAL — Mac won't use the key without this)
+chmod 400 ~/.ssh/spidy-key.pem
+Step 2: Get the Elastic IP
+1. Go to AWS Console → EC2 → Elastic IPs
+2. Click Allocate Elastic IP address → Allocate
+3. Select it → Actions → Associate Elastic IP address
+4. Instance: select spidy → Associate
+5. Copy the IP address (looks like 43.205.x.x)
+Step 3: Test SSH from Terminal
+ssh -i ~/.ssh/spidy-key.pem ubuntu@<YOUR_ELASTIC_IP>
+It should connect. If you see:
+The authenticity of host '...' can't be established.
+Are you sure you want to continue connecting?
+Type yes and press Enter.
+Step 4: VS Code Remote SSH
+Once Terminal SSH works:
+1. Open VS Code on your Mac
+2. Click the Extensions icon (left sidebar, or Cmd+Shift+X)
+3. Search for Remote - SSH → Install (by Microsoft)
+4. Press Cmd+Shift+P → type Remote-SSH: Add New SSH Host
+5. In the box that appears, enter:
+ssh -i ~/.ssh/spidy-key.pem ubuntu@<YOUR_ELASTIC_IP>
+6. Select SSH config file: ~/.ssh/config (first option)
+7. Click Connect (bottom-right popup) OR:
+- Cmd+Shift+P → Remote-SSH: Connect to Host
+- Select ubuntu@<YOUR_ELASTIC_IP>
+- New window opens → VS Code is now running on your VM
+8. Click Open Folder → /home/ubuntu → OK
+9. To open terminal inside VS Code:  Ctrl+`  (backtick)
+Now every command you run in the VS Code terminal runs ON the VM — Terraform, Azure CLI, Git — all on the cloud VM, not your Mac.
+Step 5: Setup the VM (run inside VS Code Terminal or SSH)
+# Update packages
+sudo apt update && sudo apt upgrade -y
+# Install essentials
+sudo apt install -y git curl wget vim net-tools htop python3-pip unzip
+# Install Docker
+sudo apt install -y docker.io
+sudo systemctl enable docker
+sudo usermod -aG docker $USER
+# Install Terraform
+wget -O- https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
+sudo apt update && sudo apt install -y terraform
+# Install Azure CLI
+curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+# Install Ansible
+sudo apt install -y software-properties-common
+sudo add-apt-repository --yes --update ppa:ansible/ansible
+sudo apt install -y ansible
+# Verify everything
+echo "=== Versions ==="
+terraform --version | head -1
+az version | head -1
+ansible --version | head -1
+docker --version
+git --version
+# Set up git
+git config --global user.name "Soham"
+git config --global user.email "sohamdeshmukh611@gmail.com"
+After the commands run, LOGOUT and SSH back in (or restart VS Code terminal) for docker group to take effect:
+exit
+# Then SSH again
+ssh -i ~/.ssh/spidy-key.pem ubuntu@<YOUR_ELASTIC_IP>
+Step 6: Authenticate Azure from VM
+az login --use-device-code
+- It shows a code. Go to https://microsoft.com/devicelogin on any browser
+- Enter the code → login with your student account
+- Then set subscription:
+az account list --output table
+az account set --subscription "<Your Student Subscription ID>"
+Step 7: Set Up RDP (for when you want desktop)
+# Install XFCE desktop + xrdp
+sudo apt install -y xfce4 xfce4-goodies xrdp
+sudo systemctl enable xrdp --now
+sudo adduser xrdp ssl-cert
+sudo systemctl restart xrdp
+# Set a password for RDP login
+sudo passwd ubuntu
+Choose a strong password.
+Then in AWS Console:
+- EC2 → Security Groups → spidy-sg → Inbound rules → Edit
+- Add rule: Type RDP, Port 3389, Source My IP
+- Save
+On your Mac: use Microsoft Remote Desktop app (free from App Store) or any RDP client.
+- Host: <Your Elastic IP>
+- User: ubuntu
+- Password: (the one you just set)
+
+Your Daily Workflow Starts Now
+Open VS Code → Cmd+Shift+P → Remote-SSH → Connect to Host
+  → Select ubuntu@<IP>
+  → Terminal is on the VM
+
+
+
+
+
+
+
+
+
+
+-----------------------------------------------------------------------------------------------------------
+
+SSH Reverse Tunnel — RDP Through Your AWS VM (No New Third Party)
+Your Home Windows (16 GB, 500 GB)          AWS t3.small (already running)
+    │                                             │
+    │  Outbound SSH only (no port forward)         │
+    │  ssh -R 3390:localhost:3389 ubuntu@aws-ip    │
+    │ ──────────────────────────────────────────►   │
+    │                                             │
+    │                 Mac RDP connects to aws-ip:3390
+    │                                   ◄─────────│
+    │                                             │
+                                        Your Office Mac M1
+                                     (Microsoft Remote Desktop)
+Why this works:
+- ✅ Windows initiates SSH outbound — your ISP/router doesn't block outbound SSH
+- ✅ SSH tunnel is encrypted — Zscaler sees SSH traffic, can't see inside
+- ✅ AWS VM already exists — no new services to sign up for
+- ✅ Mac RDP client connects to the AWS IP — no software install needed
+- ✅ Port 3390 is not standard RDP — bots don't scan it
+Setup Steps (30 min total)
+Step 1: On Windows — Install OpenSSH Client + Set Up Key
+# 1. Install OpenSSH Client (if not already)
+Add-WindowsCapability -Online -Name OpenSSH.Client~~~~0.0.1.0
+# 2. Generate SSH key (same as your spidy-key)
+ssh-keygen -t ed25519 -f C:\Users\YourName\.ssh\homekey
+# 3. Copy public key to AWS VM
+type C:\Users\YourName\.ssh\homekey.pub
+# → Copy the output
+Step 2: On AWS VM — Add your Windows SSH key
+SSH into the VM from your Mac terminal:
+echo "YOUR_PUBLIC_KEY_FROM_STEP1" >> ~/.ssh/authorized_keys
+Step 3: On Windows — Test the tunnel
+# 1. Enable RDP on Windows
+# Settings → System → Remote Desktop → On
+# 2. Create the reverse tunnel
+ssh -i C:\Users\YourName\.ssh\homekey -o ServerAliveInterval=60 -R 3390:localhost:3389 ubuntu@<AWS_VM_IP>
+This stays running in the terminal. When it's connected, go to Step 4.
+Step 4: On Mac — Connect via RDP
+- Open Microsoft Remote Desktop
+- Add PC: <AWS_VM_IP>:3390
+- Enter your Windows username and password
+- You're in — full Windows desktop, 16 GB RAM, 500 GB, VS Code, everything
+The One Catch
+Windows needs to stay awake and maintain the SSH tunnel. Solutions:
+If Windows...	Fix
+Goes to sleep	Disable sleep: powercfg /change standby-timeout-ac 0
+Turns off at night	Turn it on when you want to work — tunnel takes 10 sec
+Loses internet	Auto-reconnect with autossh on WSL or a scheduled task

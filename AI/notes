@@ -1,0 +1,2 @@
+ssh -i ~/.ssh/spidy-key.pem ubuntu@13.206.18.129
+git remote set-url origin https://som-d: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@github.com/som-d/AzureVM.git

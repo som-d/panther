@@ -1,0 +1,49 @@
+{
+  "_instructions": "Edit this file with YOUR details before running the automation",
+  "personal": {
+    "full_name": "Soham Deshmukh",
+    "phone": "+91-9503024323",
+    "email": "sohamdeshmukh611@gmail.com",
+    "linkedin": "https://linkedin.com/in/soham-deshmukh-142939225",
+    "current_company": "Wipro",
+    "current_role": "Infra Automation Engineer",
+    "target_role": "DevOps Engineer",
+    "years_experience": 3
+  },
+  "gmail": {
+    "username": "sohamdeshmukh611@gmail.com",
+    "app_password": "wxdn wmig ilsn jluj",
+    "_help": "Get app password at: https://myaccount.google.com/apppasswords. Enable 2FA first."
+  },
+  "preferences": {
+    "max_applications_per_day": 10,
+    "max_emails_per_day": 15,
+    "follow_up_days": 5,
+    "job_search_keywords": ["DevOps Engineer", "Platform Engineer", "Site Reliability Engineer"],
+    "job_search_location": "Pune",
+    "salary_expectation_min": 700000,
+    "salary_expectation_max": 1400000
+  },
+  "ai": {
+    "gemini_api_key": "YOUR_GEMINI_API_KEY_HERE",
+    "_help": "Get free API key at: https://aistudio.google.com/apikey. Free tier = 60 requests/min.",
+    "enabled": false
+  },
+  "learning_track": {
+    "current_week": 1,
+    "started_k8s": false,
+    "resources": [
+      "https://kodekloud.com/courses/kubernetes-for-beginners/",
+      "https://kubernetes.io/docs/tutorials/",
+      "https://learn.microsoft.com/en-us/azure/aks/"
+    ]
+  },
+  "system": {
+    "resume_path": "D:\\Resume\\resumes\\Soham_Deshmukh_DevOps_Engineer.pdf",
+    "csv_jobs": "D:\\Resume\\AUTOMATION_HUB\\data\\Active_Job_Listings.csv",
+    "csv_contacts": "D:\\Resume\\AUTOMATION_HUB\\data\\Email_Contact_List.csv",
+    "csv_applications": "D:\\Resume\\AUTOMATION_HUB\\data\\applications.csv",
+    "csv_email_log": "D:\\Resume\\AUTOMATION_HUB\\data\\email_log.csv",
+    "last_run_date": ""
+  }
+}
