@@ -38,10 +38,10 @@
       "description": "Pre-Day 1: Linux + Git taught simultaneously via terminal. Every command teaches both.",
       "status": "in_progress",
       "steps": [
-        {"step": 1, "topic": "Navigation + File Ops (pwd, ls, mkdir, touch, echo, cat, nano)", "status": "in_progress"},
-        {"step": 2, "topic": "Git init + add + commit + status + log", "status": "not_started"},
-        {"step": 3, "topic": "Git remote add + push + pull (linking to GitHub)", "status": "not_started"},
-        {"step": 4, "topic": "Symlinks + .gitignore + undo commands (restore, reset, amend)", "status": "not_started"},
+        {"step": 1, "topic": "Navigation + File Ops (pwd, ls, mkdir, touch, echo, cat, nano)", "status": "completed"},
+        {"step": 2, "topic": "Git init + add + commit + status + log", "status": "completed"},
+        {"step": 3, "topic": "Git remote add + push + pull (linking to GitHub)", "status": "completed"},
+        {"step": 4, "topic": "Symlinks + .gitignore + undo commands (restore, reset, amend)", "status": "in_progress"},
         {"step": 5, "topic": "Git branch + diff + log --graph", "status": "not_started"}
       ]
     },
@@ -177,10 +177,23 @@
       }
     ]
   },
-  "teaching_history": [],
+  "teaching_history": [
+    {
+      "date": "2026-05-23",
+      "session": 2,
+      "hours": 2.0,
+      "topics": ["ls -la & file permissions", "mkdir -p, touch, echo, cat, nano", "chmod +x, ./scripts", "git init, add, commit, status", "git remote add, push (secret blocked)", "git reset --soft, commit --amend", "git checkout --orphan, git push --force", "GitHub Push Protection"],
+      "commands_covered": ["ls -la", "ls -l", "ls -lah", "ls -R", "mkdir -p", "touch", "echo > >>", "cat", "nano", "chmod +x", "./script.sh", "mv", "git init", "git add .", "git commit -m", "git status", "git branch -m", "git branch -D", "git rm --cached", "git reset --soft", "git commit --amend --no-edit", "git checkout --orphan", "git push origin --force"]
+    }
+  ],
   "mock_history": [],
   "weak_spots": [],
-  "spaced_repetition_queue": [],
+  "spaced_repetition_queue": [
+    {"topic": "ls -la output decoding (permissions, file types)", "due_date": "2026-05-24", "interval": "1d"},
+    {"topic": "git add vs commit staging area concept", "due_date": "2026-05-26", "interval": "3d"},
+    {"topic": "git reset --soft vs --hard", "due_date": "2026-05-30", "interval": "7d"},
+    {"topic": "GitHub Push Protection & secret removal", "due_date": "2026-05-24", "interval": "1d"}
+  ],
   "preferences": {
     "include_production_stories": true,
     "require_interview_drill": true,
@@ -192,24 +205,27 @@
   "session": {
     "current_week": 1,
     "current_day": 1,
-    "last_topic": "Phase 1: Git CLI + Terminal Foundations (Step 1/6)",
-    "phase_progress": "Phase 1 (Git+Terminal) - Step 1: pwd learned, ls -la pending",
+    "last_topic": "Phase 1: Git CLI + Terminal Foundations (Steps 1-4)",
+    "phase_progress": "Phase 1 (Git+Terminal) - Steps 1-3 complete, Step 4 in progress",
     "day1_prerequisite_complete": false,
-    "streak_days": 0,
-    "total_hours_completed": 0.5,
+    "streak_days": 1,
+    "total_hours_completed": 2.5,
     "session_date": "2026-05-23",
-    "last_commands_covered": ["pwd", "ls -la (pending)"],
+    "last_commands_covered": ["pwd", "ls -la", "ls -l", "ls -lah", "mkdir -p", "touch", "echo", "cat", "nano", "chmod +x", "./", "mv", "git init", "git add", "git commit", "git status", "git branch -m", "git rm --cached", "git reset --soft", "git commit --amend", "git checkout --orphan", "git push origin master --force", "git push origin main --force"],
     "flags_covered": [
       "ls -l = long format (permissions, owner, size, date)",
       "ls -a = all files including hidden (dotfiles)",
-      "df -h = disk free human-readable",
-      "lsblk = list block devices",
-      "growpart = grow partition",
-      "resize2fs = resize filesystem",
-      "grep = search text",
-      "head -n = first n lines of output",
-      "sort -rh = sort by human-readable size descending",
-      "du -sh = disk usage summary human-readable"
+      "ls -h = human-readable sizes (K, M, G)",
+      "ls -R = recursive (lists subdirectories)",
+      "mkdir -p = create parent directories",
+      "echo > = overwrite file, >> = append to file",
+      "chmod +x = add execute permission",
+      "git -m = rename branch (move)",
+      "git commit --amend = replace last commit",
+      "git reset --soft = move HEAD back, keep staged files",
+      "git push --force = overwrite remote history (DANGEROUS)",
+      "git checkout --orphan = create branch with zero history",
+      "git rm --cached = remove from git but keep local file"
     ]
   }
 }
