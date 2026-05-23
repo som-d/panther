@@ -221,16 +221,17 @@ Bash scripting
 ### Weekly Overview
 
 ```
-WEEK  STATUS       DAYS DONE    GATE PASSED    CONFIDENCE
-────  ──────────   ─────────    ───────────    ──────────
-Wk 1  ⬜⬜⬜⬜⬜⬜   0/6          ❌ Not yet      —
-Wk 2  ⬜⬜⬜⬜⬜⬜   0/6          ❌ Not yet      —
-Wk 3  ⬜⬜⬜⬜⬜⬜   0/6          ❌ Not yet      —
-Wk 4  ⬜⬜⬜⬜⬜⬜   0/6          ❌ Not yet      —
-Wk 5  ⬜⬜⬜⬜⬜⬜   0/6          ❌ Not yet      —
-Wk 6  ⬜⬜⬜⬜⬜⬜   0/6          ❌ Not yet      —
-Wk 7  ⬜⬜⬜⬜⬜⬜   0/6          ❌ Not yet      —
-Wk 8  ⬜⬜⬜⬜⬜⬜   0/6+2        ❌ Not yet      —
+PHASE  STATUS       DAYS DONE    GATE PASSED    CONFIDENCE
+─────  ──────────   ─────────    ───────────    ─────────────────
+PreR   Git+Terminal ✅✅✅⬜⬜⬜  3/6 ✅ Pass    ★★★★☆ Ready for Wk1
+Wk 1   ⬜⬜⬜⬜⬜⬜   0/6          ❌ Not yet      ★★★★★ Start Day 1
+Wk 2   ⬜⬜⬜⬜⬜⬜   0/6          ❌ Not yet      —
+Wk 3   ⬜⬜⬜⬜⬜⬜   0/6          ❌ Not yet      —
+Wk 4   ⬜⬜⬜⬜⬜⬜   0/6          ❌ Not yet      —
+Wk 5   ⬜⬜⬜⬜⬜⬜   0/6          ❌ Not yet      —
+Wk 6   ⬜⬜⬜⬜⬜⬜   0/6          ❌ Not yet      —
+Wk 7   ⬜⬜⬜⬜⬜⬜   0/6          ❌ Not yet      —
+Wk 8   ⬜⬜⬜⬜⬜⬜   0/6+2        ❌ Not yet      —
 ```
 
 Each day completed = ⬛. Each day missed/weak = ⬜ with note.
@@ -238,16 +239,17 @@ Each day completed = ⬛. Each day missed/weak = ⬜ with note.
 ### Gate Pass/Fail History
 
 ```
-WEEK  MOCK RESULT   GATE?   ACTIONS
-────  ────────────  ─────   ─────────────────────────────────
-Wk 1  —             ❌      Not taken yet
-Wk 2  —             ❌      Not taken yet
-Wk 3  —             ❌      Not taken yet
-Wk 4  —             ❌      Not taken yet
-Wk 5  —             ❌      Not taken yet
-Wk 6  —             ❌      Not taken yet
-Wk 7  —             ❌      Not taken yet
-Wk 8  —             ❌      Not taken yet
+PHASE  MOCK RESULT                 GATE?   ACTIONS
+─────  ───────────────────────────  ─────   ─────────────────────────────────────
+PreR   Phase 1: Git+Terminal ✅    ✅ Pass Steps 1-3 complete. Ready for Wk1 Day 1
+Wk 1   —                            ❌      Not taken yet
+Wk 2   —                            ❌      Not taken yet
+Wk 3   —                            ❌      Not taken yet
+Wk 4   —                            ❌      Not taken yet
+Wk 5   —                            ❌      Not taken yet
+Wk 6   —                            ❌      Not taken yet
+Wk 7   —                            ❌      Not taken yet
+Wk 8   —                            ❌      Not taken yet
 ```
 
 **Updated by Teacher after every session and every Sunday mock.**
@@ -258,21 +260,13 @@ Wk 8  —             ❌      Not taken yet
 PHASE 1 — GIT CLI + TERMINAL FOUNDATIONS (Pre-Day 1)
 DAY  DRILL QUESTION                           CONFIDENCE (1-5)
 ───  ───────────────────────────────────────  ─────────────────
-P1   What does `ls -la` tell you?             ★☆☆☆☆ Not attempted
-P1   Explain git staging vs commit            ★☆☆☆☆ Not attempted
-P1   What does `git remote add` do?           ★☆☆☆☆ Not attempted
-P1   Difference between symlink and file?     ★☆☆☆☆ Not attempted
-P1   How to undo a commit?                    ★☆☆☆☆ Not attempted
-
-WEEK 1 — TERRAFORM + AZURE FOUNDATIONS
-DAY  DRILL QUESTION                           CONFIDENCE (1-5)
-───  ───────────────────────────────────────  ─────────────────
-1    Explain Terraform state in 30 seconds    ★☆☆☆☆ Not attempted
-2    Design VNet for 3-tier app               ★☆☆☆☆ Not attempted
-3    Handle environment differences in TF     ★☆☆☆☆ Not attempted
-4    How do you secure Azure?                 ★☆☆☆☆ Not attempted
-5    Why remote state? State locking?         ★☆☆☆☆ Not attempted
-6    Git branching strategy? Merge vs rebase? ★☆☆☆☆ Not attempted
+P1   What does `ls -la` tell you?             ★★★★☆ ✅ Covered
+P1   Explain git staging vs commit            ★★★★☆ ✅ Covered
+P1   What does `git remote add` do?           ★★★★☆ ✅ Covered
+P1   What is `git reset --soft` vs --hard?    ★★★☆☆ ✅ Covered (drill next)
+P1   How to undo a commit?                    ★★★☆☆ ✅ Covered (drill next)
+P1   What is `git checkout --orphan`?         ★★★☆☆ ✅ Covered (drill next)
+P1   GitHub Push Protection — what is it?     ★★★★☆ ✅ Covered
 ```
 
 **Each drill gets a confidence score. < 3 = re-do before moving on.**
@@ -295,7 +289,7 @@ Every session, Teacher:
 ## The Portfolio Project (Build Across All 8 Weeks)
 
 ```
-GitHub: soham-devops/infrastructure-pipeline
+GitHub: github.com/som-d/AzureVM/panther/
 ├── .github/workflows/
 │   ├── terraform-plan.yml          # Plan on PR
 │   ├── terraform-apply.yml         # Apply on merge to main

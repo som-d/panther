@@ -6,7 +6,7 @@
                           │    Current: 3 YOE, ~3 LPA @ Wipro                │
                           │    Plan: 8 weeks × 14h/week = 112h total         │
                           │    Select "Teacher" from agent list               │
-                          │    Portfolio: soham-devops/infrastructure-pipeline│
+                           │    Portfolio: github.com/som-d/AzureVM/panther/     │
                           └───────────────────────┬───────────────────────────┘
                                                   │
         ┌──────────────────────┬──────────────────┼──────────────────┬──────────────────────┐
@@ -75,29 +75,37 @@
 ### Weekly Gate Status
 
 ```
-WEEK  DAYS COMPLETE  GATE PASSED?  CONFIDENCE  NEXT ACTION
-────  ─────────────  ────────────  ──────────  ─────────────────────────
-Wk 1   ⬜⬜⬜⬜⬜⬜    ❌ Not yet    ★★★★★    Start Day 1
-Wk 2   ⬜⬜⬜⬜⬜⬜    ❌ Not yet    ★★★★★    --
-Wk 3   ⬜⬜⬜⬜⬜⬜    ❌ Not yet    ★★★★★    --
-Wk 4   ⬜⬜⬜⬜⬜⬜    ❌ Not yet    ★★★★★    --
-Wk 5   ⬜⬜⬜⬜⬜⬜    ❌ Not yet    ★★★★★    --
-Wk 6   ⬜⬜⬜⬜⬜⬜    ❌ Not yet    ★★★★★    --
-Wk 7   ⬜⬜⬜⬜⬜⬜    ❌ Not yet    ★★★★★    --
-Wk 8   ⬜⬜⬜⬜⬜⬜    ❌ Not yet    ★★★★★    --
+PHASE       DAYS COMPLETE   GATE PASSED?  CONFIDENCE  NEXT ACTION
+───────     ─────────────   ────────────  ──────────  ───────────────────────────────
+Pre-Req     ✅✅✅⬜⬜⬜    ✅ Yes        ★★★★☆    Phase 1 Steps 1-3 done
+(repo+git)                                                                          
+Wk 1         ⬜⬜⬜⬜⬜⬜    ❌ Not yet    ★★★★★    Start Terraform Day 1
+Wk 2         ⬜⬜⬜⬜⬜⬜    ❌ Not yet    ★★★★★    --
+Wk 3         ⬜⬜⬜⬜⬜⬜    ❌ Not yet    ★★★★★    --
+Wk 4         ⬜⬜⬜⬜⬜⬜    ❌ Not yet    ★★★★★    --
+Wk 5         ⬜⬜⬜⬜⬜⬜    ❌ Not yet    ★★★★★    --
+Wk 6         ⬜⬜⬜⬜⬜⬜    ❌ Not yet    ★★★★★    --
+Wk 7         ⬜⬜⬜⬜⬜⬜    ❌ Not yet    ★★★★★    --
+Wk 8         ⬜⬜⬜⬜⬜⬜    ❌ Not yet    ★★★★★    --
 ```
 
 ### Daily Confidence Tracker
 
 ```
-DAY  TOPIC                        CONFIDENCE  GATE  READY FOR NEXT?
-───  ───────────────────────────  ──────────  ────  ─────────────────
-1    Terraform State + HCL        ★☆☆☆☆       ❌   Not yet (start here)
-2    Azure VNet + Subnets + CIDR  ★☆☆☆☆       ❌   --
-3    Variables + Outputs + Locals ★☆☆☆☆       ❌   --
-4    Azure NSG + Security         ★☆☆☆☆       ❌   --
-5    Remote State + Locking       ★☆☆☆☆       ❌   --
-6    Git Branching + PR Workflow  ★☆☆☆☆       ❌   --
+DAY  TOPIC                               CONFIDENCE  GATE  READY FOR NEXT?
+───  ───────────────────────────────────  ──────────  ────  ──────────────────────────────
+P1   Phase 1: Git+Terminal Foundations   ★★★★☆       ✅   Yes → Start Week 1
+     (pwd, ls, mkdir, nano, scripts,
+      git init, commit, push, reset,
+      --orphan, --force, push protection,
+      nested repo cleanup, .gitignore)
+────────────────────────────────────────────────────────────────────────────────────────
+1    Terraform State + HCL               ★☆☆☆☆       ❌   Next up!
+2    Azure VNet + Subnets + CIDR         ★☆☆☆☆       ❌   --
+3    Variables + Outputs + Locals        ★☆☆☆☆       ❌   --
+4    Azure NSG + Security                ★☆☆☆☆       ❌   --
+5    Remote State + Locking              ★☆☆☆☆       ❌   --
+6    Git Branching + PR Workflow         ★☆☆☆☆       ❌   --
 ```
 
 ### How Gates Work
@@ -133,6 +141,7 @@ Feeling overwhelmed           Take 1 day off. Then re-do last passed day.
 ## Mock Interview Progression
 
 ```
+MOCK 0    Pre-Req ─── Git+Terminal foundations set         ✅⬜⬜⬜⬜⬜⬜⬜
 MOCK 1    Week 1  ─── Rough, hesitant, "ums" and pauses    ⬜
 MOCK 2    Week 2  ─── Better structure, still searching    ⬜⬜
 MOCK 3    Week 3  ─── Pipeline walkthrough getting smooth  ⬜⬜⬜
@@ -190,6 +199,8 @@ AFTER EACH SESSION:
 ## Key Milestones
 
 ```
+PRE-REQ DONE:  Git+Terminal foundations ✅ — 20+ commands, git reset/amend/orphan/force,
+               push protection, nested repo cleanup, .gitignore, health-check script
 END OF WEEK 2:  Can deploy a complete 3-tier Azure infra with Terraform from scratch
 END OF WEEK 4:  Full CI/CD pipeline working. Docker + Terraform + Security integrated.
 END OF WEEK 6:  All 12 tools integrated into one pipeline. LM stories polished.
