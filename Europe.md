@@ -1,865 +1,987 @@
 # Mom + Dad + Sister — Europe Trip 2026
 
-> The Complete 20-Day, 9-Country Itinerary
+> The Complete 84-Day Slow Travel Itinerary
 >
 > **For**: Mom & Dad (first international trip + retirement celebration, flying from India)
 > **With**: Sister (lives in Covilhã, Portugal — your local host and guide)
 > **Budget**: ₹4,00,000 total for ALL 3 people
-> **Style**: Pure vegetarian family. Zero flights during road trip. 2 overnight ferries (family cabin together). Land buses and trains. August warmth.
+> **Diet**: Pure vegetarian (no meat, no fish, **no eggs**)
+> **Style**: Traditional Indian family. Safe neighborhoods. Home-cooked meals. Slow pace. All famous places included.
+> **Countries**: Portugal, Spain, Italy (+ Vatican)
 
 ---
 
 ## TABLE OF CONTENTS
 
-1. [Essential Planning Info](#1-essential-planning-info)
+1. [The Big Picture — 84 Day Structure](#1-the-big-picture--84-day-structure)
 2. [Visa & Documents Checklist](#2-visa--documents-checklist)
 3. [Packing List for Mom & Dad](#3-packing-list-for-mom--dad)
 4. [Budget Summary](#4-budget-summary)
-5. [The Route Map](#5-the-route-map)
-6. [The Two Ferry Experiences](#6-the-two-ferry-experiences)
-7. [Full Daily Itinerary](#7-full-daily-itinerary)
-   - [Phase 1: Covilhã Rest (Days 1-3)](#phase-1-covilhã-rest-days-1-3)
-   - [Phase 2: The Road Trip (Days 4-14)](#phase-2-the-road-trip-days-4-14)
-   - [Phase 3: Covilhã Rest & Fly Home (Days 15-20)](#phase-3-covilhã-rest--fly-home-days-15-20)
-8. [Dad's Country Count — 9 Countries](#8-dads-country-count--9-countries)
-9. [Money-Saving Tips](#9-money-saving-tips)
-10. [Safety & Emergency Info](#10-safety--emergency-info)
-11. [Apps to Download Before You Go](#11-apps-to-download-before-you-go)
+5. [Route Map](#5-route-map)
+6. [Full 84-Day Itinerary](#6-full-84-day-itinerary)
+   - [Phase 0: Covilhã Arrival + Rest (Days 1-10)](#phase-0-covilhã-arrival--rest-days-1-10)
+   - [Trip 1: Spain + Italy (Days 11-30)](#trip-1-spain--italy-days-11-30)
+   - [Porto + Coimbra (Days 31-36)](#porto--coimbra-days-31-36)
+   - [Rest: Covilhã (Days 37-55)](#rest-covilhã-days-37-55)
+   - [Trip 2: Portugal South (Days 56-74)](#trip-2-portugal-south-days-56-74)
+   - [Fly Home (Days 75-84)](#fly-home-days-75-84)
+7. [Complete Famous Places Checklist — Don't Miss a Thing!](#7-complete-famous-places-checklist--dont-miss-a-thing)
+8. [Pure Veg Food Guide — What to Eat Where](#8-pure-veg-food-guide--what-to-eat-where)
+9. [Safety & Emergency Info](#9-safety--emergency-info)
+10. [Apps to Download](#10-apps-to-download)
 
 ---
 
-## 1. ESSENTIAL PLANNING INFO
+## 1. THE BIG PICTURE — 84 Day Structure
 
-### Travel Month: Late August (Recommended)
+### The Hub-and-Spoke Model
 
-| Month | Temp | Crowds | Prices | How Parents Feel |
-|-------|------|--------|--------|-----------------|
-| **Late August (20-31)** | **28-35°C** | Moderate | 80-100% of peak | **Like Indian summer. Comfortable for parents.** |
-| September 1st week | 22-28°C | Low | 50-70% of peak | Pleasant for Europeans but cold mornings (8-12°C) |
-
-> **Recommendation: Late August.** Your parents will feel the heat is like India. No special cold-weather gear needed. Just one light shawl each for bus AC. The warmth makes evening walks, ferry decks, and sightseeing comfortable. Prices are slightly higher than September but well within budget.
-
-### Timeline Structure
+Sister's apartment in Covilhã is your **free home base**. You go on trips, explore slowly, return to rest at no cost.
 
 ```
- Days 1-3  │  Covilhã, Portugal (Sister's apt — FREE)  │  Rest, recover jet lag, prepare
- Days 4-14 │  ROAD TRIP — 9 countries                   │  Buses, trains, 2 ferries
- Days 15-17│  Covilhã, Portugal (Sister's apt — FREE)  │  Rest, share stories
- Days 18-20│  Lisbon → Fly home to India                │  Last sightseeing + return
+                        ┌─────────────────────┐
+                        │    COVILHÃ, PORTUGAL│
+                        │   Sister's Apartment│
+                        │   🏠 FREE HOME BASE │
+                        └──────────┬──────────┘
+         ┌────────────────────────┼────────────────────────┐
+         ▼                        ▼                        ▼
+    TRIP 1:                 PORTUGAL NORTH:           TRIP 2:
+    SPAIN → ITALY           Porto + Coimbra           PORTUGAL SOUTH
+    18-20 days              (on flight back)          Lisbon + Sintra
+    (big adventure,         5 days                    + Algarve
+     do first!)                                       Ends in Lisbon →
+                                                      Fly home ✈️
 ```
+
+### Timeline
+
+| Phase | Days | What | Cost for 3 |
+|-------|------|------|-----------|
+| **Phase 0** | 1-10 | Arrive Lisbon → Covilhã. Recover jet lag. **FREE at sister's.** | Groceries only |
+| **🟢 Trip 1** | 11-28 | **SPAIN → ITALY** — Madrid, Seville, Granada, Barcelona 🚢 Genoa, Cinque Terre, Florence, Rome + Vatican | ~₹1,45,000 |
+| **✈️ 1 flight** | 29 | Rome → Porto (2.5h) — ends Trip 1 | ~₹14,000 |
+| **Porto+Coimbra** | 30-35 | Explore Porto + Coimbra on the way back to Covilhã | ~₹32,000 |
+| **Rest** | 36-55 | **COVILHÃ — FREE** (20 days). Rest. Cook. Share photos. Laundry. | Groceries only |
+| **🟢 Trip 2** | 56-73 | **PORTUGAL SOUTH** — Lisbon, Sintra, Algarve. Ends in Lisbon. | ~₹65,000 |
+| **Fly Home** | 74-84 | Lisbon ✈️ India. Trip complete. | Included in flights |
+
+**Travel days**: ~38 days
+**FREE at Covilhã**: ~36 days
+**Total**: ~74 days (you have 84 on visa = extra 10 days free rest if wanted)
+
+---
 
 ### Group Profile
 
 | Person | Role | What Matters |
 |--------|------|-------------|
-| **Dad** | Explorer, storyteller | Wants maximum countries, photos, stories for friends. Loves history, architecture. |
-| **Mom** | Comfort-keeper | Dislikes planes. Enjoys scenic beauty, local markets, cooking with family. |
-| **Sister** | Local guide & organizer | Lives in Covilhã. Handles bookings, navigation, translation. Makes everything possible. |
+| **Dad** | Explorer | Wants maximum famous places, photos, stories for friends. Loves history, architecture. |
+| **Mom** | Home-maker | Dislikes planes (tolerates 1 short flight). Enjoys cooking with family, markets, scenic beauty. |
+| **Sister** | Guide & organizer | Lives in Covilhã. Handles bookings, navigation, translation. Travels with parents for Trip 1, stays back during Trip 2. |
 
-### Important Note About This Family
+### Important Family Notes
 
-- **Pure vegetarian** — No non-veg food anywhere. Cook at hostels. Try local veg dishes when eating out (20% of meals).
-- **Traditional Indian family** — Simple needs. Safe, clean places. Togetherness matters more than luxury.
-- **Not comfortable with backpacker party scene** — Quiet hostels, family-friendly areas, private room for all 3.
-- **August heat is fine** — They're used to Indian summers. The warmth is a comfort, not a problem.
+- **Pure vegetarian** — No meat, no fish, **no eggs**. Cook 90% of meals at hostels in Indian-style (pasta, rice, vegetables, dal-style soups, bread, cheese). Try pure-veg local dishes for the 10% eating out.
+- **Traditional Indian family** — No party areas. No alcohol scenes. Safe neighborhoods. Quiet evenings. Private rooms only (not dorms).
+- **Togetherness matters** — All 3 travel together. Nobody sleeps separately on ferries/trains. Everyone gets the same comfort level.
+- **Slow pace** — 3-4 nights per city minimum. No rushing. Sit at cafes. Walk slowly. Take breaks.
+- **84 day visa** — If budget finishes early, just stay at sister's FREE. The trip doesn't end — you just stop spending.
 
 ---
 
 ## 2. VISA & DOCUMENTS CHECKLIST
 
-### Schengen Visa for Mom & Dad (Sister is exempt — she lives in Portugal)
+### Schengen Visa for Mom & Dad
 
-Apply **8-10 weeks before travel** (peak season = longer processing).
+Apply **8-10 weeks before travel**. Since you're staying 84 days, they need a visa valid for the full duration.
 
 | Item | Details | Cost |
 |------|---------|------|
-| Schengen visa fee | €90/person (~₹8,200) | ~₹16,400 for both |
-| VFS/TLS service fee | ~₹2,500/person | ~₹5,000 |
-| Travel insurance | €30,000 minimum coverage, ~₹2,000/person | ~₹4,000 |
-| Photos | 2 recent passport-style | ~₹600 |
-| **Total visa cost** | | **~₹26,000** |
+| Schengen visa fee | €90/person | ₹16,400 for both |
+| VFS/TLS service fee | ~₹2,500/person | ₹5,000 |
+| Travel insurance (90 day coverage) | ~₹2,500/person | ₹5,000 |
+| Photos + misc | | ₹600 |
+| **Total visa cost** | | **~₹27,000** |
 
-### Documents to Submit
+### Key Documents
 
-- Passport (valid 3+ months beyond return date, 2+ blank pages)
-- Filled visa application form
-- Travel insurance certificate
-- Round-trip flight booking (not fully paid — just a reservation)
-- Sister's invitation letter + her Portuguese residence proof
-- Bank statements (last 6 months, sufficient balance)
-- Leave approval letter (if employed)
-- Travel itinerary printout (this document!)
+- Passports (valid 3+ months beyond return, 2+ blank pages)
+- Sister's invitation letter + Portuguese residence card copy
+- Round-trip flight booking (India↔Lisbon)
+- Travel insurance (€30,000 minimum, Schengen-wide)
+- Bank statements (last 6 months)
+- Proof of accommodation (sister's address + hostel bookings for planned travel days)
+- Travel itinerary (this document!)
 
-### Which Country to Apply To?
+### Entry Without Visa (Non-Schengen Countries)
 
-Apply to the **country of longest continuous stay** in the Schengen zone. Likely **Spain** or **Italy** depending on final dates. Sister can help determine.
-
-### Entry Without Visa (for Balkan countries)
-
-With a used (stamped) multi-entry Schengen visa, Mom & Dad enter these countries **visa-free**:
-
-- Albania — 90 days
-- North Macedonia — 15 days
-- Serbia — 90 days
-- Bulgaria — Accepts Schengen visas for entry
-- Romania — Same as Bulgaria
-
-### Documents to Keep Handy (Physical Copies)
-
-- Passport copies (2 each)
-- Visa copies
-- Travel insurance certificate
-- Sister's address in Covilhã
-- Emergency contact numbers
-- Flight bookings
-- This itinerary printout
+Romania/Bulgaria not needed on this trip. All countries (Portugal, Spain, Italy) are Schengen — visa works everywhere.
 
 ---
 
 ## 3. PACKING LIST FOR MOM & DAD
 
-### Carry-on Backpacks Only (No Checked Bags!)
+**84 days is long. But you carry light.** Sister's apartment has storage. You can leave things there between trips.
 
-**The rule**: Each person carries one small backpack (30-40L). That's it. Everything else stays at sister's apartment in Covilhã.
+### Mom + Dad — One Small Backpack Each (30-40L, ~6-7 kg)
 
-### Mom's Backpack (~5 kg)
+| Category | Items | Notes |
+|----------|-------|-------|
+| **Clothes** | 5 kurtas/t-shirts, 3 long pants, 5 underwear, 4 pairs socks | Wash at sinks. Dries in August heat overnight. |
+| **Outer** | 1 light shawl/pashmina each | For bus AC only. In August this is ALL you need. |
+| **Shoes** | 1 pair comfortable walking shoes (BROKEN IN — this is #1 important!) + 1 pair sandals/flip-flops | Good shoes = good trip. |
+| **Toiletries** | Shampoo, soap, toothbrush, toothpaste, comb, sunscreen, mosquito repellent | Basic. Refill at supermarkets. |
+| **Medicines** | Paracetamol, antacid, ORS packets, band-aids, motion sickness pills, any regular medication for 90 days | Don't forget regular meds! |
+| **Documents** | Passport, visa copies, insurance printout, tickets | Keep in ziplock bag inside backpack |
+| **Other** | Reusable water bottle, small lock for hostel lockers, wet wipes, tissues | |
 
-| Category | Items |
-|----------|-------|
-| **Clothes** | 5 kurtas/t-shirts, 2 long pants/leggings, 1 light dupatta/scarf, 4-5 pairs underwear + socks, 1 pair comfortable walking shoes (BROKEN IN — non-negotiable), 1 pair sandals/flip-flops |
-| **Essentials** | Small shampoo, soap, toothbrush, toothpaste, comb, basic medicines, sunscreen |
-| **One extra** | 1 light shawl/pashmina (for bus AC and ferry wind) |
-| **Documents** | Passport, visa copy, insurance, tickets printout |
-
-### Dad's Backpack (~5 kg)
-
-| Category | Items |
-|----------|-------|
-| **Clothes** | 5 t-shirts, 2 long pants, 4-5 pairs underwear + socks, 1 pair comfortable walking shoes (BROKEN IN), 1 pair sandals |
-| **Essentials** | Toothbrush, toothpaste, comb, basic medicines |
-| **One extra** | 1 light shawl (for bus AC — wrap around like a muffler) |
-| **Documents** | Passport, visa copy, insurance, tickets printout |
-
-### Sister's Backpack (~7-8 kg — carries shared items)
+### Sister's Backpack (Carries Shared Items)
 
 | Item | Why |
 |------|-----|
-| Power bank (20,000mAh) | Charge all 3 phones |
-| EU adapter + small power strip | Charge everything from one plug |
-| Small first-aid kit | Paracetamol, antacid, ORS, band-aids, motion sickness pills |
-| Wet wipes + tissues | Public toilets often don't have paper |
-| Reusable water bottles × 3 | Save €2/day each by refilling at hostels |
-| Small locks for hostel lockers | 3 small padlocks |
-| Ziplock bags | Keep documents dry |
+| Power bank 20,000mAh | Charge all 3 phones |
+| EU adapter + small power strip | Everyone charges from one plug |
+| Small first-aid kit | For the family |
+| Reusable water bottles × 3 | Refill at hostels — saves €2/day each |
+| Small lockable padlocks × 3 | Hostel lockers |
+| Ziplock bags | Protect documents |
+| Chai/tea packets + small spice box | Cook familiar food at hostels |
 
-### What NOT to carry
+### What NOT to Carry
 
-- ❌ Heavy jacket / sweater (August is warm. One light shawl is enough.)
-- ❌ More than 5 sets of clothes (Wash at hostel sinks. Clothes dry overnight in August heat.)
-- ❌ Laptop / tablet (Phone is enough. Too heavy.)
-- ❌ Hair dryer / straightener (Hostels have or skip it.)
-- ❌ Guidebooks (This document + Google Maps is enough.)
+- ❌ Heavy jacket/sweater (August is 30°C+. One shawl is enough.)
+- ❌ Egg/paneer/Indian groceries (buy fresh vegetables in each city)
+- ❌ Laptop or tablet (phones are enough)
+- ❌ More than 2 pairs shoes (too heavy)
+- ❌ Hair dryer, straightener, extra electronics
 
-> **Cold weather note**: In late August, the only cold you'll face is **bus AC** (16°C). One light shawl each is enough. Wrap it around shoulders on the bus. In Balkan mornings (6-7 AM), it's 18-22°C — pleasant, not cold. By 9 AM it's 25°C+.
+> **Laundry strategy**: Most hostels have a sink. Buy a small packet of detergent (€1 at any supermarket). Wash clothes in the evening. In August heat, they dry by morning. This is how 5 pairs of clothes lasts 84 days.
 
 ---
 
 ## 4. BUDGET SUMMARY
 
-### Grand Total: ~₹3,50,000 / €3,850 (Under ₹4L by ₹50,000!)
+### Grand Total: ~₹3,90,000 / €4,290 (Under ₹4L ✅)
 
-| Category | ₹ | € | Who pays |
-|----------|---|----|----------|
-| **Flights India↔Lisbon** (Mom & Dad) | ₹1,20,000 | €1,320 | M&D |
-| **Schengen visa + insurance** (M&D) | ₹26,000 | €286 | M&D |
-| **Visa photos + misc** | ₹3,000 | €33 | M&D |
-| **Flight: Belgrade→Lisbon** (All 3) | ₹30,000 | €330 | Split |
-| **Transport** (buses, trains, 2 ferries) | ₹62,000 | €682 | Split |
-| **Hostels** (7 nights, private rooms) | ₹25,000 | €275 | Split |
-| **Food** (mostly home-cooked at hostels) | ₹22,750 | €250 | Split |
-| **Sights & activities** (mostly free) | ₹7,280 | €80 | Split |
-| **Covilhã rest days** (groceries) | ₹10,000 | €110 | Split |
-| **Lisbon last day** (budget hotel near airport) | ₹5,500 | €60 | Split |
-| **Extra cash / buffer** | ₹38,500 | €424 | Split |
-| **TOTAL** | **~₹3,50,000** | **~€3,850** | |
+| Category | ₹ | € | Notes |
+|----------|---|----|-------|
+| **✈️ Flights India↔Lisbon** (Mom & Dad) | ₹1,20,000 | €1,320 | Multi-city or round-trip, book 3+ months ahead |
+| **🛂 Schengen visa + insurance** | ₹27,000 | €300 | Apply 8-10 weeks before |
+| **🟢 Trip 1: Spain + Italy** (18 days) | ₹1,45,000 | €1,595 | Transport, hostels, food, sights for 3 |
+| **✈️ Flight Rome → Porto** (all 3) | ₹14,000 | €150 | One 2.5h flight — ends Trip 1 |
+| **Porto + Coimbra** (5 days) | ₹32,000 | €350 | On way back to Covilhã |
+| **Rest at Covilhã** (~36 days groceries) | ₹18,000 | €200 | FREE stay, just food cost |
+| **🟢 Trip 2: Portugal South** (18 days) | ₹65,000 | €715 | Lisbon, Sintra, Algarve for 3 |
+| **Lisbon last days + extras** | ₹5,000 | €55 | Buffer for airport, last meals |
+| **🪙 Unallocated buffer** | **₹10,000** | €110 | For surprises or extend rest days |
+| **GRAND TOTAL** | **~₹3,90,000** | **~€4,290** | **✅ Under ₹4L** |
 
-### Per-Person Breakdown
+### Simple Per-Day Rule
 
-| Person | Cost (₹) | What's included |
-|--------|----------|----------------|
-| **Mom** | ~₹1,38,000 | Flights ₹60K + visa ₹13K + ground share ₹65K |
-| **Dad** | ~₹1,38,000 | Flights ₹60K + visa ₹13K + ground share ₹65K |
-| **Sister** | ~₹74,000 | Ground share only (no flights, no visa) |
-| **All 3 combined** | **~₹3,50,000** | **✅ ₹50,000 under the ₹4L budget!** |
+| Situation | Daily cost for ALL 3 | Monthly for ALL 3 |
+|-----------|---------------------|-------------------|
+| **Travel days** (hostel + transport + food) | ~₹5,500-6,500 | ~₹1,65,000-1,95,000 |
+| **Rest days at Covilhã** (groceries only, FREE stay) | ~₹500 | ~₹15,000 |
 
-### Budget Philosophy
-
-> **Cook 80% of meals at hostels.** Fresh vegetables, pasta, rice, dal-style soups from local markets. It's cheaper, healthier, and your parents will prefer Indian-style home cooking. The 20% eating out is for trying local vegetarian dishes: Spanish tortilla (egg+potato), Italian pasta al pomodoro, Albanian byrek me gjizë (cheese pie), Bulgarian shopska salad.
+> **Safety net**: If budget runs low, just stop traveling and stay at sister's place FREE. Enjoy Covilhã life. Cook at home. Walk in the mountains. Zero daily cost except groceries.
 
 ---
 
-## 5. THE ROUTE MAP
+## 5. ROUTE MAP
 
 ```
-                    ┌─────────────────────┐
-                    │  COVILHÃ, PORTUGAL  │  ← START (Sister's home — FREE)
-                    └──────────┬──────────┘
-                               │ Bus 8h, €28 (day bus)
-                    ┌──────────▼──────────┐
-                    │      MADRID, SPAIN  │  🏠 Hostel night
-                    └──────────┬──────────┘
-                               │ AVE Train 2.5h, €50 (experience!)
-                    ┌──────────▼──────────┐
-                    │   BARCELONA, SPAIN  │  🏠 Hostel night
-                    └──────────┬──────────┘
-                               │ 🚢 Ferry 20h (4-berth cabin, all 3)
-                    ┌──────────▼──────────┐
-                    │    GENOA, ITALY     │  ← SLEPT ON FERRY ✅
-                    └──────────┬──────────┘
-                               │ Train 5h, €40
-                    ┌──────────▼──────────┐
-                    │  ROME + VATICAN 🏛️  │  🏠 Hostel night
-                    └──────────┬──────────┘
-                               │ Regional train 4h, €28
-                    ┌──────────▼──────────┐
-                    │     BARI, ITALY     │
-                    └──────────┬──────────┘
-                               │ 🚢 Ferry 10h (4-berth cabin, all 3)
-                    ┌──────────▼──────────┐
-                    │    ALBANIA 🇦🇱      │  ← SLEPT ON FERRY ✅
-                    └──────────┬──────────┘
-                               │ Bus 5h, €18 (day bus)
-                    ┌──────────▼──────────┐
-                    │ N. MACEDONIA 🇲🇰    │  🏠 Hostel night
-                    └──────────┬──────────┘
-                               │ Bus 3h + 4h, €30 (day bus)
-                    ┌──────────▼──────────┐
-                    │   BULGARIA 🇧🇬      │  🏠 Hostel night
-                    └──────────┬──────────┘
-                               │ Bus 6h, €18 (day bus)
-                    ┌──────────▼──────────┐
-                    │   ROMANIA 🇷🇴       │  🏠 Hostel night
-                    └──────────┬──────────┘
-                               │ Bus 6h, €18 (day bus)
-                    ┌──────────▼──────────┐
-                    │   SERBIA 🇷🇸        │  🏠 Hostel night
-                    └──────────┬──────────┘
-                               │ ✈️ Flight 3h, €55
-                    ┌──────────▼──────────┐
-                    │   LISBON, PORTUGAL  │
-                    └──────────┬──────────┘
-                               │ Train 2.5h, €18
-                    ┌──────────▼──────────┐
-                    │  COVILHÃ 🏠 FREE!   │  ← REST + FLY HOME
-                    └─────────────────────┘
+                    ┌─────────────────────────────┐
+                    │  LISBON AIRPORT 🛬           │
+                    │  Mom & Dad arrive from India │
+                    └──────────────┬──────────────┘
+                                   │ 🚄 Train 2.5h, €18
+                    ┌──────────────▼──────────────┐
+                    │  COVILHÃ 🏠 FREE!            │
+                    │  Sister's apartment          │
+                    │  Phase 0: Rest 10 days       │
+                    └──────────────┬──────────────┘
+                                   │ 🚌 Bus 8h, €28
+                    ┌──────────────▼──────────────┐
+                    │  MADRID 🇪🇸     3 nights     │
+                    └──────────────┬──────────────┘
+                                   │ 🚆 Train 2.5h
+                    ┌──────────────▼──────────────┐
+                    │  SEVILLE 🇪🇸    2 nights     │
+                    └──────────────┬──────────────┘
+                                   │ 🚌 Bus 3h
+                    ┌──────────────▼──────────────┐
+                    │  GRANADA 🇪🇸    2 nights     │
+                    │  🏆 ALHAMBRA (book ahead!)   │
+                    └──────────────┬──────────────┘
+                                   │ 🚌 Bus 6h
+                    ┌──────────────▼──────────────┐
+                    │  BARCELONA 🇪🇸  3 nights     │
+                    │  🏆 Sagrada Familia (outside)│
+                    └──────────────┬──────────────┘
+                                   │ 🚢 FERRY 20h
+                                   │ 4-berth cabin (all 3)
+                    ┌──────────────▼──────────────┐
+                    │  GENOA 🇮🇹 → Cinque Terre    │
+                    │  🚆 1 night                  │
+                    └──────────────┬──────────────┘
+                                   │ 🚆 Train 2.5h
+                    ┌──────────────▼──────────────┐
+                    │  FLORENCE 🇮🇹   2 nights     │
+                    │  🏆 Duomo, Ponte Vecchio,    │
+                    │  Michelangelo viewpoint      │
+                    └──────────────┬──────────────┘
+                                   │ 🚆 Train 1.5h
+                    ┌──────────────▼──────────────┐
+                    │  ROME + VATICAN 🇮🇹 4 nights │
+                    │  🏆 Colosseum, Trevi,        │
+                    │  St. Peter's FREE            │
+                    └──────────────┬──────────────┘
+                                   │ ✈️ FLIGHT 2.5h, €50
+                    ┌──────────────▼──────────────┐
+                    │  PORTO 🇵🇹      3-4 nights   │
+                    │  🏆 Dom Luís Bridge,         │
+                    │  Livraria Lello              │
+                    └──────────────┬──────────────┘
+                                   │ 🚌 Bus 1.5h
+                    ┌──────────────▼──────────────┐
+                    │  COIMBRA 🇵🇹    2 nights     │
+                    │  🏆 University + Library    │
+                    └──────────────┬──────────────┘
+                                   │ 🚌 Bus 1.5h
+                    ┌──────────────▼──────────────┐
+                    │  ╔══════════════════════╗   │
+                    │  ║ COVILHÃ 🏠 FREE REST ║   │
+                    │  ║ 20 days of nothing!  ║   │
+                    │  ╚══════════════════════╝   │
+                    └──────────────┬──────────────┘
+                                   │ 🚄 Train 2.5h
+                    ┌──────────────▼──────────────┐
+                    │  LISBON 🇵🇹     7 nights     │
+                    │  🏆 Belém, Alfama, Tram 28  │
+                    └──────────────┬──────────────┘
+                                   │ 🚌 Day trip
+                    ┌──────────────▼──────────────┐
+                    │  SINTRA 🏰    1 day trip    │
+                    │  🏆 Pena Palace             │
+                    └──────────────┬──────────────┘
+                                   │ 🚌 Bus 3h
+                    ┌──────────────▼──────────────┐
+                    │  ALGARVE 🏖️   4 nights      │
+                    │  🏆 Benagil Cave, Lagos     │
+                    └──────────────┬──────────────┘
+                                   │ 🚌 Bus 3h
+                    ┌──────────────▼──────────────┐
+                    │  LISBON 👋    2-3 nights    │
+                    │  Last days → ✈️ Fly home    │
+                    └─────────────────────────────┘
 ```
 
-**9 countries. 11 days of travel. 2 ferry sleeps (all 3 in cabin together). 1 smart return flight. Day buses only.**
+---
+
+## 6. FULL 84-DAY ITINERARY
 
 ---
 
-## 6. THE TWO FERRY EXPERIENCES
-
-> Both ferries use **4-berth cabins for ALL 3 together**. Mom and Dad take lower bunks. Sister takes an upper bunk. You eat together, sleep together, arrive together. That's how family travels.
-
-### Ferry 1: Barcelona → Genoa (Grandi Navi Veloci)
-
-| Detail | Info |
-|--------|------|
-| **Duration** | 20 hours (depart 9 PM, arrive 5 PM next day) |
-| **Type** | Large car ferry — 7 decks, restaurants, shops, sun deck |
-| **Cabin** | 4-berth inside cabin (€100-120 total). Lower bunks for parents. Upper bunk for sister. Private bathroom. |
-| **Cost per person** | ~€35-40/person (cabin shared by 3) |
-| **Food** | Pack your own dinner + breakfast. Eat in cabin together. |
-| **Why it's great** | You sleep on board. Wake up in Italy. No check-in/check-out. Sunset departure from Barcelona, sunrise arrival at Italian Riviera. |
-
-### Ferry 2: Bari → Durrës (Adria Ferries)
-
-| Detail | Info |
-|--------|------|
-| **Duration** | 9-10 hours overnight (depart 9 PM, arrive 7 AM) |
-| **Type** | Car ferry, shorter crossing |
-| **Cabin** | 4-berth cabin for all 3 (~€40-50 extra). Parents sleep properly. All 3 together. |
-| **Cost per person** | ~€65-70/person (ferry + cabin shared) |
-| **Food** | Pack dinner from Rome. Eat in cabin. |
-| **Why it's great** | Another night saved on accommodation. Arrive Albania at 7 AM rested and ready. |
-
-### Summary: Why Both Ferries Work for This Family
-
-| Issue | Solution |
-|-------|----------|
-| Mom hates flying | Ferry is the opposite of flying. No fear. You're on a ship. |
-| Parents need sleep | 4-berth cabin with proper beds. Lower bunks for parents. |
-| Family stays together | All 3 in one cabin. Nobody left out on a deck seat. |
-| Save hostel nights | 2 nights of accommodation saved (sleeping on ferries). |
-| August warmth | Mediterranean in August is warm. Evening on deck is pleasant, not cold. |
-| Pure veg food | Pack your own food. Eat in cabin privately. No restaurant confusion. |
-
----
-
-## 7. FULL DAILY ITINERARY
-
----
-
-### PHASE 1: COVILHÃ REST (Days 1-3)
+### PHASE 0: COVILHÃ ARRIVAL + REST (Days 1-10)
 
 **Location**: Sister's apartment in Covilhã, Portugal
-**Cost**: €0 accommodation (FREE at sister's place)
-**Purpose**: Recover from jet lag. Rest before the road trip. Prepare together.
+**Cost**: €0 accommodation (FREE!)
+**Purpose**: Recover jet lag. Rest before big trip. Stock up groceries. Plan.
 
 ---
 
 #### DAY 1 — Arrival in Portugal
 
-| Time | Activity | Details | Cost |
-|------|----------|---------|------|
-| Morning | ✈️ Mom & Dad land at Lisbon Airport | Welcome to Europe! Sister travels from Covilhã to meet you. | Included in flights |
-| 11:00 AM | 🚄 Train Lisbon → Covilhã | 2.5 hours. Comboios de Portugal Intercidades train. Scenic ride. Book at cp.pt. | €18/person = €36 for both |
-| 1:30 PM | 🏠 **Arrive at Sister's apartment!** | Sister meets at Covilhã station. Walk to her place. Hugs. Home-cooked meal. Rest. | FREE |
-| Afternoon | 😴 Sleep / rest | Parents crash. Sister makes light lunch. Portugal is warm. Let them nap properly. | FREE |
-| Evening | 🚶 Short walk around Covilhã | Sister shows the neighbourhood. 15-minute walk. Buy basic groceries. Feel the fresh air. | €5 groceries |
-| Night | 🍳 Home-cooked dinner | Sister cooks. Parents eat early. In bed by 9 PM. Jet lag recovery begins. | FREE |
-
-**Dad's story**: "We arrived in Portugal. My daughter was waiting at the train station. I haven't seen her in a year. That hug — that's what this trip is really about."
-
-**Mom's comfort**: A warm meal, a familiar bed (with daughter), no travel for the next 2 days.
+| Time | Activity | Details |
+|------|----------|---------|
+| Morning | ✈️ Mom & Dad land at Lisbon Airport | Welcome to Europe! Sister comes from Covilhã to meet you. |
+| 11:00 AM | 🚄 Train Lisbon → Covilhã | 2.5 hours. Scenic ride. Book on cp.pt. €18/person. |
+| 1:30 PM | 🏠 **Arrive at Sister's apartment!** | Sister meets at Covilhã station. Walk to her place. Hugs. Home-cooked meal. Rest. |
+| Afternoon | 😴 Sleep / rest | Parents crash. Sister makes lunch. Warm Portugal afternoon. |
+| Evening | 🚶 Short walk around Covilhã | 15-min walk. Buy basic groceries. Feel the fresh mountain air. |
+| Night | 🍳 Home-cooked vegetarian dinner | No eggs. No non-veg. Pure veg Indian-style meal at sister's. |
 
 ---
 
-#### DAY 2 — Rest Day in Covilhã
+#### DAYS 2-10 — Slow Recovery in Covilhã
 
-| Time | Activity | Details | Cost |
-|------|----------|---------|------|
-| Morning | ☕ Sleep in. Wake up naturally. | No alarm. Sister makes chai/coffee. Light breakfast at home. Talk. Laugh. | FREE |
-| 10:30 AM | 🚶 Walk: Covilhã old town | Small walk through historic center. See the university (UBI). White houses on hills. Peaceful. | FREE |
-| 12:00 PM | 🛒 Local market visit | Mercado Municipal. Buy fresh fruits, vegetables, bread, cheese, eggs, pasta, rice, dal ingredients. Stock up for the road trip. Portuguese produce is excellent. | €15 for group |
-| 1:00 PM | 🍳 Cook lunch together | Mom + sister cook. Dad reads/takes photos. | FREE |
-| 3:00 PM | 😴 Siesta | Parents rest. Sister books hostels and checks bus times for the trip. | FREE |
-| 5:00 PM | ☕ Light cafe outing | Find a quiet cafe in the square. Have a Pastel de Nata (Portuguese egg tart, €1.20). Coffee. | €3/person |
-| Evening | 🍳 Home dinner + plan trip | Look at map together. Sister shows the route. Excitement builds. | FREE |
+No strict schedule. Let your parents guide every day. Suggested loose rhythm:
 
-**Budget tip**: Buy most groceries in Covilhã before leaving. Portuguese supermarkets (Continente, Pingo Doce, Lidl) are cheap. Pack snacks for bus rides — nuts, fruits, biscuits, chai packets.
+| Time | Typical Day |
+|------|-------------|
+| Morning | ☕ Wake up naturally. Sister makes chai. Light breakfast. |
+| Late morning | 🚶 Short walks. Explore Covilhã old town. See UBI university. |
+| Afternoon | 🛒 Buy groceries for upcoming Trip 1. Pack snacks for buses. |
+| Evening | 🍳 Cook dinner together. Look at maps. Sister books hostels for Spain+Italy. |
+| Night | 😴 Early sleep. |
 
----
+**Things to do during these 10 days**:
+- Visit Mercado Municipal (local market) — stock up on spices/tea for Trip 1
+- Walk to **Serra da Estrela** viewpoint (free, stunning, 20 min walk)
+- Sister teaches parents how to use the apps (FlixBus, Google Maps offline, Booking.com)
+- **Buy a small bag of Indian spices/chai from home or from a Portuguese Indian store** — will be used at hostels
+- Pack backpacks: only what's needed for Trip 1. Leave rest at sister's.
+- Completely recover from jet lag before Trip 1 (this is the #1 goal)
 
-#### DAY 3 — Prepare for Road Trip
-
-| Time | Activity | Details | Cost |
-|------|----------|---------|------|
-| Morning | 🧳 Pack backpacks | Everything minimal. Only what's needed for 11 days. Leave extra luggage at sister's. | FREE |
-| 11:00 AM | 🎫 Book all remaining tickets | Sister handles. FlixBus for Madrid, AVE train for Barcelona, ferry tickets, Balkan buses. Book hostels on Booking.com. | See budget |
-| 1:00 PM | 🍳 Lunch at home | Use bought groceries. Good fuel for tomorrow. | FREE |
-| 2:00 PM | 🎒 Final errands | EU adapters. Download apps. Charge power banks. Fill water bottles. Pack snacks. | €5 |
-| 5:00 PM | 🚶 Evening walk: Serra da Estrela | Mountain range behind Covilhã. Sunset viewpoint. 20-min walk. FREE and stunning. | FREE |
-| 8:00 PM | 🍳 Special dinner at home | Sister cooks. Mom and Dad's last home-cooked meal before the road trip. | FREE |
-| 9:00 PM | 😴 Early sleep | Bus to Madrid leaves tomorrow morning! | FREE |
+> **Key**: Don't rush. Trip 1 is 20 days of Spain+Italy. Use ALL 10 days to build energy.
 
 ---
 
-### PHASE 2: THE ROAD TRIP (Days 4-14)
+### TRIP 1: SPAIN + ITALY (Days 11-30)
 
-**11 days, 9 countries. 2 overnight ferries (all 3 in cabin). Daytime buses only for land travel. 7 hostel nights.**
-
----
-
-#### DAY 4 — Covilhã → Madrid, Spain (Country 1: SPAIN 🇪🇸)
-
-| Time | Activity | Details | Cost |
-|------|----------|---------|------|
-| 6:30 AM | Wake up | Light breakfast at home. Pack last things. | FREE |
-| 8:00 AM | 🚌 **FlixBus: Covilhã → Madrid** | Direct bus. 8 hours. Comfortable coach with AC, wifi, toilet. Scenic drive through Extremadura. **All 3 seated together in standard seats.** | **€28/person** |
-| 12:00 PM | Break | Bus stops once mid-way. Eat packed food (sandwiches, fruit from home). | FREE |
-| 4:00 PM | 🏁 **Arrive Madrid!** | Estacion Sur de Autobuses. Metro to hostel. Buy 10-trip metro card (€12.20, can be shared). | €2/person |
-| 5:00 PM | 🏠 **Hostel check-in** | Private room (3 beds) with kitchen. Shared bathroom. Safe area near city center. | **€17/person** |
-| 6:00 PM | 🚶 **PLAZA MAYOR** | Madrid's most famous square. 400-year-old buildings. Street musicians. Dad takes photos. | FREE |
-| 7:00 PM | 🛒 Buy groceries at Mercadona | Bread, pasta, fresh tomatoes, olive oil, salad, fruit, water. Enough for tonight + tomorrow breakfast. | €8 total |
-| 8:00 PM | 🍳 **Cook dinner at hostel** | Pasta with fresh tomato sauce. Simple, filling, familiar, delicious. | €0 (bought) |
-| 9:00 PM | 🚶 Evening walk | Plaza Mayor lit up at night. Calle Mayor. Quiet photos. Back to hostel by 10 PM. | FREE |
-
-**Dad's story**: "Madrid's Plaza Mayor is 400 years old. We cooked pasta in our hostel kitchen. Simple food. But eating together in a foreign city — that felt special."
-
-**Mom's comfort**: 8-hour bus is long but doable. Arrival by 4 PM. Rest at hostel before evening walk.
-
-**Sleep**: Hostel Madrid, private room with 3 beds, shared bathroom (~€51 total for the night).
+**20 days. 2 countries. 7 cities. 1 ferry. 1 flight back.**
 
 ---
 
-#### DAY 5 — Madrid → Barcelona (AVE High-Speed Train Experience 🚆)
+#### DAY 11 — Travel: Covilhã → Madrid (Spain 🇪🇸)
 
-| Time | Activity | Details | Cost |
-|------|----------|---------|------|
-| 7:30 AM | Wake up, pack, breakfast | Use leftover groceries. Toast + fruit. | FREE |
-| 9:00 AM | 🚶 **ROYAL PALACE OF MADRID** (outside) | See the massive palace from Plaza de Oriente. Don't go inside (€12). The outside is impressive enough. | FREE |
-| 10:00 AM | 🚶 **TEMPLO DE DEBOD** | Ancient Egyptian temple gifted to Spain! 5 min metro from palace. FREE entry. Unique sight. | FREE |
-| 10:30 AM | Buy snacks for train | Bread, cheese, fruit, water from supermarket. Pack a picnic for the train. | €4 total |
-| 11:30 AM | 🚆 **AVE High-Speed Train: Madrid → Barcelona** | 2 hours 30 min at 300 km/h. **Standard class** (comfortable enough. The speed itself is the experience.) | **€50/person** |
-| 2:00 PM | 🏁 **Arrive Barcelona!** | Estacion de Barcelona Sants. Metro to hostel. | €2/person |
-| 2:30 PM | 🏠 Hostel check-in | Private triple with kitchen. Safe area (Gràcia or Eixample — quieter than Las Ramblas). | **€18/person** |
-| 3:30 PM | 🚶 **SAGRADA FAMILIA** (outside view) | Gaudi's masterpiece. View from the park across the street. You don't need to go inside (€26). The outside is THE view. Mind-blowing. | FREE |
-| 4:30 PM | 🚶 **GOTHIC QUARTER** | Narrow medieval streets. Roman ruins. Hidden plazas. Peaceful walk. | FREE |
-| 6:00 PM | 🚶 **BARCELONETA BEACH** | Walk to the Mediterranean. Dip feet. Relax on the sand. August warmth = perfect. | FREE |
-| 7:00 PM | 🛒 Buy groceries | Fresh bread, local cheese, tomatoes, salad, pasta. | €10 total |
-| 8:00 PM | 🍳 Cook dinner at hostel | Spanish tortilla (potato+egg omelette) — pure veg, easy to make! Plus bread, salad. | €0 (bought) |
-| 9:00 PM | 🚶 Quiet evening walk | Avoid Las Ramblas at night (too crowded/touristy). Walk through Gràcia neighborhood instead. Peaceful. | FREE |
+| Time | Activity | Cost |
+|------|----------|------|
+| 6:30 AM | Wake up. Light breakfast at sister's. | FREE |
+| 8:00 AM | 🚌 **FlixBus: Covilhã → Madrid** | **€28/person** |
+| 12:00 PM | Break — eat packed food from home | FREE |
+| 4:00 PM | 🏁 Arrive Madrid. Metro to hostel. Buy 10-trip metro card (€12.20, shared). | €2/person |
+| 5:00 PM | 🏠 **Hostel check-in** — Private room (3 beds). Shared bathroom. Kitchen available. Safe area. | **€17/person** |
+| 6:00 PM | 🚶 **PLAZA MAYOR** — Madrid's most famous square. 400 years old. | FREE |
+| 7:00 PM | 🛒 Buy groceries at Mercadona — pasta, tomatoes, bread, salad, fruit, olive oil, rice | €8 total |
+| 8:00 PM | 🍳 **Cook dinner at hostel** — Pasta with tomato sauce. Pure veg. Easy. Familiar. | €0 (bought) |
+| 9:00 PM | 🚶 Evening walk: Plaza Mayor lit up. Quiet walk back. | FREE |
 
-**Dad's story**: "We rode a train at 300 km/h through the Spanish countryside. Reached Barcelona in 2.5 hours. In India, that distance would take all day."
-
-**Mom's comfort**: The AVE train is smooth, air-conditioned, and fast. She'll enjoy it. Afternoon in Barcelona is relaxed.
-
-> **Train vs Bus decision confirmed**: AVE train (€50) is worth it over bus (€25). It's a 2.5h experience vs 8h journey. For parents' first international trip, the high-speed train is itself a memory.
-
-**Sleep**: Hostel Barcelona, private room with 3 beds (~€54 total).
+**Sleep**: Hostel private room (~€51 total)
 
 ---
 
-#### DAY 6 — Barcelona + THE BIG FERRY TO ITALY 🚢
+#### DAYS 12-13 — Madrid Deep Explore (3 nights total)
 
-| Time | Activity | Details | Cost |
-|------|----------|---------|------|
-| 7:30 AM | Wake up, quick breakfast | Use hostel kitchen. Pack your bags. | FREE |
-| 8:30 AM | 🚶 **PARK GUELL (free area)** | Gaudi's colorful park. Free section has beautiful mosaic benches and views. | FREE |
-| 10:00 AM | 🚶 **ARC DE TRIOMF + CIUTADELLA PARK** | Walk through the park. Relax on grass. August sun feels good. | FREE |
-| 11:30 AM | 🛒 **Buy food for the ferry** | Buy dinner + breakfast + snacks for the crossing. Bread, cheese, tomatoes, fruit, nuts, water, biscuits. Enough for 2 meals for all 3. | €12 total |
-| 12:30 PM | 🏠 Check out of hostel | Pack everything. Ready for ferry. | FREE |
-| 1:00 PM | 🚶 Walk to Barcelona Port | Port is walkable from city center (20 min). Or take metro to Drassanes. | FREE |
-| 3:00 PM | 🚢 **FERRY CHECK-IN** | Terminal at Moll de Sant Bertran. Show passports. Board the ship! | FREE |
-| 4:00 PM | 🛏️ **SETTLE INTO CABIN** | 4-berth cabin. Mom and Dad choose lower bunks. Sister takes upper bunk. Private bathroom. This is home for tonight. | FREE |
-| 5:00 PM | 🚶 Explore the ship | Walk the decks. See the shops. Watch Barcelona from the railing. | FREE |
-| 7:00 PM | 🍳 **DINNER IN CABIN** (packed food) | Eat together in the cabin. Bread, cheese, salad, fruit. No restaurant needed. Private. Comfortable. Familiar food. | €0 (packed) |
-| 8:00 PM | 🌅 **SUNSET AT SEA** | Go on deck together. Barcelona disappears on the horizon. Mediterranean sunset. Dad takes photos. Mom smiles. Sister captures the moment. | Priceless |
-| 9:00 PM | 🛏️ Sleep in cabin | Rocked to sleep by the ocean. Mom and Dad on lower bunks. Family together. | FREE |
+| Day | 🔥 Must-See Places | Cost |
+|-----|-------------------|------|
+| **Day 12** | 🚶 ROYAL PALACE (outside only — the building itself is breathtaking), 🚶 TEMPLO DE DEBOD (ancient Egyptian temple gifted to Spain — free entry), 🚶 PLAZA DE ESPAÑA | FREE + €2 metro |
+| **Day 13** | 🚶 RETIRO PARK (huge beautiful park — rowboat on lake €4, or just walk), 🚶 PUERTA DEL SOL (km 0 of Spain), 🚶 GRAN VÍA (main street) | FREE + €4 boat |
+| **Every evening** | 🛒 Buy groceries, 🍳 cook dinner at hostel together | €8/day groceries |
 
-**Dad's story**: "We sailed across the Mediterranean. Our own cabin. We watched the sunset from the deck. Barcelona's lights faded. The next morning — Italy appeared on the horizon. I'll tell this story for the rest of my life."
+**Dad's highlights**: Templo de Debod — an actual Egyptian temple standing in Madrid. Free to enter. Incredible photos.
 
-**Mom's comfort**: This is the opposite of flying. No fear. She sleeps in a proper bed. The cabin is private. She'll love it.
+**Food note**: Madrid supermarkets have excellent fresh vegetables, olives, bread, cheese, rice, pasta — everything for pure veg Indian-style cooking.
 
-**Sleep**: 4-berth cabin on the ferry (all 3 together).
-
-> **Cost comparison**:
-> - Option A: Flight (€50) + hostel (€30) = €80/person, arrive separately, different rooms
-> - Option B: Ferry with cabin (€40/person) = €40/person, family together, experience of a lifetime
->
-> **Ferry wins on value, togetherness, and memory.**
+**Sleep**: Same hostel (3 nights total = ~€51/night × 3)
 
 ---
 
-#### DAY 7 — Genoa → Rome + Vatican City (Italy 🇮🇹 + Vatican 🇻🇦)
+#### DAY 14 — Madrid → Seville
 
-| Time | Activity | Details | Cost |
-|------|----------|---------|------|
-| 6:00 AM | 🌅 **WAKE UP — ITALY!** | Go on deck. Italian Riviera coastline appears. Green hills, colorful houses. Magic. | FREE |
-| 8:00 AM | 🍳 Breakfast in cabin | Finish packed food. Freshen up in cabin bathroom. | FREE |
-| 11:00 AM | 🚢 **Arrive Genoa** | Disembark. Walk through Genoa port area. Quick look at the old port. | FREE |
-| 12:00 PM | 🚆 **Train: Genova → Roma Termini** | High-speed Frecciarossa. 4-5 hours. Scenic coastal ride for the first hour. | **€40/person** |
-| 1:30 PM | 🍳 Lunch on train | Eat packed food or buy panini at station. Veg options available (mozzarella+tomato). | €4/person |
-| 5:30 PM | 🏁 **Arrive Rome!** | Roma Termini. Metro to hostel near Monti district (quiet, historic area minutes from Colosseum). | €2/person |
-| 6:00 PM | 🏠 Hostel check-in | Private triple with kitchen. Safe area. | **€23/person** |
-| 6:30 PM | 🚶 **TREVI FOUNTAIN** | Evening is best. Lit up. Throw a coin (€0.50). Less crowded than daytime. | FREE |
-| 7:15 PM | 🚶 **SPANISH STEPS** | 10 min walk from Trevi. Sit halfway up. Watch the city. | FREE |
-| 8:00 PM | 🛒 Buy groceries | Italian pasta, fresh tomatoes, basil, olive oil, bread. Make a simple Italian dinner. | €8 total |
-| 8:30 PM | 🍳 **Cook dinner at hostel** | Pasta with fresh tomato-basil sauce. Mom stirs the sauce. Dad opens Italian water. Sister sets the table. This IS Italy. | FREE |
-| 9:30 PM | 😴 Sleep | Full day tomorrow — Vatican + Colosseum + ferry to Albania! | FREE |
+| Time | Activity | Cost |
+|------|----------|------|
+| 8:00 AM | Check out. Quick breakfast. | FREE |
+| 9:00 AM | 🚆 **AVE Train: Madrid → Seville** (2.5h, comfortable) | **€25/person** |
+| 11:30 AM | 🏁 Arrive Seville. Walk to hostel (near Alcázar/Cathedral area). | FREE |
+| 12:00 PM | 🏠 Hostel check-in. Private room with kitchen. | **€16/person** |
+| 1:00 PM | 🚶 **PLAZA DE ESPAÑA** — THE icon of Seville. Half-moon building with canals. Rowboat €6. | FREE |
+| 3:00 PM | 🚶 **SANTA CRUZ QUARTER** — Narrow white streets. Flowers. Orange trees. Peaceful. | FREE |
+| 5:00 PM | 😴 Rest at hostel. Parents nap. | FREE |
+| 7:00 PM | 🛒 Buy groceries. 🍳 Cook dinner. | €8 total |
 
-**Dad's story**: "First day in Italy. We cooked pasta at our hostel. Fresh tomatoes from the market. It didn't cost much. But sitting together, eating homemade pasta in Rome — that felt like a movie."
-
-**Mom's comfort**: Arrived rested from the ferry. Evening walk was short. Cooked familiar food. Ready for tomorrow.
-
-> **Vatican City is a country!** 🇻🇦 St. Peter's Basilica is FREE entry. The dome climb (€8) gives you a view of all Rome. Dress code: No shorts, no bare shoulders. Sister will guide.
-
-**Sleep**: Hostel Rome Monti, private room with 3 beds (~€69 total).
+**Sleep**: Hostel private room (~€48 total for the night)
 
 ---
 
-#### DAY 8 — Rome (Full Day) + Evening Train to Bari + Ferry to Albania
+#### DAY 15 — Seville Deep
 
-| Time | Activity | Details | Cost |
-|------|----------|---------|------|
-| 7:00 AM | Wake up, quick breakfast | Hostel provides something simple or use your groceries. | FREE |
-| 8:00 AM | 🚶 **COLOSSEUM** (outside view) | Walk around the entire outside. FREE. Just as stunning as going in (€16). | FREE |
-| 8:30 AM | 🚶 **ROMAN FORUM** (from above) | View from Colle Oppio park. See ancient Rome from above for free. | FREE |
-| 9:30 AM | 🚇 Metro to Vatican | 20 min. 48h transport pass (€12.50) covers everything today. | FREE (pass) |
-| 10:00 AM | 🇻🇦 **ST. PETER'S BASILICA** | FREE entrance. Michelangelo's Pietà. Massive dome. Bernini's baldachin. World's largest church. Overwhelming beauty. | FREE |
-| 11:30 AM | 🏛️ **VATICAN MUSEUMS (optional)** | €17/person if Dad + Sister want to see the Sistine Chapel. Mom can rest at a nearby cafe (€1 coffee, sit in shade). The queue can be long in August. Decision: If line is short, go. If 1+ hour, skip. | €17/person (optional) |
-| 12:30 PM | 🍳 **Lunch - try Roman pasta!** | Find a trattoria near Vatican. Order **Pasta al Pomodoro** (simple tomato pasta, pure veg, €8-10) or **Margherita Pizza** (cheese+tomato, pure veg, €6-8). This is your eating-out meal for the day. | **€8/person** 🎉 |
-| 1:30 PM | 🚇 Back to hostel, pick bags | Metro to Termini. Pack up. Check out. | FREE |
-| 2:30 PM | 🚆 **Regional train: Roma Termini → Bari Centrale** | 4 hours. Scenic ride across Italy to the Adriatic coast. | **€28/person** |
-| 6:30 PM | 🏁 **Arrive Bari** | Walk from station to port (15 min). | FREE |
-| 7:00 PM | 🛒 **Buy food for ferry** | Bread, cheese, tomatoes, fruit, water, snacks. Enough for dinner + breakfast. | €8 total |
-| 8:00 PM | 🚢 **FERRY CHECK-IN: Bari → Durrës (Albania)** | Adria Ferries. Find your 4-berth cabin. Settle in together. | **€55/person + cabin shared** |
-| 9:00 PM | 🍳 Dinner in cabin | Eat together. Private. Familiar food. Mom and Dad happy. | €0 (packed) |
-| 10:00 PM | 🛏️ Sleep in cabin | Proper beds. Family together. Wake up in Albania! | FREE |
+| Time | Activity | Cost |
+|------|----------|------|
+| 9:00 AM | 🏰 **ALCÁZAR OF SEVILLE** (€12) — Royal palace. Game of Thrones filmed here. The gardens are the highlight. Worth every euro. | **€12/person** |
+| 12:00 PM | 🚶 **SEVILLE CATHEDRAL + GIRALDA** (outside only — massive! FREE view) | FREE |
+| 1:00 PM | 🍳 Lunch — buy bread, cheese, tomatoes, make sandwiches at hostel | €3/person |
+| 3:00 PM | 😴 Siesta. Rest. | FREE |
+| 6:00 PM | 🚶 Evening walk along Guadalquivir River. Triana neighborhood. | FREE |
+| 8:00 PM | 🍳 Cook dinner at hostel | FREE |
 
-**Country count**: Portugal (#1), Spain (#2), Vatican (#3 - yes, entering St. Peter's counts!), Italy (#4). Tomorrow: Albania (#5)!
-
-**Dad's story**: "In one day I stood where gladiators fought, walked into the world's largest church, ate pasta near the Vatican, and sailed across the Adriatic with my family. I can't believe this is real."
-
-**Mom's comfort**: Morning = relaxed Vatican visit. Afternoon = sitting on train. Evening = ferry cabin with family. No stress.
-
-**Sleep**: 4-berth cabin on ferry (all 3 together).
+**Sleep**: Same hostel (2 nights total = ~€48/night × 2)
 
 ---
 
-#### DAY 9 — Albania! Berat — City of 1000 Windows 🇦🇱
+#### DAY 16 — Seville → Granada (🏆 ALHAMBRA DAY!)
 
-| Time | Activity | Details | Cost |
-|------|----------|---------|------|
-| 7:00 AM | 🌅 **Arrive Durrës, Albania** | First Balkan country! Disembark. Warmer, less polished, more real. | FREE |
-| 8:00 AM | 🚌 **Mini-bus: Durrës → Berat** | 2.5 hours through Albanian countryside. Albania is cheap and beautiful. | **€4/person** |
-| 10:30 AM | 🏁 **Arrive Berat** | Check into guesthouse (Booking.com: Guesthouse Villa 5 or similar, ~€25 for triple with kitchen). | **€8/person** |
-| 11:00 AM | 🚶 **BERAT CASTLE** (FREE) | Walk up the hill. Inhabited fortress — people still LIVE inside. 360° view of the city. "City of 1000 Windows" from above. Incredible photos. | FREE |
-| 12:30 PM | 🍳 **Try local veg food!** | Find a restaurant. Order: **Byrek me gjizë** (cheese pie, €1.50) + **Fergesë** (pepper+tomato+cheese bake, €3) + fresh salad (€2). All pure vegetarian. | **€3/person** |
-| 2:00 PM | 🚶 Walk through Mangalem quarter | Old Ottoman quarter. Cobblestone streets. White Ottoman houses. Beautiful photos. | FREE |
-| 3:00 PM | ☕ Coffee break | Albanian coffee = strong and cheap. €0.50 at a local cafe. Dad tries it. | €0.50/person |
-| 4:00 PM | 🛒 Buy groceries | Open market. Fresh vegetables, local cheese, bread, fruit. Albania is DIRT CHEAP. | €5 total |
-| 5:00 PM | 😴 Rest at guesthouse | Parents nap. Sister plans next day's bus. | FREE |
-| 7:00 PM | 🍳 Cook dinner | Pasta with Albanian tomatoes (they're amazing) + local cheese + salad. | €0 (bought) |
-| 9:00 PM | 🚶 Evening walk | Berat at sunset. Windows light up one by one. Peaceful. | FREE |
+| Time | Activity | Cost |
+|------|----------|------|
+| 8:00 AM | Check out. Bus to Granada. | **€18/person** |
+| 11:00 AM | 🏁 Arrive Granada. Metro to area near Alhambra. | €2/person |
+| 12:00 PM | 🏠 Guesthouse check-in. Private room with kitchen. | **€16/person** |
+| 1:00 PM | 🏆 **THE ALHAMBRA** — **BOOK 2 MONTHS AHEAD ONLINE!** €15/person. Allow 3-4 hours inside. The most spectacular Moorish palace in Europe. Nasrid Palaces, Generalife Gardens, Alcazaba fortress. Dad will never forget this. | **€15/person** 🏆 |
+| 5:00 PM | 😴 Rest at guesthouse | FREE |
+| 7:00 PM | 🛒 Buy groceries. 🍳 Cook dinner. | €8 total |
 
-**Dad's story**: "Albania is like India 30 years ago. Real, raw, cheap, friendly. The castle on the hill has people living inside. Coffee cost 50 cents. We ate cheese pie for €1.50. My daughter said, 'Dad, THIS is the real Europe.'"
+> ⚠️ **ALHAMBRA BOOKING**: Tickets SELL OUT weeks in advance in August. Book at least 2 months ahead on www.alhambra-patronato.es. Sister must handle this.
 
-**Mom's comfort**: Very short travel day after the ferry. Lots of rest. Berat is small, walkable, and safe.
-
-> **💰 Albania saves your budget**: Hostel €8/person, meal €3, coffee €0.50. This is where you SPEND LESS so you can enjoy Rome more.
-
-**Sleep**: Guesthouse in Berat, private room with kitchen (~€25 total).
+**Sleep**: Guesthouse private room (~€48 total for the night)
 
 ---
 
-#### DAY 10 — Berat → Ohrid, North Macedonia 🇲🇰
+#### DAY 17 — Granada Morning + Travel to Barcelona
 
-| Time | Activity | Details | Cost |
-|------|----------|---------|------|
-| 7:00 AM | Wake up, pack, breakfast | Use guesthouse kitchen. | FREE |
-| 8:00 AM | 🚌 **Bus: Berat → Tirana** | 1 hour. Change buses in Tirana. Quick stop. | €3/person |
-| 10:00 AM | 🚌 **Bus: Tirana → Ohrid** | 5 hours through mountains. Stunning scenery. Enter North Macedonia. Bus via GetbyBus app. | **€18/person** |
-| 3:00 PM | 🏁 **Arrive Ohrid!** | Beautiful lake town. "Jerusalem of the Balkans" — 365 churches. Lake Ohrid is one of Europe's oldest and deepest lakes. | FREE |
-| 3:30 PM | 🏠 Guesthouse check-in | Near Ohrid Lake. Private triple with kitchen (~€27 total). | **€9/person** |
-| 4:00 PM | 🚶 **OHRID LAKE** | Walk along the shore. Crystal clear water. Sit on a bench. Relax. August warmth = perfect. | FREE |
-| 5:00 PM | 🚶 **SAMUEL'S FORTRESS** | Climb up for 360° view of the lake and town. Dad loves the history. | €2/person |
-| 6:30 PM | 🛒 Buy groceries | Local market. Fresh vegetables, bread, cheese, pasta supplies. | €6 total |
-| 8:00 PM | 🍳 Cook dinner at guesthouse | Lake view from the kitchen window while cooking. | FREE |
-| 9:00 PM | 🚶 Evening lakeside walk | The lake is calm. Light breeze. Perfect end to the day. | FREE |
+| Time | Activity | Cost |
+|------|----------|------|
+| 9:00 AM | 🚶 **ALBAICÍN QUARTER** — Old Arab quarter. View of Alhambra from Mirador San Nicolás (FREE, stunning). | FREE |
+| 11:00 AM | Back to guesthouse. Check out. Buy bus snacks. | €3 total |
+| 12:00 PM | 🚌 **Bus: Granada → Barcelona** (6h) | **€35/person** |
+| 6:00 PM | 🏁 Arrive Barcelona. Metro to hostel. Use T-casual metro ticket (€11, 10 rides). | €2/person |
+| 7:00 PM | 🏠 Hostel check-in. Private room with kitchen. Safe area (Gràcia or Eixample — quieter). | **€18/person** |
+| 8:00 PM | 🛒 Buy groceries. 🍳 Cook dinner. | €8 total |
 
-**Dad's story**: "Lake Ohrid is so old they say it existed before humans. The water is so clear you can see 20 meters down. Churches everywhere. Samuel's Fortress on the hill. This is Balkan paradise."
-
-**Mom's comfort**: 5-hour bus is long but scenic. Afternoon is short walking + lakeside relaxation. She'll enjoy sitting by the water.
-
-> **Ohrid Tip**: Don't rush. Let your parents sit by the lake for an hour. August sun, gentle breeze, clear water. This IS the experience.
-
-**Sleep**: Guesthouse Ohrid, private room with kitchen (~€27 total).
+**Sleep**: Hostel private room (~€54 total for the night)
 
 ---
 
-#### DAY 11 — Ohrid → Skopje (quick stop) → Sofia, Bulgaria 🇧🇬
+#### DAYS 18-19 — Barcelona Deep (3 nights total)
 
-| Time | Activity | Details | Cost |
-|------|----------|---------|------|
-| 7:00 AM | Morning walk by the lake | One last look at Ohrid. Peaceful morning. | FREE |
-| 8:00 AM | 🚌 **Bus: Ohrid → Skopje** | 3 hours. Through mountains. | **€15/person** |
-| 11:00 AM | 🚶 **Skopje stop (2 hours)** | Walk through Macedonia Square. See the giant Alexander the Great statue. Quick snack: **Burek with cheese** (Balkan pastry, €1.50) — pure veg. | **€2/person** |
-| 1:00 PM | 🚌 **Bus: Skopje → Sofia** | 4 hours. Border crossing into Bulgaria. Bus company: Kaleia or GetbyBus. | **€15/person** |
-| 5:00 PM | 🏁 **Arrive Sofia, Bulgaria** | Central bus station. Metro to hostel. | €1/person |
-| 5:30 PM | 🏠 **Hostel check-in** | Private triple with kitchen. Quiet hostel (NOT a backpacker party hostel — family-friendly). | **€12/person** |
-| 6:30 PM | 🚶 **ALEXANDER NEVSKY CATHEDRAL** | 10 min walk. One of the largest Eastern Orthodox cathedrals. Gold domes. Jaw-dropping. FREE entry (dress code: covered shoulders/knees). | FREE |
-| 7:30 PM | 🛒 Buy groceries | Supermarket near hostel. Fresh vegetables, pasta, bread. | €7 total |
-| 8:00 PM | 🍳 Cook dinner at hostel | Simple pasta + salad. Cook together in hostel kitchen. | FREE |
-| 9:00 PM | 🚶 Evening walk: Vitosha Boulevard | Sofia's main walking street. Mountains visible in the background. Peaceful. | FREE |
+| Day | 🔥 Must-See Places | Cost |
+|-----|-------------------|------|
+| **Day 18** | 🏆 **SAGRADA FAMILIA** (outside only — FREE, mind-blowing, spend 30 min just looking); 🚶 **GOTHIC QUARTER** (medieval streets, Roman ruins); 🏖️ **BARCELONETA BEACH** (dip feet in Mediterranean) | FREE |
+| **Day 19** | 🚶 **PARK GÜELL** (free section has colorful mosaics and view); 🚶 **ARC DE TRIOMF + CIUTADELLA PARK**; 🚶 **LAS RAMBLAS** (just walk through — busy, keep wallets safe) | FREE |
+| **Evenings** | 🛒 Buy groceries at Mercadona. 🍳 Cook dinner. Pure veg pasta, salads, bread. | €8/day |
 
-**Dad's story**: "Sofia's Alexander Nevsky Cathedral is covered in gold. One of the largest in the world. Bulgaria is so underrated. The city feels calm and safe."
+**Dad's highlight**: Sagrada Familia — Gaudi's masterpiece. Still under construction since 1882. The outside is free and more impressive than the inside.
 
-**Mom's comfort**: Long travel day (3h + 4h bus) but broken by Skopje stop. Evening is just a short walk to the cathedral. She'll rest at the hostel while sister and dad explore.
+**Mom's comfort**: Barcelona can be crowded. Stay in Gràcia (quiet neighborhood). Take afternoon siesta at hostel. Only go out mornings + evenings.
 
-> **Sofia is affordable**: Everything costs less than Western Europe. Good place to restock groceries and relax.
+**Ferry preparation**: On Day 19 evening, buy food for the ferry crossing — bread, cheese, tomatoes, fruit, nuts, water. Pack in your daypack.
 
-**Sleep**: Hostel Sofia, private room with 3 beds (~€36 total).
+**Sleep**: Same hostel (3 nights total = ~€54/night × 3)
 
 ---
 
-#### DAY 12 — Sofia → Bucharest, Romania 🇷🇴
+#### DAY 20 — 🚢 FERRY: Barcelona → Genoa (THE EXPERIENCE!)
 
-| Option | Travel Time | Cost | Arrival | Best For |
-|--------|-------------|------|---------|----------|
-| **A: Day Bus (RECOMMENDED)** | 6 hours | €18/person | 6 PM | Comfort. Cook dinner. Rest properly. |
-| **B: Overnight Bus (takes planning)** | 11 PM → 5 AM | €18/person | 5 AM | Saves hostel night. But needs late checkout. |
+| Time | Activity | Cost |
+|------|----------|------|
+| 8:00 AM | Wake up. Breakfast at hostel. Pack bags. | FREE |
+| 10:00 AM | 🚶 Last Barcelona walk — see Arc de Triomf again. Buy ferry food: bread, cheese, tomatoes, fruit, nuts, water for dinner + breakfast. | €12 total |
+| 12:00 PM | Check out of hostel. Walk toward port. | FREE |
+| 1:00 PM | 🚢 **FERRY CHECK-IN** — Grandi Navi Veloci, Barcelona port. Passports. Board the ship. | FREE |
+| 2:00 PM | 🛏️ **SETTLE INTO 4-BERTH CABIN** — Mom and Dad take lower bunks. Sister takes upper bunk. Private bathroom. Your home for the night. | **~€40/person** (includes cabin) |
+| 3:00 PM | 🚶 Explore the ship. Walk the decks. Watch Barcelona's coastline from the railing. | FREE |
+| 5:00 PM | 🍳 **DINNER IN CABIN** — Packed food. Bread, cheese, tomatoes, fruit. Eat together. Private. Familiar. Comfortable. | €0 (packed) |
+| 7:30 PM | 🌅 **SUNSET AT SEA** — Go on deck. Mediterranean sunset. Barcelona disappears. Dad takes photos. Mom smiles. Together. | Priceless |
+| 9:00 PM | 🛏️ **SLEEP** — Rocked by the ocean. Cabin is cool but you have blankets. Family together. | FREE |
 
-### Recommended: Option A — Day Bus
+**Mom's comfort**: This is the opposite of flying. A ship. A cabin. A bed. Family next to her. Sunset on the sea. She will love this.
 
-| Time | Activity | Details | Cost |
-|------|----------|---------|------|
-| 8:00 AM | Wake up, breakfast at hostel | Use kitchen. | FREE |
-| 9:00 AM | 🚶 **SOFIA MORNING WALK** | See St. George Rotunda (oldest building in Sofia, 4th century). Walk through city garden. | FREE |
-| 10:30 AM | Back to hostel, pack up, check out | | FREE |
-| 11:00 AM | 🚌 **Bus: Sofia → Bucharest** | 6 hours. FlixBus or Racic. Comfortable coach. AC. Eat packed lunch on the bus. | **€18/person** |
-| 5:00 PM | 🏁 **Arrive Bucharest, Romania** | Bus drops at Gara de Nord station. Metro to hostel. | €1/person |
-| 5:30 PM | 🏠 Hostel check-in | Private triple near old town. With kitchen. Safe area. | **€11/person** |
-| 6:00 PM | 🛒 Buy groceries | Supermarket near hostel. | €7 total |
-| 7:00 PM | 🍳 Cook dinner at hostel | Romanian-style pasta. Or make mămăligă (polenta with cheese) — easy, local, pure veg. | FREE |
-| 8:00 PM | 🚶 **PALACE OF THE PARLIAMENT** (outside at night) | Second largest building in the world (after the Pentagon). Lit up at night = unreal. 10 min walk from hostel. | FREE |
-| 9:00 PM | 😴 Sleep | Rest well. Full day in Bucharest tomorrow. | FREE |
+**Dad's story**: "We sailed across the Mediterranean. Watched the sunset from the deck. Woke up in Italy. Our own cabin. Me, Mom, and our daughter together."
 
-### Option B: Overnight Bus (If You Want to Try It)
-
-| Detail | How It Works |
-|--------|-------------|
-| **Before bus** | Ask hostel for **late checkout (€10-15)** — keep room until 6 PM. Nap in afternoon. Cook dinner at 5 PM. Pack food for next morning. |
-| **11 PM** | Board bus. All 3 in standard seats together. Shawl for AC. Sleep. |
-| **5 AM** | Arrive Bucharest. Pre-book Bolt/Uber taxi (€5-8) to hostel. |
-| **5:30 AM** | Drop bags at hostel (24h reception). Walk to 24-hour cafe. Have tea/coffee, use restroom, sit till 7 AM. |
-| **7 AM** | Sun is up. Light walk to Palace of Parliament (morning view is different from night). |
-| **11 AM** | Check if hostel has early check-in available (sometimes €5-10 extra). If yes, freshen up and nap. |
-| **6 PM** | Evening walk. Same sights, different time. |
-
-> **Honest take**: The day bus is worth the extra €33 (1 hostel night). Your parents arrive at 5 PM, check in properly, cook their own dinner, sleep in a bed, and rest. For the tiny saving overnight brings, the stress of 5 AM arrival isn't worth it. **Option A recommended.**
-
-**Dad's story**: "Romania's Palace of the Parliament is so big you can see it from space. We saw it at night, all lit up. I couldn't believe one building could be this massive."
-
-**Sleep**: Hostel Bucharest, private room with 3 beds (~€33 total).
+**Sleep**: 4-berth cabin on ferry (all 3 together) ✅
 
 ---
 
-#### DAY 13 — Bucharest → Belgrade, Serbia 🇷🇸
+#### DAY 21 — Genoa → Cinque Terre (Arrive Italy! 🇮🇹)
 
-| Time | Activity | Details | Cost |
-|------|----------|---------|------|
-| 8:00 AM | Wake up, breakfast at hostel | Use kitchen. | FREE |
-| 9:00 AM | 🚶 **BUCHAREST MORNING WALK** | Old Town (Lipscani). Stavropoleos Church (tiny, beautiful, FREE). Manuc's Inn (historic caravanserai). | FREE |
-| 10:30 AM | 🚶 **REVOLUTION SQUARE** | Where the 1989 revolution happened. Memorial. Photos. History for Dad. | FREE |
-| 11:30 AM | Back to hostel, check out. Buy bus snacks. | Bread, cheese, fruit, water for the ride. | €4 total |
-| 12:00 PM | 🚌 **Bus: Bucharest → Belgrade** | 5-6 hours. FlixBus. Cross into Serbia. Last country of the road trip! | **€18/person** |
-| 6:00 PM | 🏁 **Arrive Belgrade, Serbia** | Bus station (BAS). Walk or tram to accommodation. | €1/person |
-| 6:30 PM | 🏠 **Guesthouse check-in** | Private triple with kitchen. Quiet area near Kalemegdan (near the fortress, NOT the party area). Safe, family-friendly. | **€8/person** |
-| 7:00 PM | 🚶 **KALEMEGDAN FORTRESS** | Huge park + fortress where Sava and Danube rivers meet. Sunset view = spectacular. | FREE |
-| 8:00 PM | 🛒 Buy groceries | Supermarket near guesthouse. | €7 total |
-| 8:30 PM | 🍳 **CELEBRATION DINNER (cook at home!)** | Last night of the road trip. Make something special. Buy ingredients for a nice pasta or vegetable curry. Sister and mom cook together. Dad sets the table. Celebrate 9 countries! | €0 (cooked) |
-| 9:30 PM | 🚶 Final night walk | Danube river at night. The adventure is almost over. | FREE |
+| Time | Activity | Cost |
+|------|----------|------|
+| 6:00 AM | 🌅 **WAKE UP — ITALY!** — Go on deck. Italian Riviera appears. Green hills, colorful houses. | FREE |
+| 9:00 AM | 🍳 Breakfast in cabin. Finish packed food. Freshen up in cabin bathroom. | FREE |
+| 11:00 AM | 🚢 Arrive Genoa. Disembark. Quick walk through Genoa port — it's historic. | FREE |
+| 12:00 PM | 🚆 **Train: Genoa → Cinque Terre** (1.5h, coastal — gorgeous views) | **€15/person** |
+| 1:30 PM | 🏁 Arrive **Cinque Terre** — the colorful cliff villages you've seen in photos! | FREE |
+| 2:00 PM | 🏠 Guesthouse check-in (Riomaggiore or Manarola village) | **€22/person** |
+| 3:00 PM | 🚶 **MANAROLA + RIOMAGGIORE** — Walk between these two iconic villages. THE famous colorful view. | FREE |
+| 6:00 PM | 🛒 Buy groceries at village shop. Fresh pasta, local tomatoes, basil, bread. | €10 total |
+| 8:00 PM | 🍳 Cook dinner at guesthouse — Italian pasta with fresh basil from Cinque Terre! | FREE |
+| 9:00 PM | 🚶 Evening walk — Villages lit up at night. Peaceful. | FREE |
 
-**Dad's story**: "Belgrade sits where two rivers meet. Kalemegdan Fortress watches over both. We sat by the Danube on the last night. 9 countries in 11 days. We cooked our own celebration dinner. I didn't think it was possible. My daughter made it happen."
+**Dad's photo moment**: The view of Manarola from the waterfront path. This is THE image of Italy everyone knows.
 
-**Mom's comfort**: 6-hour bus ride, arrive at 6 PM, short evening walk. Comfortable pace.
-
-> **On eating out**: You CAN try a local restaurant if you want. In Belgrade, look for: **Punjena Paprika** (stuffed peppers with rice — ask if meat-free, often is), **Ajvar** (roasted pepper spread — served with bread for free!), **Prebranac** (baked beans, pure veg). But cooking at home is cheaper and more comfortable for your family.
-
-**Sleep**: Guesthouse Belgrade, private room with kitchen (~€24 total).
+**Sleep**: Guesthouse private room (~€66 total for the night)
 
 ---
 
-#### DAY 14 — Belgrade → Fly to Lisbon → Covilhã 🏠
+#### DAY 22 — Cinque Terre → Florence
 
-| Time | Activity | Details | Cost |
-|------|----------|---------|------|
-| 8:00 AM | Wake up, breakfast | Use guesthouse kitchen. Pack everything. | FREE |
-| 9:30 AM | 🚶 **ST. SAVA TEMPLE** | One of the largest Orthodox churches in the world. FREE. Beautiful mosaics inside. Peaceful. | FREE |
-| 11:00 AM | 🚌 **Bus to airport** | Bus 72 from Zeleni Venac to Nikola Tesla Airport. 30 min. | €1.5/person |
-| 12:00 PM | 🏢 Belgrade Airport | Check-in. Relax at gate. One last Balkan meal? Buy snacks. | €3/person |
-| 2:00 PM | ✈️ **FLY: Belgrade → Lisbon** | 3 hours. Wizz Air or Ryanair. Last flight of the trip. | **€55/person** |
-| 5:00 PM | 🏁 **Arrive Lisbon, Portugal!** | Back where we started 11 days ago. | FREE |
-| 6:00 PM | 🚄 **Train: Lisbon → Covilhã** | 2.5 hours. Scenic ride through Portugal. This feels like coming home. | **€18/person** |
-| 8:30 PM | 🏠 **BACK AT SISTER'S! 🎉** | Parents collapse with joy. Sister makes chai. Show photos. Talk. Laugh. The trip is done. | FREE |
-| 10:00 PM | 😴 Sleep | In sister's apartment. Road trip complete. Rest begins. | FREE |
+| Time | Activity | Cost |
+|------|----------|------|
+| 8:00 AM | Morning walk. One last look at the colorful houses. | FREE |
+| 10:00 AM | 🚆 **Train: Cinque Terre → Florence** (2.5h) | **€20/person** |
+| 12:30 PM | 🏁 Arrive Florence. Walk to hostel (near Duomo/Santa Maria Novella area). | FREE |
+| 1:00 PM | 🏠 Hostel check-in. Private room with kitchen. | **€20/person** |
+| 2:00 PM | 🚶 **PONTE VECCHIO** — Famous bridge with shops built on it. Jewelers. Beautiful. | FREE |
+| 3:00 PM | 🚶 **DUOMO + BAPTISTERY** (outside) — Massive red dome. White/green marble. Mind-blowing architecture. Go inside the Baptistery (€5) to see the golden ceiling. | €5/person |
+| 5:00 PM | 😴 Rest at hostel | FREE |
+| 7:00 PM | 🛒 Buy groceries. 🍳 Cook dinner. | €9 total |
 
-**Dad's story**: "We flew from Serbia back to Portugal. 3 hours. My daughter said 'remember Dad, 11 days ago we set out on a bus from Covilhã'. 9 countries later, we're back. I have 900 photos. Stories I'll tell for the rest of my life."
+**Sleep**: Hostel private room (~€60 total for the night)
 
-**Mom's comfort**: One 3-hour flight. That's it. She conquered Europe without a single mid-trip plane. The two ferries were her favorite part — sailing the Mediterranean with her family.
+---
+
+#### DAY 23 — Florence Deep
+
+| Time | Activity | Cost |
+|------|----------|------|
+| 9:00 AM | 🚶 **PIAZZALE MICHELANGELO** (FREE) — Walk up the hill. BEST VIEW of ALL Florence. The Duomo, the bridges, the hills. Unforgettable. | FREE |
+| 11:00 AM | 🚶 **PIAZZA DELLA SIGNORIA** — Outdoor sculpture gallery. David replica. Palazzo Vecchio. | FREE |
+| 1:00 PM | 🍳 Lunch — bread, cheese, tomatoes from supermarket | €3/person |
+| 2:00 PM | 🚶 **SAN LORENZO MARKET** — Indoor food market. Just walk through. Colors, smells, energy. | FREE |
+| 4:00 PM | 😴 Rest | FREE |
+| 7:00 PM | 🍳 Cook dinner at hostel — try making fresh pasta from a local shop! | €8 total |
+
+**Dad's highlight**: Piazzale Michelangelo. The view of Florence from above is worth every step up the hill.
+
+**Sleep**: Same hostel (2 nights total = ~€60/night × 2)
+
+---
+
+#### DAY 24 — Florence → Rome
+
+| Time | Activity | Cost |
+|------|----------|------|
+| 9:00 AM | Check out. Quick breakfast. | FREE |
+| 10:00 AM | 🚆 **Train: Florence → Rome** (1.5h, high-speed) | **€25/person** |
+| 11:30 AM | 🏁 **ARRIVE ROME!** 🏟️ Metro to hostel. Buy 48h transport pass (€12.50). | €3/person |
+| 12:00 PM | 🏠 Hostel check-in. Private room with kitchen. Near Termini station or Monti district. | **€25/person** |
+| 2:00 PM | 🚶 **TREVI FOUNTAIN** — Throw a coin (€0.50). Guarantees return to Rome! | FREE |
+| 3:00 PM | 🚶 **SPANISH STEPS** — Climb halfway, sit, watch Rome go by. | FREE |
+| 5:00 PM | 😴 Rest at hostel | FREE |
+| 7:00 PM | 🛒 Buy groceries. Italian pasta, tomatoes, basil, olive oil, bread. 🍳 Cook dinner. | €9 total |
+| 9:00 PM | 🚶 Evening walk — see Trevi Fountain lit up at night. | FREE |
+
+**Sleep**: Hostel private room (~€75 total for the night)
+
+---
+
+#### DAYS 25-27 — Rome + Vatican Deep (4 nights total, including Day 24)
+
+**Day 25 — Ancient Rome**
+
+| Time | Activity | Cost |
+|------|----------|------|
+| 9:00 AM | 🏟️ **COLOSSEUM** (outside only — walk all the way around, it's FREE and just as impressive) | FREE |
+| 10:00 AM | 🚶 **ROMAN FORUM** (view from above at Colle Oppio park — FREE, see the ruins of ancient Rome) | FREE |
+| 11:00 AM | 🚶 **PANTHEON** (FREE entry! Ancient Roman temple with open hole in ceiling — incredible) | FREE |
+| 1:00 PM | 🍳 Lunch at hostel — cook your own | FREE |
+| 4:00 PM | 🚶 **PIAZZA NAVONA** — Beautiful fountain square. Street artists. Relax. | FREE |
+| 8:00 PM | 🍳 Cook dinner. Pasta with Roman tomatoes — the best in Italy! | FREE |
+
+**Day 26 — Vatican City (Country #4! 🇻🇦)**
+
+| Time | Activity | Cost |
+|------|----------|------|
+| 9:00 AM | 🚇 Metro to Vatican: Colosseo → Ottaviano (20 min) | €2/person |
+| 10:00 AM | 🇻🇦 **ST. PETER'S SQUARE + BASILICA** — **FREE ENTRY.** World's largest church. Michelangelo's Pietà. Massive dome. Bernini's columns. Go through security (no shorts/bare shoulders). | **FREE** 🏆 |
+| 12:00 PM | 🏛️ **VATICAN MUSEUMS (optional)** — €17/person. Dad + Sister might want to see the Sistine Chapel (Michelangelo's ceiling). Mom can rest at nearby cafe (€1 coffee). If the line is 1+ hour, skip — the basilica is already enough. | €17/person (if Dad+Sis go) |
+| 1:30 PM | 🍳 Lunch: find a trattoria. Order **PASTA AL POMODORO** (tomato pasta, **no eggs**, pure veg ✅) or **PIZZA MARGHERITA** (cheese+tomato, **no eggs** ✅) — €8-10. | **€8/person** 🎉 |
+| 3:00 PM | 🚶 Walk back through Rome. Castel Sant'Angelo (outside). | FREE |
+| 5:00 PM | 😴 Rest | FREE |
+| 8:00 PM | 🍳 Cook dinner at hostel — last Rome dinner! | FREE |
+
+**Day 27 — Rome Morning + Flight Prep**
+
+| Time | Activity | Cost |
+|------|----------|------|
+| 9:00 AM | 🚶 Walk through **TRASTEVERE** — Rome's most charming neighborhood. Quiet streets. Ivy-covered buildings. | FREE |
+| 11:00 AM | 🛒 Buy food for tomorrow's travel + pack bags | €5 total |
+| 12:00 PM | 😴 Rest. Pack for flight to Porto. | FREE |
+| 4:00 PM | 🚶 Last walk — visit whatever you loved most again. Trevi? Colosseum? | FREE |
+| 8:00 PM | 🍳 Cook last dinner. Rome has been beautiful. | FREE |
+
+---
+
+#### DAY 28 — ✈️ Rome → Porto + Explore Porto!
+
+| Time | Activity | Cost |
+|------|----------|------|
+| 8:00 AM | Wake up. Hostel breakfast. Check out. | FREE |
+| 10:00 AM | 🚇 Metro to Rome Fiumicino Airport (Leonardo Express €14, 32 min) | €14/person |
+| 1:00 PM | ✈️ **FLY: Rome → Porto** (2.5h, ~€45-50/person) — **one flight. Short. Easy.** | **€50/person** |
+| 3:30 PM | 🏁 **Arrive Porto, Portugal!** Metro to city center (€2). | €2/person |
+| 4:30 PM | 🏠 Hostel check-in. Private room with kitchen. Safe area (Ribeira or Cedofeita). | **€16/person** |
+| 5:30 PM | 🚶 **DOM LUÍS BRIDGE** — Iconic double-deck bridge designed by Eiffel's student. Walk across the TOP level for stunning view. | FREE |
+| 6:30 PM | 🛒 Buy groceries. 🍳 Cook dinner. | €8 total |
+| 8:00 PM | 🚶 Evening walk along Ribeira (riverside). Lit up at night. Beautiful. | FREE |
+
+**Mom's comfort**: One 2.5h flight. That's it for the entire trip. She did it. Now she's in a familiar country (Portugal) with her daughter. Rest begins.
+
+**Sleep**: Hostel private room (~€48 total for the night)
+
+---
+
+#### DAYS 29-31 — Porto Deep (4 nights total)
+
+| Day | 🔥 Must-See Places | Cost |
+|-----|-------------------|------|
+| **Day 29** | 🚶 **PORTO CATHEDRAL** (FREE), 🚶 **Ribeira district** (UNESCO, colorful houses along river), 🌉 Walk across Dom Luís Bridge LOWER level | FREE |
+| **Day 30** | 📚 **LIVRARIA LELLO** — THE most beautiful bookstore in the world. Harry Potter inspired. €8 entry but you get €5 off any book. Worth it. Go early (opens 9 AM, queues form fast). | **€8/person** |
+| **Day 31** | 🚶 **CLÉRIGOS TOWER** (view from outside, €6 to climb), 🚶 **SÃO BENTO STATION** (FREE — inside is covered in blue tile paintings), 🚶 **CRYSTAL PALACE GARDENS** (free, peacocks, viewpoint) | FREE |
+| **Evenings** | 🛒 Buy groceries at Mercadona. 🍳 Cook pure veg dinner. | €8/day |
+
+**Dad's story**: "Livraria Lello is the most beautiful bookstore in the world. J.K. Rowling lived in Porto and wrote Harry Potter here. The staircase inspired Hogwarts."
+
+**Sleep**: Same hostel (4 nights total = ~€48/night × 4)
+
+---
+
+#### DAY 32 — Porto → Coimbra
+
+| Time | Activity | Cost |
+|------|----------|------|
+| 10:00 AM | Check out. 🚆 **Train: Porto → Coimbra** (1.5h) | **€10/person** |
+| 11:30 AM | 🏁 Arrive Coimbra. Walk to guesthouse near University. | FREE |
+| 12:00 PM | 🏠 Guesthouse check-in. Private room. | **€14/person** |
+| 1:00 PM | 🎓 **UNIVERSITY OF COIMBRA** — Oldest university in Portugal (1290!). Walk through the campus. The view from the tower is stunning. | €5/person |
+| 2:00 PM | 📖 **JOANINA LIBRARY** — Baroque library. Gold leaf. Rare books. €10 entry. Jaw-dropping. | **€10/person** |
+| 4:00 PM | 😴 Rest | FREE |
+| 6:00 PM | 🛒 Buy groceries. 🍳 Cook dinner. | €7 total |
+
+**Sleep**: Guesthouse private room (~€42 total for the night)
+
+---
+
+#### DAY 33 — Coimbra Morning → Back to Covilhã 🏠
+
+| Time | Activity | Cost |
+|------|----------|------|
+| 9:00 AM | Morning walk through Coimbra old town. One last look. | FREE |
+| 11:00 AM | 🚌 **Bus: Coimbra → Covilhã** (1.5h, €10) | **€10/person** |
+| 12:30 PM | 🏠 **BACK AT SISTER'S!** — Trip 1 is complete. Spain, Italy, Porto, Coimbra — all done. Rest begins. | **FREE** |
+| Evening | 🍳 Sister cooks a big pure-veg meal. Share photos. Tell stories. Sleep in a real bed. | FREE |
 
 **Sleep**: Sister's apartment. FREE. 🏠
 
 ---
 
-### PHASE 3: COVILHÃ REST + LISBON + FLY HOME (Days 15-20)
+### REST: COVILHÃ (Days 34-55) — 22 Days FREE
 
-**Location**: Sister's apartment in Covilhã (FREE) + Lisbon last days
-**Cost**: ~€5/person/day for groceries
-**Purpose**: Rest. Process the trip. Spend quality time. Lisbon on the way out.
+| Day Range | What to Do |
+|-----------|-----------|
+| **Days 34-40** | **Deep rest.** Sleep in every day. Sister cooks. Walk around Covilhã. Look at Trip 1 photos. Dad writes down stories. Mom does laundry, rests properly. |
+| **Days 41-48** | **Day trips from Covilhã:** Serra da Estrela (mountain, bus €5 round trip), visit local markets, explore nearby towns. Nothing expensive. Just being together. |
+| **Days 49-55** | **Prepare for Trip 2.** Pack a SMALLER bag (Trip 2 is shorter). Buy groceries for Lisbon/Sintra/Algarve. Sister books hostels. Check budget remaining. |
 
----
-
-#### DAYS 15-17 — Pure Rest in Covilhã
-
-You've earned this. The road trip covered 9 countries in 11 days. Now rest.
-
-| Day | Suggested Activities |
-|-----|---------------------|
-| **Day 15** | Sleep in. Late breakfast. Short walk in Covilhã. Sister makes lunch. Evening: look at all photos together. Write down stories. |
-| **Day 16** | Day trip: **Serra da Estrela Natural Park** (FREE!). Take local bus to Torre — highest point in mainland Portugal (€5 round trip). Breathtaking views. Pack a picnic. |
-| **Day 17** | Light walk through Covilhã. Visit UBI university. Buy souvenirs (€10-15 total). Evening: cook a special "Portugal farewell dinner" together. |
-
-**Dad's homework**: Sit down with a notebook. Write down all the stories. The ferry sunset. The Colosseum. Berat's thousand windows. Ohrid lake. The Danube. Every detail matters.
+> **Budget note**: EVERY day at Covilhã costs ONLY groceries (~€5 for all 3). If money is tight, stay here longer. Zero pressure.
 
 ---
 
-#### DAY 18 — Lisbon (Last Day Before Flying Home)
+### TRIP 2: PORTUGAL SOUTH (Days 56-73)
 
-| Time | Activity | Details | Cost |
-|------|----------|---------|------|
-| 8:00 AM | 🚄 **Train: Covilhã → Lisbon** | 2.5 hours. Take your backpacks. No need to return to Covilhã. | **€18/person** |
-| 11:00 AM | 🚶 **BELÉM TOWER + JERÓNIMOS MONASTERY** (outside) | UNESCO world heritage sites. Walk along the Tagus river. Beautiful area. | FREE |
-| 12:30 PM | 🥟 **PASTEL DE BELÉM** | ORIGINAL egg tart bakery since 1837. €1.30 each. EVERY visitor must try it. Pure veg. | €1.30/person |
-| 2:00 PM | 🚃 **TRAM 28** | Iconic yellow tram through Lisbon's oldest neighborhoods. €3. Fun ride. | €3/person |
-| 3:00 PM | 🚶 **ALFAMA + MIRADOURO VIEWPOINT** | Lisbon's oldest district. Climb to the viewpoint. Stunning view of the city and river. Last photos. | FREE |
-| 5:00 PM | 🏨 **Check into budget hotel near airport** | Book in advance (~€40-50 for triple near Lisbon airport). | ~€17/person |
-| 7:00 PM | 🍳 Last dinner out (or cook at hotel if kitchen available) | Try **Caldo Verde** (Portuguese potato+kale soup, pure veg, €3-4) or just buy bread, cheese, fruit from a supermarket. | €4/person |
-| 9:00 PM | 😴 Sleep early | Flight tomorrow! | FREE |
+**18 days. Covilhã → Lisbon → Sintra → Algarve → Lisbon → Fly home.**
 
 ---
 
-#### DAYS 19-20 — Fly Home ✈️
+#### DAY 56 — Covilhã → Lisbon
+
+| Time | Activity | Cost |
+|------|----------|------|
+| 9:00 AM | 🚄 **Train: Covilhã → Lisbon** (2.5h, €18) | **€18/person** |
+| 11:30 AM | 🏁 Arrive Lisbon! Metro to hostel (buy Viva Viagem card €0.50 + load 24h pass €6.60). | €7/person |
+| 12:00 PM | 🏠 Hostel check-in. Private room with kitchen. Safe area (Alfama or Baixa/Chiado — NOT Bairro Alto, that's the party area). | **€18/person** |
+| 1:00 PM | 🚶 **BELÉM TOWER** (outside — UNESCO tower on the river) | FREE |
+| 2:00 PM | 🚶 **JERÓNIMOS MONASTERY** (outside — massive, ornate, UNESCO) | FREE |
+| 3:00 PM | 🛒 Buy groceries. 🍳 Cook lunch/dinner at hostel. | €8 total |
+| 5:00 PM | 🚶 **ALFAMA DISTRICT** — Lisbon's oldest neighborhood. Narrow streets. Fado music. Walk up to a miradouro (viewpoint). | FREE |
+| 8:00 PM | 🍳 Cook dinner. | FREE |
+
+**Sleep**: Hostel private room (~€54 total for the night)
+
+---
+
+#### DAYS 57-62 — Lisbon Deep (7 nights total)
+
+| Day | 🔥 Must-See Places |
+|-----|-------------------|
+| **Day 57** | 🏰 **SÃO JORGE CASTLE** (€10 — oldest part of Lisbon, view of the whole city), 🚶 Walk down from castle through Alfama |
+| **Day 58** | 🚃 **TRAM 28** (€3 — iconic yellow tram that climbs Lisbon's hills. Sit by the window. A Lisbon must-do.) |
+| **Day 59** | 🚶 **LX FACTORY** (trendy market in a converted factory, fun to walk through), 🚶 **TIME OUT MARKET** (food hall — just look, expensive to eat) |
+| **Day 60** | 🚶 **CASCALIS DAY TRIP** — Train from Lisbon (€4, 40 min). Beautiful beach town. Walk the promenade. Dip feet in Atlantic. Pure veg lunch at a cafe. Back by evening. |
+| **Day 61** | Rest day. Sit at a miradouro (viewpoint). Listen to Fado music on the street. Do nothing. |
+| **Day 62** | 🚶 Revisit favorite spots. Buy souvenirs (€10). Last evening in Lisbon before Sintra/Algarve. |
+| **Every evening** | 🛒 Buy groceries. 🍳 Cook dinner at hostel. |
+
+**Sleep**: Same hostel (7 nights = ~€54/night × 7)
+
+---
+
+#### DAY 63 — Sintra Day Trip 🏰
+
+| Time | Activity | Cost |
+|------|----------|------|
+| 8:00 AM | 🚆 **Train: Lisbon → Sintra** (€4, 40 min) | **€4/person** |
+| 9:00 AM | 🏆 **PENA PALACE** (€14) — Colorful fairy-tale castle on a hilltop. The most photographed palace in Portugal. Book online to avoid queues. Allow 2 hours. | **€14/person** 🏆 |
+| 12:00 PM | 🚶 Walk through Sintra village. Charming streets. Cafes. | FREE |
+| 1:00 PM | 🍳 Lunch — bread, cheese, fruit from local shop (packed picnic) | €3/person |
+| 2:00 PM | 🚶 **QUINTA DA REGALEIRA** (€10) — Mysterious estate with underground tunnels, the "initiation well" (spiral staircase going deep into the earth). Worth it. | €10/person |
+| 5:00 PM | 🚆 Train back to Lisbon | €4/person |
+| 7:00 PM | 🍳 Cook dinner at hostel. Pack for Algarve tomorrow. | FREE |
+
+---
+
+#### DAY 64 — Lisbon → Algarve (Lagos)
+
+| Time | Activity | Cost |
+|------|----------|------|
+| 9:00 AM | Check out. 🚌 **Bus: Lisbon → Lagos (Algarve)** (3h, €15) | **€15/person** |
+| 12:00 PM | 🏁 Arrive Lagos. Walk to guesthouse (near Ponta da Piedade or city center). | FREE |
+| 1:00 PM | 🏠 Guesthouse check-in. Private room with kitchen. | **€16/person** |
+| 2:00 PM | 🚶 **PONTA DA PIEDADE** — Iconic golden rock formations + turquoise water. Walk the cliff path. FREE and STUNNING. | FREE |
+| 5:00 PM | 🏖️ **PRAIA DO CAMILO** — Beach at the bottom of 200 steps. Most beautiful beach in Lagos. | FREE |
+| 7:00 PM | 🛒 Buy groceries. 🍳 Cook dinner. | €8 total |
+
+**Sleep**: Guesthouse private room (~€48 total for the night)
+
+---
+
+#### DAYS 65-67 — Algarve Deep (4 nights total)
+
+| Day | 🔥 Must-See Places | Cost |
+|-----|-------------------|------|
+| **Day 65** | 🏆 **BENAGIL CAVE** — THE most famous sea cave in Portugal! Take a boat tour from Benagil beach (€15/person, 45 min). The cave has a hole in the ceiling. Photos don't do it justice. | **€15/person** 🏆 |
+| **Day 66** | 🚶 **ALBUFEIRA** — Walk the old town. See the beaches from the cliff-top path. Relaxed day. | FREE |
+| **Day 67** | 🏖️ Free beach day. No plans. Just rest. Swim (if they want). Walk. Read. Cook. | FREE |
+| **Evenings** | 🛒 Groceries. 🍳 Cook pure veg dinner. Fresh vegetables, rice, pasta. | €8/day |
+
+**Sleep**: Same guesthouse (4 nights total = ~€48/night × 4)
+
+---
+
+#### DAY 68 — Algarve → Lisbon (Final Days)
+
+| Time | Activity | Cost |
+|------|----------|------|
+| 10:00 AM | Check out. 🚌 **Bus: Algarve → Lisbon** (3h, €15) | **€15/person** |
+| 1:00 PM | 🏁 Arrive Lisbon. Same hostel or a new one near airport area. | FREE |
+| 2:00 PM | 🏠 Hostel check-in (near airport — last days, easier for flight). | **€18/person** |
+| 3:00 PM | 😴 Rest. Unpack. This is the final stretch. | FREE |
+| 6:00 PM | 🚶 Last evening walk. Go to a miradouro. Watch the sunset over Lisbon. | FREE |
+| 8:00 PM | 🍳 Cook final Lisbon dinner. | FREE |
+
+**Sleep**: Hostel near Lisbon airport (~€54 total for the night)
+
+---
+
+#### DAYS 69-70 — Lisbon Final Days
 
 | Day | Activity | Cost |
 |-----|----------|------|
-| **Day 19** | Wake up. Check out. Go to Lisbon Airport. Hug sister goodbye. ✈️ **Fly: Lisbon → India.** | Included in flights |
-| **Day 20** | Arrive India. The trip of a lifetime is over. | — |
-
-**Final thought**: Sister will stay at the airport hotel with parents on Day 18 night. She sees them off at the airport on Day 19. That's the last hug. Make it count.
-
----
-
-## 8. DAD'S COUNTRY COUNT — 9 Countries
-
-| # | Country | Best for Dad's Stories |
-|---|---------|----------------------|
-| 1 | 🇵🇹 **Portugal** | Sister's home. Serra da Estrela. Pastel de Nata. |
-| 2 | 🇪🇸 **Spain** | Plaza Mayor. AVE train at 300 km/h. Sagrada Familia. |
-| 3 | 🇮🇹 **Italy** | 🚢 Ferry across the Mediterranean! Colosseum. Real Italian pasta. |
-| 4 | 🇻🇦 **Vatican City** | World's smallest country. St. Peter's Basilica (free + massive). |
-| 5 | 🇦🇱 **Albania** | Coffee for €0.50. Castle with people living inside. The "real Europe." |
-| 6 | 🇲🇰 **North Macedonia** | Lake Ohrid (one of the oldest in the world). Samuel's Fortress. |
-| 7 | 🇧🇬 **Bulgaria** | Alexander Nevsky Cathedral. Affordable and beautiful Sofia. |
-| 8 | 🇷🇴 **Romania** | Palace of the Parliament (2nd largest building in the world). |
-| 9 | 🇷🇸 **Serbia** | Kalemegdan Fortress. Two rivers meeting. Danube sunset. |
-
-**9 countries. 11 days of travel. 0 mid-trip flights. Hundreds of stories.**
+| **Day 69** | 🚶 Visit your favorite Lisbon spot one more time. Buy last souvenirs (€10). Take last photos. | FREE |
+| **Day 70** | 🧳 Pack everything. Clean up hostel. Sister says goodbye — she'll go back to Covilhã after. Tonight is the last night all 3 together. | FREE |
+| Evening | 🍳 **Final family dinner.** Cook together. Talk about the 70 days. Look at all photos. This is the last night of the trip. | €10 total |
 
 ---
 
-## 9. MONEY-SAVING TIPS
+### FLY HOME (Days 71-84)
 
-### How This Trip Stays Under ₹4L
-
-| Strategy | Saving |
-|----------|--------|
-| Sister's apartment (7 nights FREE) | ~€500 saved |
-| Cook 80% of meals at hostels (not restaurants) | ~€400 saved |
-| Hostel private rooms (not hotels) | ~€300 saved |
-| Day buses (not trains) for long Balkan routes | ~€200 saved |
-| Albania + Balkans (2-3x cheaper than Western Europe) | ~€200 saved |
-| Regional train Rome→Bari (not high-speed) | ~€100 saved |
-| Free sightseeing (view from outside) | ~€200 saved |
-| Belgrade→Lisbon flight (not 3-day ground return) | ~€500 saved |
-| Ferries instead of flights+hotels | ~€100 saved |
-
-### Daily Money-Saving Habits
-
-- **Water**: Refill at hostel. Never buy bottled. Saves €2/day/person.
-- **Coffee**: Make at hostel. Don't buy cafe coffee every day.
-- **Snacks**: Carry nuts, dry fruit, biscuits from Covilhã.
-- **Markets**: Buy from local produce markets, not tourist shops. Cheaper and better.
-- **Laundry**: Hand-wash in hostel sink. Dries overnight in August heat.
-- **SIM**: Buy Airalo eSIM (€5-10 for 10GB). No roaming charges.
-- **Transport passes**: Buy 24h/48h metro passes in big cities — cheaper than single tickets.
-
-### When to Spend (Worth Every Euro)
-
-| Item | Why | Cost |
-|------|-----|------|
-| AVE train Madrid→Barcelona | 2.5h vs 8h bus. Experience. | €50/person |
-| 4-berth cabin Barcelona→Genoa | Family together. Mom's comfort. Memory. | ~€40/person |
-| 4-berth cabin Bari→Durrës | Family together. Parents sleep properly. | ~€15 extra/person |
-| Pasta al Pomodoro near Vatican | Real Italian food. Pure veg. A memory. | €8/person |
-| Pastel de Belém | €1.30 for the world's best egg tart. | €1.30/person |
+| Day | Activity |
+|-----|----------|
+| **Day 71** | Wake up. Final breakfast together. Pack. |
+| **✈️** | **Mom & Dad fly Lisbon → India.** Sister goes back to Covilhã (train €18, 2.5h). |
+| **Days 72-84** | **BUFFER DAYS** — These are spare days on your 84-day visa. You can use them to rest longer at Covilhã (FREE at sister's) before flying. The flights are flexible with a change fee? If yes, extend the stay. If not, the 84 days is just the maximum visa — you can fly home earlier. |
 
 ---
 
-## 10. SAFETY & EMERGENCY INFO
+## 7. COMPLETE FAMOUS PLACES CHECKLIST — Don't Miss a Thing!
+
+### 🔴 TRIP 1: SPAIN
+
+| City | Place | Cost | Must-See? |
+|------|-------|------|-----------|
+| **Madrid** | Plaza Mayor | FREE | ✅ Walk through, take photos |
+| | Royal Palace (outside) | FREE | ✅ Massive, just look from outside |
+| | Templo de Debod | FREE | ✅ Ancient Egyptian temple in Spain. Unique. |
+| | Retiro Park | FREE | ✅ Beautiful park. Rowboat on lake (€4). |
+| **Seville** | Plaza de España | FREE | ✅ THE icon of Seville. Half-moon building. |
+| | Alcázar | €12 | ✅ Game of Thrones gardens. Worth every euro. |
+| | Santa Cruz quarter | FREE | ✅ White streets, flowers, orange trees. |
+| **Granada** | 🏆 **ALHAMBRA** | **€15** | **⭐ BOOK 2 MONTHS AHEAD. THE BEST thing in Spain.** |
+| | Albaicín quarter | FREE | ✅ View of Alhambra from Mirador San Nicolás. |
+| **Barcelona** | 🏆 **Sagrada Familia** (outside) | **FREE** | **⭐ Gaudi's masterpiece. FREE to view from outside.** |
+| | Gothic Quarter | FREE | ✅ Medieval streets. Roman ruins. |
+| | Park Güell (free area) | FREE | ✅ Gaudi's colorful park with city view. |
+| | Barceloneta beach | FREE | ✅ Mediterranean. Dip feet. |
+| | 🚢 **Ferry Barcelona→Genoa** | ~€40 | **⭐ THE experience. Sunset at sea. Cabin together.** |
+
+### 🔴 TRIP 1: ITALY
+
+| City | Place | Cost | Must-See? |
+|------|-------|------|-----------|
+| **Cinque Terre** | Manarola + Riomaggiore | FREE | ✅ The colorful cliff villages. Walk between them. |
+| **Florence** | Duomo (outside) | FREE | ✅ Red dome. White/green marble. Mind-blowing. |
+| | Ponte Vecchio | FREE | ✅ Famous bridge with shops. Walk across. |
+| | **Piazzale Michelangelo** | **FREE** | **⭐ BEST VIEW of all Florence. Walk up at sunset.** |
+| **Rome** | 🏆 **Colosseum (outside)** | **FREE** | **⭐ Walk around it. Free and just as impressive.** |
+| | Trevi Fountain | FREE | ✅ Throw a coin. Iconic. |
+| | Spanish Steps | FREE | ✅ Sit. Watch. Relax. |
+| | Pantheon | FREE | ✅ Ancient temple with open hole roof. |
+| | **St. Peter's Basilica** | **FREE** | **⭐ World's largest church. FREE entry. A MUST.** |
+| | Vatican Museums (optional) | €17 | Only if Dad+Sister want Sistine Chapel. |
+
+### 🔴 PORTO + COIMBRA
+
+| City | Place | Cost | Must-See? |
+|------|-------|------|-----------|
+| **Porto** | Dom Luís Bridge | FREE | ✅ Iconic bridge. Walk the top level. |
+| | Livraria Lello | €8 | ✅ Most beautiful bookstore. Harry Potter. |
+| | Ribeira district | FREE | ✅ UNESCO riverside. Colorful houses. |
+| | São Bento Station | FREE | ✅ Blue tile paintings inside. |
+| **Coimbra** | University of Coimbra | €5 | ✅ Oldest in Portugal. Stunning view. |
+| | Joanina Library | €10 | ✅ Baroque. Gold leaf. Jaw-dropping. |
+
+### 🔴 TRIP 2: PORTUGAL SOUTH
+
+| City | Place | Cost | Must-See? |
+|------|-------|------|-----------|
+| **Lisbon** | Belém Tower | FREE | ✅ UNESCO tower on the river. |
+| | Jerónimos Monastery (outside) | FREE | ✅ Massive. Ornate. UNESCO. |
+| | Tram 28 | €3 | ✅ Iconic yellow tram. Must ride. |
+| | Alfama district | FREE | ✅ Oldest neighborhood. Viewpoints. |
+| | São Jorge Castle | €10 | ✅ View of ALL Lisbon. |
+| | Cascais day trip | €4 train | ✅ Beautiful beach town. Easy day. |
+| **Sintra** | 🏆 **Pena Palace** | **€14** | **⭐ Colorful fairy-tale castle. THE Portugal photo.** |
+| | Quinta da Regaleira | €10 | ✅ Mysterious initiation well. Unique. |
+| **Algarve** | 🏆 **Benagil Cave** | **€15 boat** | **⭐ The most famous sea cave in Portugal.** |
+| | Ponta da Piedade (Lagos) | FREE | ✅ Golden rocks + turquoise water. |
+
+---
+
+## 8. PURE VEG FOOD GUIDE — What to Eat Where
+
+### Rule: Cook 90% of Meals at Hostels
+
+**What to buy at any European supermarket** (Mercadona, Continente, Lidl, Pingo Doce, Carrefour):
+
+| Ingredient | Cost | Use |
+|-----------|------|-----|
+| Pasta (500g) | €0.60-1 | Basic dinner. Add tomato sauce. |
+| Rice (1kg) | €0.80-1.50 | Make Indian-style curry with vegetables. |
+| Fresh tomatoes | €1-2/kg | Sauce, salad, sandwiches. |
+| Onions | €0.80/kg | Curry base. |
+| Potatoes | €0.80/kg | Boil, fry, curry. |
+| Bell peppers | €1.50-2/kg | Curry, salad, roasted. |
+| Carrots | €0.80/kg | Curry, salad. |
+| Zucchini | €1.50-2/kg | Curry, pasta. |
+| Garlic | €0.50/head | EVERYTHING needs garlic. |
+| Olive oil | €2-3/bottle | Cooking base. |
+| Bread (fresh) | €0.50-1/loaf | Breakfast, sandwiches. |
+| Cheese (local) | €1.50-3/block | Sandwiches, pasta. |
+| Yogurt (plain) | €0.60-1 | Breakfast, raita. |
+| Fresh fruit (seasonal) | €1-2/kg | Snacks, dessert. |
+| Lentils/dal | €1.50-2/bag | Indian-style dal soup! |
+| Chickpeas (canned) | €0.80-1 | Curry with rice. |
+
+### What to Order When Eating Out (10% of Meals)
+
+**Important: NO EGGS means some local dishes are NOT allowed.**
+
+| Country | ✅ CAN Eat (Pure Veg, No Eggs) | ❌ Skip (Has Eggs or Meat) |
+|---------|-------------------------------|--------------------------|
+| **Portugal** | 🥟 **Pastel de Nata** — ❌ WAIT, this has EGGS (egg custard). **Your parents CANNOT eat this.**<br>✅ **Caldo Verde** (kale soup — ASK if no meat stock, can be vegan)<br>✅ **Bread with olive oil**<br>✅ **Grilled vegetables**<br>✅ **Fresh orange juice** (Portugal has the best) | ❌ Pastel de Nata (eggs)<br>❌ Any seafood<br>❌ Meat dishes |
+| **Spain** | ✅ **Patatas Bravas** (fried potatoes with spicy tomato sauce — **check no aioli/eggs**) <br>✅ **Pan con Tomate** (bread with crushed tomato, olive oil, garlic — pure veg ✅)<br>✅ **Gazpacho** (cold tomato soup — vegan ✅)<br>✅ **Pimientos de Padrón** (fried green peppers — vegan ✅) | ❌ Tortilla Española (potato omelette — has EGGS)<br>❌ Jamón (ham — everywhere)<br>❌ Paella (usually has meat/seafood) |
+| **Italy** | ✅ **Pasta al Pomodoro** (tomato pasta — no eggs ✅)<br>✅ **Pizza Margherita** (cheese+tomato — no eggs ✅)<br>✅ **Bruschetta** (tomato+basil on bread — vegan ✅)<br>✅ **Insalata Mista** (mixed salad — no eggs ✅)<br>✅ **Grilled vegetables** (verdure alla griglia — vegan ✅) | ❌ Pasta Carbonara (has eggs + bacon)<br>❌ Pizza with meat/cheese that has eggs |
+
+### Sister's Secret Weapon: Indian Spices in a Small Box
+
+Before Trip 1, buy a **small box of basic Indian spices** in Covilhã:
+- Jeera (cumin)
+- Haldi (turmeric)
+- Red chili powder
+- Garam masala
+- Salt
+- Chai patti (tea leaves)
+
+This small box (fits in sister's backpack) lets you cook **Indian-style food anywhere**. With rice, vegetables, tomatoes, onions, and these spices — Mom can make dal, sabzi, curry in any hostel kitchen in Europe.
+
+### Sample Hostel Menu (What Mom Can Cook Anywhere)
+
+| Meal | What to Make | Cost for 3 |
+|------|-------------|-----------|
+| **Breakfast** | Bread + butter/jam + banana + tea/chai | €2 |
+| **Lunch** | Sandwiches (bread + cheese + tomato + olive oil) + fruit | €3 |
+| **Dinner** | Pasta with tomato+onion+garlic sauce + salad | €4 |
+| **OR Dinner** | Rice + vegetable curry (potatoes, carrots, peppers, tomatoes, spices) | €4 |
+| **OR Dinner** | Vegetable soup + bread | €3 |
+| **Snacks** | Fresh fruit, nuts, yogurt | €2 |
+
+**~€12-13/day for ALL 3 people's food. That's ₹1,100/day for the whole family.**
+
+---
+
+## 9. SAFETY & EMERGENCY INFO
 
 ### Emergency Numbers
 
 | Country | Number |
 |---------|--------|
-| EU-wide (Spain, Italy, Portugal, Bulgaria, Romania) | **112** |
-| Albania | 129 (police) / 127 (ambulance) |
-| North Macedonia | 192 (police) / 194 (ambulance) |
-| Serbia | 192 (police) / 194 (ambulance) |
+| EU-wide (Portugal, Spain, Italy) | **112** |
 
-### General Safety for Your Family
+### Safety for Your Family
 
 | Situation | What to Do |
 |-----------|------------|
-| **Pickpocket risk** | Barcelona + Rome = highest risk. Keep wallets in front pockets. Mom's bag zipped and in front. Dad's phone NOT in back pocket. |
-| **Separated in city** | Agree on a meeting point: "If we get separated, meet at [landmark] at 6 PM." |
-| **Health issue** | EU has excellent healthcare. Show passport + travel insurance card. Most care is free or very cheap. |
-| **Missed bus** | Don't panic. Sister buys the next one. Every city has options. |
-| **Lost** | Use Google Maps offline (download before). Ask a young person — they speak English. |
-| **Cash needed** | Balkans prefer cash (€). Italy/Spain accept cards. Withdraw from city ATMs (avoid airport ATMs — bad rates). |
-| **Bathroom** | Use hostel before leaving. Pay toilets exist (€0.50-1). Carry tissues always. |
+| **Pickpockets** | Barcelona + Rome = highest risk. Keep wallets in FRONT pockets. Mom's bag zipped and in front. Dad's phone NOT in back pocket. |
+| **Getting lost** | Use Google Maps offline. Or ask a young person — they speak English. |
+| **Separated** | Agree on a meeting point: "If we get lost, meet at [main landmark] at 6 PM." |
+| **Health** | EU healthcare is excellent. Show passport + insurance card. Free or very cheap. |
+| **Missed bus** | Don't panic. Sister buys next ticket on FlixBus app. |
+| **Cash** | Balkans not needed (not visiting). Spain/Italy/Portugal = cards accepted everywhere. Keep €50-100 cash for small shops. |
+| **Bathroom** | Use hostel before leaving. Pay toilets exist (€0.50-1). Always carry tissues. |
 
-### Health Kit to Carry
+### Health Kit
 
-| Item | Why |
-|------|-----|
-| Paracetamol | Headache, fever |
-| Antacid | Stomach issues from new food |
-| ORS packets | Dehydration, upset stomach |
-| Band-aids | Blisters from walking |
-| Motion sickness pills | For Mom on buses (just in case) |
-| Regular medication | Bring enough for 25 days + extra in hand luggage |
+- Paracetamol, antacid, ORS packets, band-aids
+- Motion sickness pills (for Mom on long buses — just in case)
+- Any regular medication for 90+ days
 
 ---
 
-## 11. APPS TO DOWNLOAD BEFORE YOU GO
+## 10. APPS TO DOWNLOAD
 
-### Essential (Sister's Phone)
+### Sister's Phone (She Handles Everything)
 
-| App | Purpose |
-|-----|---------|
-| **FlixBus** | Book bus tickets (majority of travel) |
-| **GetbyBus** | Balkan bus routes (Tirana→Ohrid→Skopje→Sofia) |
-| **Rome2Rio** | Route planner — shows all options between cities |
-| **Booking.com** | Hostel bookings |
-| **Omio** | Bus + train comparison |
+| App | Why |
+|-----|-----|
+| **FlixBus** | Book buses across Spain + Portugal |
+| **Rome2Rio** | Shows ALL routes between two places |
+| **Booking.com** | Book hostel private rooms |
 | **Trainline** | Italian trains |
-| **GNV + Adria Ferries** | Ferry bookings |
-| **Bolt / Uber** | Taxi in Balkan cities (cheaper than street taxis) |
+| **GNV Ferries** | Barcelona→Genoa ferry booking |
+| **Bolt** | Taxi in cities (cheaper than Uber) |
+| **Google Maps** | Offline maps downloaded for every city |
+| **XE Currency** | ₹↔€ conversion |
 | **Airalo** | Europe eSIM for data |
-| **Google Maps** (offline maps downloaded) | Navigation |
-| **XE Currency** | Real-time ₹↔€ conversion |
-| **WhatsApp** | Family group — Mom, Dad, Sister, you in India |
+| **WhatsApp** | Family group — Mom, Dad, you in India |
 
-### For Mom & Dad's Phones
+### Mom & Dad's Phones
 
-| App | Purpose |
-|-----|---------|
+| App | Why |
+|-----|-----|
 | **WhatsApp** | Stay connected |
-| **Google Maps** | See where you are (works offline) |
+| **Google Maps** | Offline navigation |
 | **Google Photos** | Auto-backup photos |
 
-> **Day before departure**: Download ALL offline maps on wifi at sister's apartment. Covilhã, Madrid, Barcelona, Genoa, Rome, Bari, Berat, Ohrid, Sofia, Bucharest, Belgrade, Lisbon. Each ~200-500 MB.
+> **Before leaving Covilhã**: Download offline maps for ALL cities on wifi at sister's apartment. Madrid, Seville, Granada, Barcelona, Genoa, Cinque Terre, Florence, Rome, Porto, Coimbra, Lisbon, Sintra, Lagos. Each ~200-500 MB.
 
 ---
 
 ## FINAL WORDS
 
-**To Dad**: You wanted 9 countries and stories to tell. Here are 9 countries and 900 stories. The ferry across the Mediterranean with your family. The 300 km/h train through Spain. The €0.50 coffee in Albania. The Danube sunset in Belgrade. But the best story? That you and Mom did this together, after retirement, with your daughter guiding you. That's the real story.
+**To Dad**: You wanted famous places and stories to tell. Sagrada Familia. Alhambra. Colosseum. St. Peter's. Alhambra. Trevi Fountain. Pena Palace. Benagil Cave. Dom Luís Bridge. This itinerary hits EVERY iconic spot. But the real story? That you did this with Mom and your daughter, at your pace, eating your own food, sleeping together in a ferry cabin. That's the real story.
 
-**To Mom**: You conquered Europe without a single unwanted flight. You sailed the Mediterranean in a cabin with your family. You cooked familiar food in foreign kitchens. You saw the Colosseum, St. Peter's Basilica, the City of 1000 Windows. We are so proud of you.
+**To Mom**: You managed 84 days in Europe with just ONE short flight (Rome→Porto). You sailed the Mediterranean in a family cabin. You cooked your own food in every city. You walked through the Colosseum, threw a coin in Trevi Fountain, stood in St. Peter's. No eggs. No non-veg. No party scenes. Just your family, exploring the world your way.
 
-**To Sister**: You're the hero of this trip. Without your apartment in Covilhã, your knowledge of Europe, your language skills, your planning, and most of all your love — this trip doesn't happen. You gave Mom and Dad the retirement trip they deserve.
+**To Sister**: You made this possible. Without your apartment, your language skills, your planning, your love — none of this happens. You gave your parents the retirement trip of a lifetime. You are the hero.
 
-**To the family together**: 9 countries. 20 days. 2 overnight ferries in a family cabin. Day buses through the Balkans. Home-cooked meals in every city. This is ₹3.5L well spent.
+**To the whole family**: This is ₹3.9L for 3 people, 84 days, 3 countries, every famous place included, pure vegetarian, no stress. If budget runs low? Stay at Covilhã FREE. Cook at home. Walk in the mountains. That's the safety net.
 
-The remaining ₹50,000? Use it for the ferry cabin upgrade, the Pastel de Nata, an extra kilo of good cheese, and the airport hotel on the last night. You've earned every bite.
-
----
-
-> **Budget check**: ₹3,50,000 / ₹4,00,000 used ✅ **₹50,000 remaining for surprises.**
->
-> **Countries**: 9 countries. 11 travel days. 2 ferry sleeps together. 7 hostel nights.
->
-> **Family check**: Together at all times. Private rooms. Pure veg food. Warm weather. Safe neighborhoods. ✅
->
-> **Mom approved?** ✅ No unwanted flights. Proper rest. Home cooking. Family together.
->
-> **Dad approved?** ✅ 9 countries. Stories for a lifetime. Photos for albums.
+**Now go. Make memories. You've earned this.**
 
 ---
 
-*This itinerary was designed with love. Every decision was made with your family's comfort, values, and togetherness in mind. Safe travels, Mom, Dad, and Sister. 🌍❤️*
+> **Budget**: ₹3,90,000 / ₹4,00,000 ✅ **₹10,000 buffer**
+>
+> **Countries**: Portugal, Spain, Italy, Vatican (4)
+>
+> **Duration**: ~74 travel+rest days (84 on visa = extra rest if wanted)
+>
+> **Diet**: Pure vegetarian ✅ No eggs ✅ No non-veg ✅
+>
+> **Mom approved?** ✅ One short flight only. Slow pace. Home cooking. Family together.
+>
+> **Dad approved?** ✅ Every iconic place. 4 countries. Stories for a lifetime.
+
+---
+
+*This itinerary was designed for your family. Pure veg. No eggs. No parties. Safe neighborhoods. Famous places. Home-cooked meals. 84 days together. 🌍❤️*
