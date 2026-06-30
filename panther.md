@@ -1,10 +1,104 @@
-# Interview Prep — Monitoring & Observability Engineer @ ParentPay Group
+## SECTION 1: LOGICMONITOR (Advanced)
 
-## Target: ₹11-12 LPA
+### Q0a: What is WMI, SNMP, and ICMP? How does LM use them?
+
+**Answer:**
+
+**WMI (Windows Management Instrumentation)** — Microsoft's management protocol for Windows. It lets you query system info like CPU, memory, disk, processes, services from Windows machines. LM uses WMI when monitoring Windows servers. It connects via DCOM or WinRM on port 135/5985.
+
+**SNMP (Simple Network Management Protocol)** — Industry-standard protocol for network devices. Uses MIBs (Management Information Bases) to organize data. LM uses SNMP to monitor:
+- Network devices (switches, routers, firewalls)
+- Linux servers (with SNMP enabled) — like my custom DataSource
+- Any SNMP-capable device
+
+SNMP versions:
+- v1/v2c — uses community string (password), no encryption
+- v3 — with authentication and encryption (more secure)
+
+Key SNMP operations:
+- GET — fetch a single value
+- WALK — fetch all values under an OID (like "list all running processes")
+- TRAP — device sends alert to monitoring server
+
+**ICMP (Internet Control Message Protocol)** — The protocol behind `ping`. It's the simplest check — is the device alive and reachable? LM uses ping checks for basic availability monitoring before attempting SNMP/WMI.
+
+**In practice at my work:**
+- ICMP = first check (is it alive?)
+- Then SNMP = Linux/network monitoring
+- Then WMI = Windows monitoring
+- My custom DataSource used SNMP WALK on HOST-RESOURCES-MIB to find running processes
 
 ---
 
-## SECTION 1: LOGICMONITOR (Advanced)
+### Q0b: What is collector size and load? How many devices can each size handle?
+
+**Answer:**
+A LogicMonitor collector is a Windows/Linux service that does the actual polling. When you add a device to LM, an assigned collector does the monitoring.
+
+**Collector sizes and their capacity (official LM data):**
+
+| Size | CPU | RAM | SNMP v2c (Linux) | WMI | HTTP |
+|---|---|---|---|---|---|
+| **Nano** | - | <1GB | Testing only | Testing only | Testing only |
+| **Small** | 1 core | 2GB | **300 devices** | 211 devices | 320 devices |
+| **Medium** | 2 cores | 4GB | **1,000 devices** | 287 devices | 1,400 devices |
+| **Large** | 4 cores | 8GB | **4,000 devices** | 760 devices | 2,400 devices |
+| **XL** | 8 cores | 16GB | **8,000 devices** | 1,140 devices | 4,500 devices |
+| **XXL** | 16 cores | 32GB | **15,000 devices** | 1,330 devices | 7,500 devices |
+
+**Key insight:** The capacity depends on the protocol. A Medium collector can monitor 1,000 Linux devices via SNMP but only 287 Windows devices via WMI. This is because WMI is more resource-intensive.
+
+**Collector capacity also depends on:**
+- Number of **instances** per device (a switch with 100 interfaces = 100 instances, uses more resources)
+- Polling interval (frequent = more load)
+- DataSource complexity (script-based = more CPU)
+
+**Signs of collector overload:**
+- Increased latency in data collection
+- Dropped data points
+- Delayed alerting
+- High CPU/memory on collector VM
+
+**ABCG (Auto Balanced Collector Group) instance thresholds:**
+
+| Config | Small | Medium | Large |
+|---|---|---|---|
+| Default | 4,950 | **10,000** | 14,140 |
+| Conservative | 7,070 | 10,000 | 14,140 |
+| Aggressive | 10,600 | 15,000 | 21,210 |
+
+**How to handle load:**
+1. **Upgrade collector size** — Small → Medium → Large (most CPU/memory, more capacity)
+2. **Add more collectors** — distribute device groups across collectors
+3. **Collector groups** — organize collectors by location (Pune DC, Mumbai DC)
+4. **Failover collectors** — if primary fails, secondary takes over seamlessly
+5. **ABCG** — automatically balances devices across collectors in a group
+
+---
+
+### Q0c: What is ABCG (Auto Balanced Collector Group)?
+
+**Answer:**
+ABCG stands for **Auto Balanced Collector Group**. It's a LM feature that automatically distributes monitoring load across multiple collectors in a group instead of manually assigning devices.
+
+**How it works:**
+1. You create an ABCG group and add 2+ collectors to it
+2. You assign device groups to the ABCG
+3. LM automatically distributes devices evenly across the collectors based on load
+4. If a collector fails, ABCG redistributes its devices to the remaining collectors
+
+**Instance thresholds in ABCG:**
+- ABCG uses a formula: `Instances = sqrt(CollectorMem / MediumMem) × MediumThreshold`
+- Example: Large collector (4GB) = `sqrt(4/2) × 10,000 = 14,140 instances`
+- Collectors auto-calculate their weight based on current usage vs capacity
+- When overloaded, ABCG automatically offloads to another collector
+
+**Why it matters:**
+Without ABCG, you manually assign each device group to a collector. If one collector gets overloaded, you have to move devices manually. ABCG handles load balancing automatically.
+
+**In an interview, say:** "I know that collector sizing is measured both by device count and instance count. A Medium collector handles about 1,000 SNMP devices or 10,000 instances in ABCG. I'd use LM's capacity dashboard to monitor collector load and upgrade size or add collectors as needed."
+
+---
 
 ### Q1: Explain LogicMonitor architecture — collectors, collectors groups, device groups, data sources.
 
@@ -863,6 +957,134 @@ Phase 5 (Ongoing): Add synthetic monitoring for end users. Automate remediation 
 I had a case where a service would fail intermittently — maybe once every 2-3 days, but always recovered on restart. Standard monitoring showed nothing because by the time we checked, it was running fine.
 
 I added a custom DataSource that collected application logs in real-time and checked for specific error patterns. I also added process-level metrics (memory handle count, thread count). This caught a memory leak that built up over 48 hours until the process crashed. We fixed the leak and added a preventive restart playbook as a temporary measure.
+
+---
+
+### Q58: A critical alert fires at 2 AM. The server is unresponsive. You can't SSH in. Walk through what you do.
+
+**Answer:**
+1. First, try ping — if no response, it's likely a hardware or network-level issue.
+2. Check out-of-band management (iLO/iDRAC/IPMI) if available — check power, hardware errors.
+3. Check LM dashboard — what was the last data point before it went down? Any precursor spike?
+4. Check BigPanda/alert history — did other related devices also go down? Could be a network switch or power issue.
+5. Contact the data center team or cloud provider — check if it's a hypervisor/rack-level issue.
+6. If it's a VM, try force restart from hypervisor. If physical, request hands-and-feet.
+7. Once it's back, check logs (dmesg, /var/log/messages, application logs) for root cause.
+8. After resolution, ask: Could we have detected this earlier? Should we add hardware-level monitoring? Is there a runbook gap?
+
+---
+
+### Q59: A customer complains the website is slow, but your monitoring shows everything is green. What do you do?
+
+**Answer:**
+Green on infrastructure monitoring doesn't mean green on user experience.
+
+1. Check end user monitoring — do we have synthetic checks? If not, the monitoring gap is the problem.
+2. Check from a different location — maybe it's a regional network issue.
+3. Check CDN/cloud front — is the content being served from cache?
+4. Drill into individual request times — maybe 95% of requests are fast but the slow 5% are the customer.
+5. Check if the issue is still happening — maybe it was a transient spike that recovered.
+6. If found: add a synthetic check that mirrors the user journey.
+7. Tune the alert — set an alert on 95th percentile latency, not just average.
+
+---
+
+### Q60: You have 50 new Azure VMs being provisioned next week. They all need monitoring. What's your automation plan?
+
+**Answer:**
+I'd build a fully automated onboarding pipeline:
+
+1. **Discovery** — Use LM API to detect new VMs via Azure integration or NetScan. Or use Azure Event Grid to trigger a webhook when a VM is created.
+2. **Classification** — A Python script reads Azure tags (environment=prod, tier=web) and assigns device groups and properties in LM automatically.
+3. **Monitoring** — LM auto-applies DataSources based on device group and OS type.
+4. **Alerting** — Alert rules based on properties (production = critical, dev = warning).
+5. **Validation** — Script checks that all 50 VMs appear in LM with expected DataSources within 5 minutes.
+
+I already have similar automation using Python + LM API for adding ping monitoring. I'd extend that to handle full device onboarding with property propagation.
+
+---
+
+### Q61: A recurring incident happens every 2 weeks — server runs out of disk space. You've fixed it manually 3 times. What do you do?
+
+**Answer:**
+This is the difference between incident management and problem management.
+
+**Immediate:** Write an Ansible playbook that:
+- Checks disk space
+- If >90%, cleans up temp files and old logs
+- Restarts the service if needed
+- Sends a summary email
+
+**Permanent:** Find root cause — why does disk fill up?
+- Is there a log rotation issue? Fix logrotate config.
+- Is an application writing too much? Work with dev team to cap log size.
+- Add trending — alert at 80% with "disk will be full in X days" predictive alert.
+
+**Result:** First playbook handles tonight. Root cause fix prevents next month.
+
+---
+
+### Q62: Your manager says "I want one dashboard that shows me the health of everything." How do you build it?
+
+**Answer:**
+I wouldn't give them one dashboard — I'd give them layered dashboards:
+
+**Layer 1 — Executive Dashboard** (for manager):
+- Overall health score (green/yellow/red)
+- Number of critical/warning alerts
+- SLA compliance % for last 30 days
+- Top 3 services with most incidents
+
+**Layer 2 — Service Dashboards** (for team leads):
+- Per-service: latency, error rate, traffic, saturation
+- Recent incidents and resolution times
+
+**Layer 3 — Technical Dashboards** (for engineers):
+- Individual server CPU, memory, disk
+- Application-specific metrics
+
+In LM, I'd use dashboard groups with rollup widgets so the executive dashboard shows a summary, and they can click through to details. I've built similar layered dashboards at Wipro.
+
+---
+
+### Q63: The team uses PagerDuty for on-call. How would you integrate LM with PagerDuty?
+
+**Answer:**
+Two ways:
+
+1. **Alert Rule → Webhook** — In LM, create an alert rule that sends a webhook to PagerDuty Events API v2. PagerDuty creates an incident, notifies the on-call engineer, and auto-resolves when LM sends a clear alert.
+
+2. **Email Integration** — LM sends email to PagerDuty's integration email address. Simpler but less control.
+
+I've done similar integrations with Ansible Tower via webhooks. The PagerDuty integration follows the same pattern — JSON payload with service name, severity, description, and a unique dedup key so alerts don't duplicate.
+
+---
+
+### Q64: Your automation playbook ran but made the problem worse. Now what?
+
+**Answer:**
+This is why I design auto-remediation with safety guards:
+
+1. **Max attempts** — Playbook runs max 2 times. After that, escalation to human.
+2. **Rollback plan** — Every playbook has a rollback step. If the fix doesn't work, revert.
+3. **Canary** — Before broad rollout, test on a non-critical server first.
+4. **Kill switch** — Ability to disable auto-remediation globally if it's causing issues.
+5. **Audit** — Every playbook run is logged. We review failed runs weekly.
+
+At Wipro, I learned this the hard way. Now every playbook I write has: dry-run mode → canary → full rollout, each with a manual approval gate for critical systems.
+
+---
+
+### Q65: What if the monitoring tool itself goes down? How do you monitor the monitor?
+
+**Answer:**
+LM collectors are designed for this — collectors cache data locally if they lose connection to LM cloud. When connection restores, they forward the cached data.
+
+Additional safeguards:
+1. **Collector redundancy** — Deploy failover collectors. If primary fails, secondary takes over.
+2. **Health check** — An external cron job or third-party monitoring (e.g., Azure Monitor) pings LM API to check if data is being received.
+3. **Alert on silence** — If no data from a collector for 5 minutes, alert immediately.
+4. **Out-of-band** — SMS or Slack alert that doesn't depend on the monitoring tool.
 
 ---
 
