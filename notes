@@ -1,0 +1,689 @@
+# Research Proposal for PhD Studies
+
+## Adaptive Edge AI: Reversibility-Enabled Drift-Triggered Selective Model Updates on Microcontroller-Class Devices
+
+---
+
+## 1. Problem Statement
+
+Edge AI systems are deployed on resource-constrained devices — microcontrollers with 264 KB of RAM, limited battery budgets, and intermittent connectivity. These systems run machine learning models that make predictions on sensor data in real time. In laboratory conditions, they perform well. In the field, they degrade silently over time.
+
+This degradation occurs because edge environments are non-stationary. Sensors age, producing biased readings. Lighting and weather conditions shift. User behavior evolves. These changes cause a phenomenon called *concept drift*: the statistical relationship between input data and target labels changes, so the deployed model's predictions become less reliable [6]. A fixed model, frozen at deployment time, cannot adapt to these shifts. It either violates its accuracy requirements silently, or it violates its energy and latency budgets by attempting expensive retraining. Empirical evidence from production AI systems confirms the scale of the problem: a study of 128 model/data pairs across healthcare, transport, finance, and weather found temporal quality degradation in 91% of them [49]. Practitioner surveys report that fewer than half of production models are monitored at all, and that model performance issues such as drift are the number one runtime problem [43, 49].
+
+Recent work has established that Edge AI in realistic deployments is necessarily adaptive [18]. Pittorino and Roveri introduce an Agent-System-Environment (ASE) lens that formalizes what changes, what is observable, and what can be reconfigured over time. Among the ten research challenges they identify, two are directly relevant to this proposal:
+
+**C3 — Fault/Anomaly-Driven Targeted Updates.** When utility drops, can the system infer *why* it degraded (sensor fault, distribution shift, hardware issue) and apply the *smallest effective intervention* that restores performance? Current approaches trigger blanket retraining or full parameter updates, which is wasteful and often infeasible on constrained devices.
+
+**C7 — Lifecycle Efficiency.** Over a long deployment horizon, the cost of *maintaining* a model (monitoring for drift, retraining, updating) can exceed the cost of running inference. The field has optimized inference efficiency extensively through quantization, pruning, and hardware acceleration. But the total cost of ownership for adaptive edge systems — the sum of execution and reconfiguration costs over time — remains understudied. Recent measurements confirm this asymmetry: on a RISC-V microcontroller, a single training update costs roughly five times the energy of one inference [44], and evaluation of edge AI lifecycles shows adaptation energy can exceed inference energy by an order of magnitude [46].
+
+The core problem this PhD addresses is: **How can an edge device detect concept drift, attribute it to a specific cause, and apply a minimal, targeted, and reversible model update — all within a memory budget of a few hundred kilobytes and an energy budget of millijoules per update?**
+
+---
+
+## 2. State of the Art and Identified Gaps
+
+### 2.1 Concept Drift Detection on the Edge
+
+Concept drift detection is well established for server-class systems. DDM [6], ADWIN (Adaptive Windowing) [3], and Page-Hinkley test [20] are standard algorithms. On the edge, two landmark works demonstrate feasibility:
+
+- **Disabato and Roveri (2022)** proposed TML-CD, the first concept drift adaptation system for Tiny Machine Learning on ARM Cortex-M microcontrollers [5]. It uses a deep feature extractor with a k-NN classifier and a hybrid passive-active adaptation module. This proved that drift handling *can* fit on MCUs, but the adaptation mechanism resets the full knowledge base — it does not perform targeted, minimal updates.
+
+- **Yamada and Matsutani (2023)** proposed a fully sequential drift detection method cooperating with on-device sequential learning (OS-ELM) [22]. On a Raspberry Pi Pico (264 KB RAM), they achieved 88.9–96.4% memory reduction over batch-based methods with only 3.8–4.3% accuracy loss. Again, adaptation is global — the entire model is updated when drift is detected.
+
+The most comprehensive survey of on-device learning in TinyML (Pavan et al., 2026) organizes roughly 70 works by their distribution change regime [25]. Two of its findings are directly relevant. First, the **concept drift regime is the thinnest slice of the on-device learning literature**, with fewer solutions than either the single-change or continual learning regimes. Second, **sensor calibration is the only real-world application addressed in the drift regime** — IMU calibration under thermal stress and pressure sensor calibration appear as isolated examples [25]. Everything else is evaluated on synthetic corruptions of standard benchmarks.
+
+### 2.2 On-Device Learning on Microcontroller-Class Hardware
+
+A substantial ecosystem for on-device learning on MCUs has emerged, but every approach works around the same bottleneck: the memory cost of backpropagation on devices with a few hundred kilobytes of SRAM.
+
+- **Tiny Train Engine** (Lin et al., 2022) enables on-device training under 256 KB using quantization-aware scaling, sparse updates, and compile-time backward-graph pruning [48].
+- **FQT on Cortex-M** (Deutel et al., 2024) trains fully quantized networks with dynamic partial gradient updates [38].
+- **TinyFoA** (Huang and Aminifar, AAAI 2025) uses forward-only learning; **Poor Man's Training** (2024) uses zeroth-order methods; **TinyPropv2** (2024) uses dynamic sparse backprop.
+- **COOL** (Liu et al., 2026) achieves continual online on-device learning on an STM32H743 using Kolmogorov-Arnold Networks, with ~46 ms per training step at ~2.8 mJ [31].
+- **S³OvA** (Maoui and Benaboud, 2026) demonstrates incremental SVM learning on an ESP32-S [32].
+- **Latent Replay Detection** (2026) is the first continual *detection* framework on MCUs at a 64 KB budget, but its authors state explicitly that fully on-device learning remains open *"due to memory constraints during backpropagation"* [39].
+
+Two patterns matter here. Lightweight incremental learners (k-NN, SVM, OS-ELM) dominate the concept drift regime because they need no backprop [5, 22, 32], but they hit an expressiveness ceiling on complex sensor input, as the survey of Lourenço et al. documents [26]. Deep models adapt better but their training memory does not fit. Reversibility is a third path that the MCU community has not taken: because reversible layers reconstruct activations from the output, **no activation storage is needed for backpropagation at all**. This is the core insight of this proposal.
+
+### 2.3 Selective and Targeted Model Updates
+
+The idea of updating only part of a model is active in several communities, but has not reached MCU-class drift adaptation:
+
+- **SEKF** (Hammond et al., 2025) updates only the parameters most affected by drift using a subset extended Kalman filter, and outperforms retraining on industrial process models [28]. But it is server-side, runs continuously (no drift detector), and uses no architectural support for selectivity.
+- **Minerva** (Patil et al., EuroSys 2026) delivers component-granular model updates to deeply embedded microcontrollers with in-place swap, acceptance testing, and full-model rollback [30]. It has no drift detector and no selective parameter updates.
+- **SoLA** (2026) introduces *reversible* model editing for LLMs: each edit is an independent LoRA module that can be revoked by deleting its routing key [29]. This is the closest existing work to the rollback mechanism this proposal needs, but it targets large language models, not embedded devices.
+- Sparse and partial gradient updates exist on MCUs [38], and layer-freezing strategies exist for fleets [40, 47], but selectivity is treated as a cost-saving heuristic, not as a property of the architecture.
+
+### 2.4 Reversible Neural Networks
+
+Reversible neural networks (RevNets, i-RevNets) [8, 9] are architectures where each layer's activations can be reconstructed from the next layer's output. Originally developed for memory-efficient training, reversibility is now a major research direction:
+
+- **RevViT** (Mangalam et al., 2022) achieves a 15.5x activation-memory reduction for vision transformers [36].
+- **Dr²Net** (2024) is the first reversible family that can directly fine-tune pretrained non-reversible models, saving 46–80% memory [35].
+- **BDIA** (Zhang et al., ICML 2025) achieves *exact bit-level reversibility while keeping the inference architecture unchanged*, treating transformer blocks as Euler steps of an ODE [33]. This directly answers the long-standing objection that reversibility constrains model design.
+- **Reversible LLMs** (Gal et al., 2025) show ~10x activation-memory reduction and can retrofit already-trained models in about two epochs [34].
+
+**Stefan Kuhn has published on reversible neural network architectures** [11, 13], including conditional invertible neural networks (cINNs) for bidirectional inference. One obstacle must be acknowledged and is addressed by this work: DaCapo (Khan et al., 2023) explicitly rejected RevNet-style reversibility for MCU on-device training, arguing that the same-input/output-dimension constraint limits model design [37]. This objection was made before BDIA and Dr²Net demonstrated that exact reversibility can be achieved *without changing the inference architecture* [33, 35]. This proposal directly builds on those results.
+
+To our knowledge, **no reversible network has ever been trained on a microcontroller**, and no work applies reversible architectures to concept drift adaptation.
+
+### 2.5 Distributed Adaptation
+
+- **FedConD** [15] and **FL-HVD** [21] address concept drift in federated learning settings, but they assume coordinated training across nodes with a central aggregator.
+- **FedDrift** (Jothimurugesan et al., AISTATS 2023) handles drift that is staggered in time and space, but again under a central server [41].
+- **DriftGuard** (2026) performs selective group-level retraining under asynchronous drift with a retraining-cost objective — the closest existing system — but it is server-driven [40].
+- A 2026 decentralized partial-model-fusion approach handles concept drift in a peer-to-peer setting, but does not coordinate fleet-level update decisions [43].
+
+Systematic surveys of federated learning under concept drift identify *drift-aware aggregation* — who to aggregate, how to weight, when to split — as the central open algorithmic problem, together with the lack of standardized benchmarks [43, 46]. No existing work addresses the scenario where individual edge nodes experience *different* drifts at *different* times and must coordinate *minimal, targeted* updates without a central orchestrator.
+
+### 2.6 Lifecycle Evaluation and TinyMLOps
+
+Pittorino and Roveri's C7 challenge — lifecycle efficiency — calls for separating execution cost (C_run) from reconfiguration cost (C_chg) and introduces metrics such as Energy-to-Recover (E2R), Time-to-Recover (T2R), and Stability Score (SS) [18]. The Pavan et al. survey argues that *"without benchmarks that fix an explicit power budget and latency constraint, the co-optimization of execution and change cost becomes practically infeasible"* [25]. Energy accounting studies are emerging: EDGE-EVAL shows adaptation energy can be 6.4–7.2x inference energy [46]; ETuner shows lazy, selective updates save 64% time and 56% energy [47]; Cerberus measures per-update energy on RISC-V [44]. TinyMLOps for embedded devices is immature: a 2026 field study concludes that explicit monitoring and maintenance — drift detection, automated retraining triggers, hardware-degradation guards — is explicitly future work [45]. The evaluation protocol proposed in this PhD directly addresses this gap.
+
+### 2.7 Identified Gap
+
+The literature shows an opportunity at the intersection of five areas that have not been combined:
+
+| Area | Existing Work | Gap |
+|------|--------------|-----|
+| Drift detection on MCUs | Disabato & Roveri (2022) [5], Yamada & Matsutani (2023) [22], S³OvA (2026) [32] | Full-reset or whole-model adaptation, not targeted |
+| Selective updates | SEKF (2025) [28] (server), Minerva (2026) [30] (no drift trigger), SoLA (2026) [29] (LLMs) | None on MCU-class devices with drift attribution |
+| Reversible NNs | Kuhn et al. [11, 13], RevViT [36], Dr²Net [35], BDIA [33], R-LLMs [34] | GPU/server only; never applied to drift adaptation; never trained on MCUs |
+| MCU on-device learning | Tiny Train Engine [48], FQT [38], COOL [31], LRD [39] | Backprop memory unsolved; no reversibility |
+| Fleet coordination of selective updates | DriftGuard (2026) [40] (central), FedDrift (2023) [41] (central) | Serverless, drift-driven, component-level: no existing work |
+| Lifecycle evaluation | E2R/T2R/SS proposed [18] | No standardized benchmarks with explicit power/latency budgets [25, 27] |
+
+This proposal fills this gap by combining lightweight concept drift detection with attribution on MCUs, **reversibility-enabled selective on-device learning** (activation-free backprop, drift-attributed block-level updates, built-in rollback), serverless fleet coordination under heterogeneous drift, and a lifecycle-efficiency evaluation protocol with explicit budgets.
+
+---
+
+## 3. Research Objectives and Questions
+
+### Objective 1: Lightweight Drift Detection with Fault Attribution
+
+**Research Question:** Can we design a drift detection and attribution method that identifies not only *that* drift occurred, but *which sensor, feature, or module* caused it, while operating within MCU memory budgets and O(1) per-sample computation?
+
+Current drift detectors (DDM, ADWIN) output a binary signal: drift or no drift. They do not localize the cause. The C3 challenge requires attribution: is the utility drop caused by sensor drift, a distribution shift in a specific feature, or a hardware fault? We propose to extend lightweight distribution-based detection methods [22] with per-feature drift scores and change localization, inspired by multivariate fault attribution techniques [12, 23]. The flagship scenario is **sensor calibration and predictive maintenance on industrial IoT telemetry** — the only real-world application class found in the drift regime of the ODL literature [25], and one that matches the candidate's production anomaly-detection background.
+
+**Methodology:**
+- Implement and benchmark ADWIN2, DDM, Page-Hinkley, and KSWIN using the River library [19], TensorFlow Lite Micro [1], and the MOA framework [4] for reproducibility
+- Extend these methods with per-feature drift attribution using an incremental feature-wise change test
+- Evaluate on real sensor datasets with labeled fault sources: environmental drift, sensor aging, and hardware faults (TON_IoT, UCI gas sensor drift, IMU calibration)
+- Metrics: detection delay, attribution accuracy (precision/recall per fault source), memory footprint, energy per detection
+
+### Objective 2: Reversibility-Enabled Selective On-Device Learning
+
+**Research Question:** Can reversible neural network architectures enable drift-triggered, selective model updates on microcontroller-class hardware, with an order of magnitude less energy and memory than full retraining, plus built-in rollback?
+
+This is the heart of the proposal. The key insight is that invertible architectures (RevNets, i-RevNets, cINNs) maintain a bijective mapping between layers, which gives three properties useful on a microcontroller:
+
+1. **Activation-free backpropagation.** Because activations are reconstructible, no activation memory is needed for training. This directly attacks the bottleneck that LRD explicitly identifies [39] and that the entire MCU training ecosystem works around with quantization, sparsity, and checkpointing [48, 38].
+2. **Selective block updates.** If a specific module or feature space has drifted, the corresponding invertible block can be updated independently, without propagating changes through the full network.
+3. **Built-in rollback.** A reversible model can return to its pre-drift state exactly, giving a recovery mechanism that today exists only as full-model swap (Minerva [30]) or LLM edit revocation (SoLA [29]).
+
+We will address the DaCapo objection [37] head-on by building on BDIA-style exact reversibility with unchanged inference architecture [33] and Dr²Net-style retrofit of pretrained models [35], combined with conditional invertible designs from the supervisor's cINN work [11].
+
+**Methodology:**
+- Design a compact reversible architecture suitable for MCU-class devices (inspired by BDIA [33], i-RevNet [9], and Kuhn's cINN work [11])
+- Implement selective block-level fine-tuning: when drift is attributed to feature group X, update only the invertible block processing X; evaluate rollback fidelity
+- Compare against full model fine-tuning, incremental learning [24], sparse/partial-update baselines [38, 47], and knowledge-reset baselines [5, 22]
+- Evaluate on TinyML benchmarks [2] and IIoT telemetry with controlled drift injection
+- Metrics: accuracy recovery, energy per update (measured with a power probe, following the COOL protocol [31]), memory footprint for training, number of parameters modified, rollback fidelity
+
+### Objective 3: Lifecycle-Efficient Fleet Coordination of Selective Updates
+
+**Research Question:** In a multi-node edge deployment where different nodes experience different drifts at different times, what serverless coordination strategy minimizes total lifecycle cost (execution + reconfiguration) while maintaining system-level accuracy?
+
+Edge deployments are distributed by nature. A fleet of 10–100 sensor nodes may experience heterogeneous drift patterns. Sharing update information across nodes could improve accuracy and reduce per-node computation, but it costs bandwidth and energy. Existing approaches are either centralized (DriftGuard [40], FedDrift [41]) or drift-blind (SwarmUpdate-class layer freezing [47]). The surveys identify drift-aware coordination as the central open problem [43, 46].
+
+**Methodology:**
+- Simulate a multi-node edge deployment (10–50 nodes) with heterogeneous, asynchronous drift injections
+- Implement coordination strategies: independent adaptation, peer-to-peer selective-update sharing, and lightweight decentralized aggregation of selective updates (building on the reversible update mechanism from Objective 2: nodes share only affected invertible blocks)
+- Compare against centralized baselines (DriftGuard-style) and federated baselines [16]
+- Metrics: total lifecycle energy (Σ C_run + Σ C_chg per node), Energy-to-Recover [18], communication bytes per accuracy recovered, adaptation latency
+
+### Objective 4: Lifecycle Evaluation Protocol with Explicit Power and Latency Budgets
+
+**Research Question:** How should adaptive edge systems be evaluated so that long-horizon behavior, transients, and total cost of ownership are visible and comparable?
+
+Every major recent survey calls for standardized evaluation of adaptive embedded ML [25, 27, 43, 46]. Current practice reports accuracy at a snapshot, which hides the energy asymmetry between inference and adaptation [46] and the cost of recovery [18].
+
+**Methodology:**
+- Implement the ASE evaluation protocol: time-series reporting of U(t), C_run(t), C_chg(t), V(t) [7, 18]
+- Fix explicit power budgets and latency constraints per benchmark (the missing piece identified by Pavan et al. [25])
+- Compute lifecycle metrics: Energy-to-Recover (E2R), Time-to-Recover (T2R), Stability Score (SS) [18]
+- Publish benchmark streams with declared drift/intervention scripts and reference implementations
+- Evaluate all three objectives under a unified protocol; compare against static deployment, full-retraining, and periodic-update baselines
+
+---
+
+## 4. Novel Contributions
+
+This PhD is expected to make the following contributions:
+
+1. **First drift detection method with integrated fault attribution** for MCU-class devices, evaluated on real industrial telemetry, enabling targeted (not blanket) adaptation
+2. **First reversible-layer on-device learning system on microcontroller-class hardware** — activation-free backpropagation with drift-triggered selective block updates and built-in rollback; directly answers the DaCapo objection [37] with BDIA-style exact reversibility [33]
+3. **First serverless coordination protocol for selective updates under heterogeneous edge drift**, minimizing lifecycle energy across a fleet
+4. **First standardized lifecycle evaluation protocol with explicit power and latency budgets** (E2R/T2R/SS [18]) implemented on real embedded hardware
+5. **Open-source benchmark suite** for lifecycle-efficient adaptive edge AI, including drift injection scripts, evaluation metrics, energy measurement procedures, and reference implementations
+
+---
+
+## 5. Research Plan and Timeline
+
+### Year 1 (2027–2028): Foundations and Baseline
+
+| Quarter | Activities | Deliverables |
+|---------|-----------|-------------|
+| Q1 | Literature deep dive: concept drift detection, online learning, TinyML, reversible NNs | Reading notes, annotated bibliography |
+| Q2 | Implement drift detection benchmarks on laptop using River: ADWIN2, DDM, Page-Hinkley, KSWIN | Benchmarking code and results |
+| Q3 | Port promising detectors to ESP32-S3 (TensorFlow Lite Micro); measure memory, latency, energy with a power probe | Ported detector, measurements |
+| Q4 | Design and implement per-feature drift attribution; evaluate on TON_IoT, UCI sensor drift, IMU calibration | Attribution method prototype, paper draft |
+
+**Milestone:** Conference paper on lightweight drift detection with fault attribution (target: IEEE ICMLA, ECML-PKDD, or ACM SenSys)
+
+### Year 2 (2028–2029): Reversibility-Enabled Selective On-Device Learning
+
+| Quarter | Activities | Deliverables |
+|---------|-----------|-------------|
+| Q1 | Study reversible NN architectures (BDIA, i-RevNet, cINN); design compact MCU-scale reversible blocks | Architecture design |
+| Q2 | Implement activation-free backpropagation and selective block-level fine-tuning on ESP32-S3/STM32 | Implementation |
+| Q3 | Benchmark selective vs. full updates under drift; measure energy per update with power probe; evaluate rollback | Benchmark results |
+| Q4 | Integrate with drift attribution from Year 1; end-to-end C3 system on a single MCU | Integrated prototype, paper draft |
+
+**Milestone:** Paper on reversible-NN-based targeted model updates for edge drift adaptation (target: IEEE TNNLS, NeurIPS, or DAC)
+
+### Year 3 (2029–2030): Fleet Coordination
+
+| Quarter | Activities | Deliverables |
+|---------|-----------|-------------|
+| Q1 | Simulate multi-node edge deployment; implement heterogeneous, asynchronous drift injection | Simulation framework |
+| Q2 | Implement coordination strategies: independent, peer-to-peer selective sharing, decentralized aggregation | Coordination implementations |
+| Q3 | Benchmark communication cost, energy, accuracy under different drift patterns; compare with centralized baselines | Benchmark results |
+| Q4 | Design adaptive coordination strategy that selects update-sharing policy based on drift characteristics | Adaptive coordination policy, paper draft |
+
+**Milestone:** Paper on distributed lifecycle-efficient adaptation (target: ACM/IEEE IoTDI, IEEE INFOCOM, or ACM MobiCom)
+
+### Year 4 (2030–2031): Integration, Evaluation, and Thesis
+
+| Quarter | Activities | Deliverables |
+|---------|-----------|-------------|
+| Q1 | Implement full lifecycle evaluation protocol with explicit power/latency budgets; compute E2R, T2R, SS | Evaluation suite |
+| Q2 | Publish benchmark suite with drift injection scripts, energy measurement procedures, and reference implementations | Open-source benchmark |
+| Q3 | Run long-horizon evaluations (30+ day deployments); finalize experiments | Experimental results |
+| Q4 | Write and defend thesis | PhD thesis |
+
+**Milestone:** PhD thesis defense; open-source benchmark suite publication
+
+---
+
+## 6. Supervision and Alignment
+
+Dr. Stefan Kuhn's research spans distributed systems, reversible computation, and machine learning. His recent work includes:
+
+- **Reversible deep learning architectures** — implementing reversible neural networks (i-RevNet-based) for NMR structure-spectrum prediction [11, 13]
+- **Federated learning for IoT security** — comparing FL approaches for distributed malware detection across edge devices [14]
+- **Bio-inspired optimization for edge AI** — hybrid optimization methods for real-time IoT intrusion detection [10]
+- **Distributed systems infrastructure** — reversible debugging for MPI parallel applications [12]
+
+His expertise in **reversible computation** is the specific bridge to this proposal. The proposal's central insight — that reversibility enables selective, memory-feasible, rollback-capable model updates — is a direct application of his reversible NN line of work into a new domain (concept drift adaptation on edge devices), building on the newest reversible architecture results (BDIA [33], Dr²Net [35]). His distributed systems background is essential for Objective 3, where coordination across edge nodes requires communication-efficient protocols.
+
+The proposal also extends his reversible NN research program: the reversible-computation community has focused on memory-efficient training and reversible computing theory; this PhD adds a third pillar — reversible model lifecycle management.
+
+---
+
+## 7. Candidate Background
+
+I am a DevOps engineer with three years of production experience at Wipro Ltd. I build monitoring and auto-remediation systems that detect anomalies and respond automatically in real time. This experience gives me an operational intuition for the problem this PhD addresses: I know what real anomalies look like outside curated datasets.
+
+**Relevant technical experience:**
+
+- **Monitoring and anomaly detection** — Built production monitoring pipelines using LogicMonitor, Prometheus, Grafana, and BigPanda for event correlation. Reduced manual incident handling by approximately 40% through event-driven Ansible automation. This experience maps directly to the drift detection and anomaly attribution challenges in Objective 1.
+
+- **Efficient ML (quantization)** — Self-studied post-training quantization, mixed-precision quantization, and INT8 quantization applied to MobileNetV2 on CIFAR-10. Documented accuracy-F1-size-latency trade-offs systematically. This experience is relevant to Objective 2, where efficient model updates are the core challenge.
+
+- **Edge deployment** — Built a real-time gesture recognition pipeline using MediaPipe, OpenCV, pyFirmata, and Arduino UNO to control home appliances. This project required working within hardware constraints, teaching me the practical realities of inference on resource-limited devices.
+
+- **Programming** — Python (primary), Bash, Ansible (YAML), basic C/C++ for Arduino. Familiar with PyTorch, TensorFlow Lite, Jupyter for experimentation.
+
+**Academic background:** MCA (Master of Computer Applications), CGPA 7.74. BCS (Bachelor of Computer Science), CGPA 8.63. Microsoft Certified: Azure Fundamentals (AZ-900). LogicMonitor Certified Professional.
+
+**Strengths relevant to this PhD:** Practical systems building, anomaly detection intuition from production experience, self-directed learning in efficient ML, comfort with hardware-software co-design.
+
+**Areas for growth:** I have no publications and no formal research training. I have been studying concept drift, adaptive systems, and edge AI since mid-2026. I plan to spend 2026–2027 building the foundations needed for this PhD through independent reading, River library experiments, and a hands-on pilot on an ESP32-S3 development board (approximately $8, to be purchased in 2026), in collaboration with Dr. Kuhn before the PhD start date.
+
+---
+
+## 8. Timeline and Feasibility
+
+The PhD is proposed for four years (August 2027 – July 2031), aligned with the standard University of Tartu junior research fellow contract.
+
+**Risk assessment:**
+
+| Risk | Likelihood | Mitigation |
+|------|-----------|------------|
+| MCU memory constraints too tight for reversible architecture (the DaCapo objection [37]) | Medium | Build on BDIA-style exact reversibility with unchanged inference architecture [33]; start with a single reversible block; iterate toward full reversible networks if feasible |
+| Lightweight learners outperform reversible nets on simple tasks | Medium | Target scenarios where deep adaptation matters (complex sensor input, multi-sensor fusion); publish the regime analysis as a contribution in itself |
+| Drift attribution accuracy insufficient for selective updates | Medium | Evaluate multiple attribution methods; fall back to block-level updates (coarser granularity) |
+| Fleet coordination costs exceed benefits | Low | Theoretical analysis before implementation; use simulation to find regimes where coordination helps |
+| Energy measurement reproducibility | Low | Follow published measurement protocols (e.g., X-NUCLEO-LPM01A power shield as in COOL [31]) |
+
+**Resources required:**
+- ESP32-S3 / STM32F746 development boards (approximately $8–20 each; to be purchased in 2026)
+- Power measurement equipment (STM32 Power Shield or Nordic Power Profiler-class)
+- Sensor kits for real-world drift data collection (IMU, pressure, temperature)
+- Standard compute hardware for simulation experiments (no GPU required for MCU-scale design; Colab-class resources suffice)
+- Access to University of Tartu Distributed Systems Chair infrastructure
+
+---
+
+## 9. Expected Outcomes and Impact
+
+### Scientific Impact
+- First demonstration of reversibility-enabled, attribution-driven selective model updates for MCU-class devices, answering the DaCapo objection with modern reversible architecture results
+- First application of reversible neural networks to concept drift adaptation
+- First serverless coordination protocol for selective updates under heterogeneous edge drift
+- A standardized evaluation paradigm for lifecycle-efficient adaptive edge AI
+
+### Practical Impact
+- Open-source benchmark suite with declared drift scripts, explicit power/latency budgets, and energy measurement procedures
+- Reference implementations deployable on $8 microcontrollers
+- Design principles for industrial edge deployments where reliability over time is critical (sensor calibration, predictive maintenance)
+
+### Career Impact
+- The PhD produces a researcher who can bridge ML systems and distributed systems — a skills profile in high demand for MLOps, edge AI, and AI infrastructure roles at companies deploying ML in production. The topic aligns with European funding priorities on decentralized AI and the cloud-edge continuum (Horizon Europe Cluster 4), and with the on-device learning platforms being industrialized by major vendors.
+
+---
+
+## 10. References
+
+[1] M. Abadi et al. TensorFlow: A system for large-scale machine learning. 12th USENIX OSDI, 2016.
+
+[2] C. R. Banbury et al. MLPerf Tiny: Benchmarking machine learning on the edge. NeurIPS Datasets and Benchmarks, 2021.
+
+[3] A. Bifet and R. Gavalda. Learning from time-changing data with adaptive windowing. SIAM International Conference on Data Mining, 2007.
+
+[4] A. Bifet et al. Machine Learning for Data Streams with MOA. MIT Press, 2018.
+
+[5] S. Disabato and M. Roveri. Tiny machine learning for concept drift. IEEE Transactions on Neural Networks and Learning Systems, 35(6):8470–8481, 2022.
+
+[6] J. Gama et al. A survey on concept drift adaptation. ACM Computing Surveys, 46(4):1–37, 2014.
+
+[7] J. Gama et al. On evaluating stream learning algorithms. Machine Learning, 90(3):317–346, 2013.
+
+[8] A. N. Gomez et al. The reversible residual network: backpropagation without storing activations. NeurIPS, 2017.
+
+[9] J.-H. Jacobsen et al. i-RevNet: Deep invertible networks. ICLR, 2018.
+
+[10] T. A. L. Ibaisi, M. Kazim, S. Kuhn, M. Kaiiali, M. U. Rehman. A hybrid bio-inspired encoding and feature selection for real-time IoT network intrusion detection using deep learning framework. Internet of Things (Elsevier), 101957, 2026.
+
+[11] S. Kuhn, V. Dwarka, P. K. Grenda, E. Vainikko. Reversible deep learning for 13C NMR in chemoinformatics: On structures and spectra. arXiv:2602.03875, 2026.
+
+[12] S. Kuhn, M. Tiks, O. K. Martens, E. Vainikko. A reversible debugger for MPI applications with flexible backends. Future Generation Computer Systems, 181:108418, 2026.
+
+[13] S. Kuhn et al. Implementing reversible neural networks. 17th International Conference on Reversible Computation (RC 2025), LNCS 15716, pp. 155–161, 2025.
+
+[14] T. A. L. Ibaisi, S. Kuhn, M. Kazim, I. Kara, T. Altindag, M. U. Rehman. A comparative study of federated learning and amino acid encoding with IoT malware detection as a case study. Big Data and Cognitive Computing, 10(4):111, 2026.
+
+[15] Z. Li et al. FedConD: Concept drift detection in federated learning for IoT. IEEE International Conference on Big Data, 2023.
+
+[16] B. McMahan et al. Communication-efficient learning of deep networks from decentralized data. AISTATS, 2017.
+
+[17] A. Piaseczny, M. K. C. Shisher, S. Wang, C. G. Brinton. RCCDA: Adaptive model updates in the presence of concept drift under a constrained resource budget. NeurIPS, 2025.
+
+[18] F. Pittorino and M. Roveri. Position paper: From edge AI to adaptive edge AI. arXiv:2604.07360, 2026.
+
+[19] River: online machine learning in Python. https://riverml.xyz/
+
+[20] E. S. Page. Continuous inspection schemes. Biometrika, 41(1–2):100–115, 1954.
+
+[21] V. Tolpegin et al. FL-HVD: Heterogeneous virtual drift detection in federated learning. IEEE Transactions on Dependable and Secure Computing, 2023.
+
+[22] T. Yamada and H. Matsutani. A lightweight concept drift detection method for on-device learning on resource-limited edge devices. IEEE IPDPSW, 2023.
+
+[23] M. Liu et al. Root cause analysis of anomalies in multivariate time series. ACM SIGMOD, 2021.
+
+[24] R. Elwell and R. Polikar. Incremental learning of concept drift in nonstationary environments. IEEE Transactions on Neural Networks, 22(10):1517–1531, 2011.
+
+[25] M. Pavan, L. Pezzarossa, F. Pittorino, M. Roveri, X. Fafoutis. What changes after deployment? A survey on on-device learning in TinyML. arXiv:2605.31226, 2026.
+
+[26] A. Lourenço, J. Rodrigo, J. Gama, G. Marreiros. On-device edge learning for IoT data streams: a survey. arXiv:2502.17788, 2025.
+
+[27] O. Abozaid, B. Selim, B. Jaumard. Adaptive embedded machine learning on IoT devices: a review. IEEE International Telecommunications Conference (ITC-Egypt), 2025.
+
+[28] F. R. Hammond et al. Subset extended Kalman filter: online model maintenance under systemic drift. Scientific Reports, 15, 2025. DOI: 10.1038/s41598-025-24558-8.
+
+[29] X. Luo et al. SoLA: Reversible lifelong model editing via semantic routing-based LoRA. arXiv:2603.11239, 2026.
+
+[30] S. Patil, A. Kumar, S. Dutta, J. E. Gonzalez. Minerva: Efficient ML model updates for deeply embedded microcontrollers. EuroSys, pp. 1550–1564, 2026.
+
+[31] M. Liu, S. Bian, V. Fortes Rey, D. Geißler, P. Kang, B. Zhou, P. Lukowicz. COOL: continual online on-device learning for human activity recognition enhanced by KANs. CCF Transactions on Pervasive Computing and Interaction, 2026. DOI: 10.1007/s42486-026-00229-z.
+
+[32] M. Maoui and R. Benaboud. S³OvA: A reformable TinyML solution for self-adaptive IoT-based systems. Informatica, 50(10):195–218, 2026. DOI: 10.31449/inf.v50i10.11947.
+
+[33] S. Zhang, S. Lewis, W. B. Kleijn. On exact bit-level reversible transformers without changing architecture. ICML, PMLR 267:75314–75328, 2025.
+
+[34] R. Gal et al. Reversible large language models for memory-efficient training. arXiv:2512.02056, 2025.
+
+[35] K. Zhao et al. Dr²Net: Dynamic reversible dual-residual networks for memory-efficient fine-tuning. arXiv:2401.04105, 2024.
+
+[36] K. Mangalam et al. Reversible vision transformers. CVPR, 2022.
+
+[37] H. Khan, D. Park, Y. Seo. DaCapo: An on-device learning scheme for memory-constrained embedded systems. ACM Transactions on Embedded Computing Systems, 22(5s), 2023. DOI: 10.1145/3609121.
+
+[38] M. Deutel, C. Hannig, J. Mutschler, J. Teich. On-device training of fully quantized deep neural networks on Cortex-M microcontrollers. arXiv:2407.10734, 2024.
+
+[39] Latent replay detection: continual object detection on microcontrollers under memory constraints. arXiv:2603.00138, 2026.
+
+[40] X. Han, C. Wu, S. Varghese. DriftGuard: selective model updates under asynchronous concept drift. arXiv:2603.18872, 2026.
+
+[41] E. Jothimurugesan, K. Hsieh, J. Wang, G. Joshi, P. B. Gibbons. Federated learning under distributed concept drift. AISTATS, 2023.
+
+[42] P. Raghuwanshi. TinyML for on-device and edge analytics in wireless networks: a survey of deployments, opportunities, and concept-drift mitigation. arXiv:2606.30843, 2026.
+
+[43] M. Mahdi, E. Pardede, S. Bevinakoppa, B. Ali. Federated learning under concept drift: a systematic survey of foundations, innovations, and future research directions. Electronics, 14(22):4480, 2025.
+
+[44] S. Shalby, J. Moosmann, C. Trojaniello, M. Magno, M. Roveri. Energy accounting for on-device continual learning on RISC-V microcontrollers. IEEE Sensors Journal, 2026.
+
+[45] L. Scaramuzza and D. A. Tamburri. Tiny machine-learning operations within cyber-physical systems: a field study. arXiv:2606.20952, 2026.
+
+[46] S. Mohammad et al. EDGE-EVAL: lifecycle energy evaluation of edge AI systems. arXiv:2604.19342, 2026.
+
+[47] ETuner: redundancy-aware continual learning on the edge. arXiv:2401.16694, 2024.
+
+[48] J. Lin, L. Zhu, W.-M. Chen, W. Wang, S. Han. On-device training under 256KB memory. NeurIPS, 2022.
+
+[49] D. Vela, A. Sharp, R. Zhang, T. Nguyen, A. Hoang, O. S. Pianykh. Temporal quality degradation in AI models. Scientific Reports, 12:11654, 2022.
+
+
+______________________________________________________________________________________________________
+
+# 12 — SOTA & Gap Analysis for the PhD Direction (Adaptive Edge AI)
+
+> **Purpose:** Source of truth for the revised Stefan Kuhn research proposal and for Soham's
+> confidence in the direction. Compiled from live literature research (sweeps A-D) and
+> market/industry research, July 2026. Every load-bearing claim is cited; weak data is flagged.
+> This document exists to answer: *what is the state of the art, where is the real gap,
+> how bright is the future, and what is the realistic probability of a top-1% outcome.*
+
+---
+
+## 1. Research question being answered
+
+Soham's PhD direction (with Stefan Kuhn, University of Tartu):
+
+> **Adaptive Edge AI: drift-triggered, selective model updates on microcontroller-class
+> hardware, enabled by reversible neural network architectures, evaluated with
+> lifecycle-efficiency accounting, and coordinated across device fleets.**
+
+The thesis spine is: **"reversibility as the enabler of selective on-device learning"** —
+not merely "surgical repair via invertibility".
+
+---
+
+## 2. SOTA Sweep A — Concept drift + TinyML on-device learning (2023-2026)
+
+Key works and what they mean for us:
+
+| Work | Year | Finding relevant to us |
+|---|---|---|
+| Pavan, Pezzarossa, Pittorino, Roveri, Fafoutis — "What changes after deployment? A survey on On-device Learning in TinyML" (arXiv:2605.31226) | 2026 | Definitive ~70-work survey organized by *distribution change regime*. **The concept-drift regime is the thinnest slice of the literature.** Sensor calibration is the ONLY real-world application in the drift regime. Flags: no benchmarks fix explicit power/latency budgets, so "co-optimization of execution cost and change cost is practically infeasible"; persistent gap between methodological benchmarks and real deployments |
+| Lourenço, Rodrigo, Gama, Marreiros — "On-device edge learning for IoT data streams: a survey" (arXiv:2502.17788) | 2025 | NN vs decision-tree split; explicit gap in memory optimization + tabular stream handling for on-device training; DTs hit expressiveness ceiling |
+| Abozaid, Selim, Jaumard — "Adaptive Embedded Machine Learning on IoT Devices: A Review" (IEEE ITC-Egypt) | 2025 | Raises awareness of adaptability as underexplored; gaps: limited time-series adaptation, lack of standardized evaluation |
+| Raghuwanshi — TinyML for wireless networks survey (arXiv:2606.30843) | 2026 | 146 studies; FL-based TinyML model updates for batteryless devices; update-aware checkpointing, fault-tolerant bootloader, intermittent-aware modify — all at survey/concept level only |
+| Evolving ML survey (arXiv:2505.17902) | 2025 | Unified taxonomy; adaptive ensembles/meta-learning beat static under combined drift; **no standardized benchmarks for cross-domain validation** |
+| FCL survey (arXiv:2606.11272) | 2026 | Open: heterogeneity under temporal drift, privacy-preserving memory, **lack of standardized benchmarks/evaluation protocols** |
+
+**Net:** drift adaptation on MCU-class devices is real but thin; the evaluation problem is
+called out by every major survey as unsolved; sensor calibration is the natural real-world
+application.
+
+---
+
+## 3. SOTA Sweep B — Reversible/invertible neural networks (2023-2026)
+
+| Work | Year | What it does |
+|---|---|---|
+| RevViT (Mangalam et al., CVPR) | 2022 | Reversible vision transformers; 15.5x activation-memory reduction; memory decoupled from depth |
+| Dr²Net (arXiv:2401.04105) | 2024 | First reversible family that *directly fine-tunes pretrained non-reversible models* (dual residual, annealed coefficients); 46-80% memory savings |
+| BDIA (Zhang, Lewis, Kleijn, ICML 2025) | 2025 | **Exact bit-level reversibility with an UNCHANGED inference architecture** (transformer blocks as ODE Euler steps). Defeats the classic objection that reversibility constrains architecture |
+| R-LLMs (arXiv:2512.02056) | 2025 | Reversible LLMs from midpoint/leapfrog/Hamiltonian discretizations; ~10x activation-memory reduction; retrofit of existing pretrained models in ~2 epochs |
+| VINA (arXiv:2602.20480) | 2026 | Variational invertible NN training with ERM-based guarantees |
+
+Selective/targeted update work:
+
+| Work | Year | Target | Gap vs us |
+|---|---|---|---|
+| SEKF — Subset EKF (Hammond et al., Scientific Reports) | 2025 | Servers/industrial process models | Selective parameter updates under drift, but continuous (no detector), non-reversible, no MCU |
+| SoLA — reversible editing via semantic LoRA (arXiv:2603.11239) | 2026 | LLMs only | Edit-level rollback exists, but no drift, no edge, ICLR'26 withdrawn |
+| Minerva (Patil et al., EuroSys) | 2026 | MCUs | Component-granular OTA + acceptance testing + FULL-MODEL rollback; no drift detector, pull-based, no reversibility |
+| EMMET/ROME/MEMIT/LocFT-BF | 2024-2026 | LLMs | Knowledge editing; servers only |
+
+**CRITICAL OBSTACLE FOUND:** DaCapo (Khan, Park, Seo, ACM TECS 2023) explicitly *rejected*
+RevNet-style reversibility for MCU on-device training, claiming the same input/output size
+constraint limits model design. **Counter-evidence exists**: BDIA (ICML 2025) achieves exact
+reversibility *without changing the inference architecture*, and Dr²Net/R-LLM retrofit show
+you can convert already-trained models cheaply. Beating the DaCapo objection with 2025-era
+architecture results is a genuine, defensible contribution.
+
+**Verdict: "reversible architectures + drift-triggered selective updates on MCU-class
+hardware" = NOT FOUND anywhere in 2023-2026 literature. No reversible network has ever been
+trained on a Cortex-M/ESP32/STM32.**
+
+---
+
+## 4. SOTA Sweep C — On-device learning on microcontrollers (2023-2026)
+
+The MCU on-device-training ecosystem uses quantization, sparsity, checkpointing, zero-order
+methods, or latent replay — **never reversibility**:
+
+- Tiny Train Engine (Lin et al., NeurIPS 2022) — on-device training under 256 KB
+- FQT Cortex-M (Deutel et al., 2024) — fully quantized training + partial gradient updates
+- TinyFoA (AAAI 2025) — forward-only training
+- TinyPropv2 (2024), Poor Man's ZO (2024), TinyTrain (ICML 2024)
+- ASI (ICML 2025) — 120x activation-memory reduction
+- **LRD (arXiv:2603.00138, Feb 2026)** — first continual *detection* on MCUs at 64 KB;
+  explicitly states: *"Enabling fully on-device continual learning ... remains an open
+  challenge due to memory constraints during backpropagation."*
+- **COOL (CCF Trans. Pervasive Comp. Interact., 2026)** — KAN-based continual on-device
+  learning on STM32H743; ~46 ms training, ~2.8 mJ/training cycle (with X-NUCLEO-LPM01A
+  power measurements — a good protocol to copy)
+- **S³OvA (Informatica, 2026)** — incremental SVM on ESP32-S, +20 accuracy points, memory stable
+
+**Net:** the memory bottleneck for backprop is the acknowledged open problem; lightweight
+learners (SVM/kNN/OS-ELM/KAN) dominate the drift regime but hit expressiveness ceilings on
+complex sensor input [Sweep A: Lourenço].
+
+---
+
+## 5. SOTA Sweep D — Distributed adaptation + TinyMLOps (2023-2026)
+
+**Verified: the fleet-level gap is OPEN.** No work lets edge nodes collectively decide which
+model components to update on which nodes under heterogeneous drift, without a central
+orchestrator, under a lifecycle-energy objective.
+
+| Work | Year | Selective? | Drift-driven? | Decentralized? | Missing |
+|---|---|---|---|---|---|
+| DriftGuard (arXiv:2603.18872) | 2026 | Yes (MoE groups) | Yes (asynchronous) | No — server | Central orchestrator |
+| NOLTA 2026 partial model fusion | 2026 | Yes (components) | Yes (eval) | Yes (P2P) | No coordinated fleet plan |
+| SwarmUpdate (arXiv:2503.13784) | 2025 | Yes (layers) | No (static) | Hierarchical | Drift-awareness |
+| FedDrift (AISTATS 2023) | 2023 | No | Yes (staggered) | No | Selectivity + decentralization |
+| FedConD (2021/2023), FL-HVD (2023/2026), FedDriftGuard (2026) | — | No | Yes | No | All server-based |
+| Minerva (EuroSys 2026) | 2026 | Component granularity | No trigger | Pull-based | Drift-aware targeting |
+| Pittorino & Roveri position paper (arXiv:2604.07360) | 2026 | Calls for it (C8) | — | — | Position only; names E2R/T2R/SS metrics, C7 lifecycle efficiency |
+
+FL + drift surveys (Electronics 14(22):4480, 2025; FCL arXiv:2606.11272, 2026) name as open
+problems: **drift-aware aggregation** (who/weight/split), scalable drift detection on
+resource-limited devices, missing convergence guarantees, lack of standardized benchmarks.
+
+TinyMLOps is immature: TinyMLOps framework (River Publishers, 2025) exists, but the June 2026
+field study (Scaramuzza & Tamburri, arXiv:2606.20952) concludes *"explicit monitoring and
+maintenance — concept-drift detection, automated retraining triggers, hardware-degradation
+guards"* is **explicitly future work**.
+
+Energy accounting exists only in fragments: EDGE-EVAL (2026) found adaptation can cost
+6.4-7.2x inference energy (invisible in accuracy benchmarks); ETuner (2024) lazy updates save
+64% time / 56% energy; Cerberus (IEEE JSEN 2026) measured 29.65 mJ/update vs 5.49 mJ/inference
+on RISC-V.
+
+---
+
+## 6. Market evidence — how bright is the future (comparative)
+
+### 6.1 Market size and growth (multi-source; definitions differ — cite ranges)
+
+| Source | Numbers |
+|---|---|
+| Technavio (May 2026) | TinyML $2.23B (2025), CAGR 35.7% (2026-2030), +$8.06B incremental |
+| ABI Research (2024-25) | TinyML chipset shipments 37% CAGR through 2031, >4.1B units; revenue >$7.8B; NPUs 90% CAGR; Europe edge AI 17% CAGR |
+| Nordic Semiconductor (2025) | TinyML chipset $5.9B by 2030 (industry citation) |
+| MarketsandMarkets (2025) | Edge AI hardware $26.14B (2025) -> $58.90B (2030), 17.6% CAGR; edge AI software $2.4B -> $8.89B (2031), 24.4% CAGR |
+| Grand View (2026) | Edge AI $24.91B (2025) -> $118.69B (2033), 21.7% CAGR |
+| **MarketsandMarkets (key quote)** | Edge AI *training* function grows faster than inference, driven by "federated learning ... device-based model updates to accommodate real-time learning and adaptation to local conditions" — **analysts name Soham's PhD topic as the growth driver** |
+
+### 6.2 Drift is the industry problem (the pain this PhD solves)
+
+- **Nature Scientific Reports (Vela et al., 2022): temporal degradation in 91% of 128
+  model/dataset pairs** (healthcare, transport, finance, weather)
+- Gartner (2025): 60% of AI projects abandoned through 2026; 63% lack AI-ready data
+- Practitioner surveys: <50% of production models monitored (n=188, 2024); model performance
+  issues (drift, data quality) = #1 runtime problem at 38% (n=91, 2025); 84.3% say
+  detection/diagnosis time is a problem (n=945)
+- IBM: model accuracy "can degrade within days of deployment"
+
+### 6.3 On-device learning is being industrialized (vendors moving into our exact topic)
+
+Apple (on-device LoRA personalization, WWDC 2025), Google (federated on-device
+personalization on Android from Q3 2025; Coral NPU Oct 2025), ST (STM32N6, 600 GOPS NPU),
+Nordic (acquired Neuton.AI June 2025; nRF54LM20B NPU), Edge Impulse ($34M), Plumerai
+($8.7M Sept 2025), Axelera AI (>€200M, EIC-backed).
+
+### 6.4 Jobs: the scarce "bridge" profile
+
+- LinkedIn (Apr 2026): AI-skills demand +142% YoY; Europe has **1.9 qualified candidates per
+  10 open AI roles**; ML Engineer postings +178% YoY
+- UK: <10,000 engineers list edge skills vs ~4,000-8,000 live edge vacancies (+39% YoY);
+  real TinyML role advertised at £92k; **TinyML UK Network launched 2026** to fix skills gap
+- Germany: senior ML systems / MLOps / edge hybrid €105-140k (recruiter data); premiums for
+  production monitoring + ML depth combinations; BMW, NVIDIA Munich, Flexlith, Formula hiring
+  edge-ML/embedded AI roles with DevOps+ML hybrid requirements (July 2026 postings)
+- US: "TinyML Engineer" averages $145k (Orbyt 2026)
+
+### 6.5 EU funding matches the topic 1:1
+
+- **HORIZON-CL4-2027-04-DATA-03: €35M — "decentralised AI compute ... whole AI model
+  lifecycle ... across the cloud-edge continuum" (opens Nov 2026 — Soham's application window)**
+- HORIZON-CL4-2025-04-DATA-02: €30M cognitive computing continuum (closed Oct 2025, 74 proposals)
+- EIC 2026: >€2.125B total
+
+### 6.6 Comparative brightness vs alternative PhD directions (judgment, structured)
+
+| Direction | Demand/supply | Funding | Differentiation for Soham | Top-1% ceiling |
+|---|---|---|---|---|
+| **Adaptive edge AI (this choice)** | Very scarce (1.9/10, <10k edge-skilled) | EU calls match exactly | HIGH: DevOps + verified gap + reversible NNs | High |
+| LLM/NLP research | Crowded (2.3/10 global, still hot) | High but saturated | LOW: no NLP background, everyone does this | High but crowded; harder admission |
+| General ML/DL | Oversupplied | Moderate | LOW-MEDIUM | Medium |
+| MLOps/AI infrastructure | High | Moderate | HIGH fit, but less "PhD-shaped" (usually career via industry) | Medium-High |
+| Robotics/autonomy | High | High | LOW today (no robotics credentials) -> low admission odds | High only via elite labs |
+| Stay in DevOps, no PhD | Good now | n/a | n/a | Low-Medium (€40-90k trajectory, slower ceiling) |
+
+**How bright: 8-9/10 relative to alternatives for HIS profile.** The combination of a
+verified novel gap + analyst-named growth driver + matching EU funding + vendor
+industrialization + scarce hybrid job profile is rare. Main honest caveats: TinyML market
+sizing is definition-dependent (2B vs 7B by 2030) and "TinyML engineer" as a literal title
+barely exists in Germany yet — demand materializes as hybrid MLOps/edge roles.
+
+---
+
+## 7. Top-1% probability assessment (honest estimate, judgment-based)
+
+**Method:** base rates for PhD -> top-tier outcome, multiplied by Soham's differentiators,
+discounted by execution risk. This is a structured judgment, not a measurement.
+
+- Base rate for a generic CS/ML PhD holder landing a "top-1%" outcome (top-tier salary
+  €120k+ / elite research role): **~15-25%** (competitive but many never differentiate).
+- Soham's profile-specific baseline (no PhD, staying in ops): top-1% outcome ~5-10%.
+
+**Multipliers from this direction, if executed well:**
+1. Verified novel gap with 3-4 "firsts" (papers get visibility/citations): x1.5-2
+2. Market timing (analysts name the topic; vendors shipping it): x1.5-2
+3. Scarcity of the bridge profile (DevOps + TinyML + drift; 1.9 candidates/10 roles): x2-3
+4. EU funding alignment (Horizon calls match thesis -> consortium/industry roles): x1.5
+5. Execution risk (no pubs yet, self-taught ML, DaCapo technical risk, hardware to buy): x0.5-0.7
+
+**Estimated probability of a top-tier (top-1% class) outcome after a well-executed PhD:
+40-70%** (central estimate ~50%). With mediocre execution: 20-30%. Without the PhD: 5-10%.
+
+**What moves the needle toward 70%:**
+- Publish early: Objective 3 (fleet coordination) is simulation-friendly -> first paper in
+  Year 1-2; publish the MCU demo (ESP32 drift detection + selective update) as open source
+- Ship a visible artifact early (GitHub: River benchmarks -> ESP32 demo)
+- Do an industry internship / collaboration with Nordic, ST, Edge Impulse-type companies
+- Get into a Horizon consortium via Stefan's network (the €35M call opens Nov 2026)
+- Network with the Swedish track (Priyanka/Palu/Emelie) as Plan B in parallel
+
+---
+
+## 8. Verified gap candidates (all re-checked July 2026)
+
+| # | Gap | Verification | Risk |
+|---|---|---|---|
+| G1 | Reversibility-enabled drift-triggered selective updates on MCU-class hardware (activation-free backprop + block-level selective updates + built-in undo) | OPEN — not found in 2023-2026; must beat DaCapo (TECS 2023) objection; answer: BDIA/Dr²Net retrofit | Medium |
+| G2 | Fleet-level coordination of selective updates under heterogeneous drift, serverless, lifecycle-energy objective | OPEN — DriftGuard is server-driven; NOLTA'26 uncoordinated | Medium-low (simulation) |
+| G3 | Standardized lifecycle evaluation with explicit power/latency budgets (co-optimize C_run + C_chg), E2R/T2R/SS on real hardware | OPEN — every major survey demands it (Pavan 2026, Abozaid 2025, FCL 2026) | Low |
+| G4 | Reversibility for intermittent/batteryless learning (reversible nets eliminate activation checkpoints) | OPEN — Raghuwanshi 2026 is survey-level only | High (hardware complexity) |
+| G5 | Deep on-device adaptation for tabular/operational streams (IIoT telemetry) | OPEN but partial; less crisp as a thesis spine | Low-Medium |
+
+**Recommended: G1 as the spine, G2 + G3 as the second and third pillars, G5 as the flagship
+application (sensor calibration / predictive maintenance on TON_IoT), G4 as stretch goal.**
+
+---
+
+## 9. Capability check (what Soham can actually execute)
+
+| Asset | Status |
+|---|---|
+| Hardware | Arduino UNO only (2 KB SRAM — unusable for this research). **Must buy ESP32-S3 (~$8) or STM32F746 (~$20).** No Raspberry Pi. Cheap fix, do it early |
+| Skills | Python, quantization (PTQ/INT8), Arduino C/C++, monitoring/ops; ML is self-taught |
+| Data | No Wipro data (NDA). Public: TON_IoT (IIoT), UCI gas sensor drift, CIFAR-10-C, Google Speech Commands |
+| Compute | MCU-scale work needs no GPU; Colab sufficient for design |
+| Time | Apply end-2026, start Aug 2027. One year for: River benchmarks -> ESP32 drift demo -> selective-update prototype on GitHub |
+| Supervision fit | Stefan Kuhn: reversible NN research (cINN, RC 2025) + distributed systems — exact match for G1+G2 |
+
+---
+
+## 10. Recommended thesis framing (what the proposal now claims)
+
+> **"Lifecycle-Efficient Adaptive Edge AI: Reversibility-Enabled Drift-Triggered Selective
+> Model Updates on Microcontroller-Class Devices"**
+
+Four verified "firsts":
+1. First reversible-layer on-device learning on MCU-class hardware (activation-free
+   backprop; answers DaCapo via BDIA-style exact reversibility with unchanged inference architecture)
+2. First drift-triggered selective block updates with built-in rollback on MCUs
+   (SEKF = server, Minerva = full-model, SoLA = LLMs)
+3. First serverless fleet coordination of selective updates under heterogeneous drift with
+   lifecycle-energy objective (DriftGuard = centralized; surveys demand drift-aware aggregation)
+4. First standardized lifecycle evaluation with explicit power/latency budgets on real
+   hardware (E2R/T2R/SS; every survey calls for it)
+
+Flagship application: **sensor calibration and predictive maintenance on IIoT** — the only
+real-world drift-regime application in the ODL literature, and a natural match for Soham's
+production anomaly-detection instincts.
+
+Stretch (optional, high reward): **batteryless/intermittent devices + reversibility** — no
+checkpoints needed when activations are reconstructible.
+
+---
+
+## 11. Next steps (tracked)
+
+- [x] Literature sweeps A-D (July 2026)
+- [x] Market research (July 2026)
+- [x] Gap verification (July 2026)
+- [ ] Revise `research_proposal.md` to the sharpened framing (in progress)
+- [ ] Draft findings email to Stefan with verified gaps + market/funding evidence
+- [ ] Buy ESP32-S3 dev board
+- [ ] River benchmark experiment (Week 2 of reading plan) -> GitHub artifact
+
+*Created: 31 July 2026. Update every 6 months or when new surveys appear.*
